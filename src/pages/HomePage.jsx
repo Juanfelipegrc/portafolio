@@ -38,6 +38,8 @@ export const HomePage = () => {
 
     const y = useTransform(scrollY, [0, 700], [1000, -2000]);
 
+    
+
 
     useEffect(() => {
         const updateCursor = (e) => {
@@ -142,10 +144,12 @@ export const HomePage = () => {
                 
             </div>
 
+            
 
-            <div className='bg-neutral-900 w-full'>
 
-                <h2 className='font-semibold text-5xl my-4 text-center text-white'>SKILLS AND HABILITIES</h2>
+            <div className='bg-neutral-950 w-full'>
+
+                <h2 className='font-semibold text-[2.7rem] my-4 text-center text-white'>SKILLS & ABILITIES</h2>
 
                 <div className='flex justify-center items-center'>
 

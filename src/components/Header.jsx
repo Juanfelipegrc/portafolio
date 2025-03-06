@@ -20,7 +20,7 @@ export const Header = () => {
 
     }, []);
 
-    console.log(scrollY)
+
     
 
 
