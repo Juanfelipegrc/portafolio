@@ -1,4 +1,5 @@
 import React from 'react'
+import { TypeAnimation } from 'react-type-animation'
 
 export const Header = () => {
   return (
@@ -8,7 +9,22 @@ export const Header = () => {
         <div className="grid grid-cols-12 bg-black text-white h-20 items-center">
             
             <div className='col-span-12 flex justify-center'>
-                <h1 className='font-light text-xl'>JUAN FELIPE</h1>
+                <TypeAnimation
+                    sequence={[
+                        "Hi dear!",  
+                        1000, 
+                        "I'm Juan Felipe García Rojas.",
+                        1000,              
+                        "I'm React JS software developer.", 
+                        1000, 
+                        "Tell me what you need and i'll do it.", 
+                        1000, 
+                    ]}
+                    wrapper="h1"
+                    speed={50}  
+                    repeat={Infinity}  
+                    className="text-2xl text-white font-light"
+                />
             </div>
             {/* <div className='grid-cols-12 col-span-6 h-full hidden sm:hidden md:hidden lg:grid'>
 

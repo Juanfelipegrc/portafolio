@@ -1,2 +1,9 @@
 @import "tailwindcss";
 
+
+
+@media (min-width: 1024px) {
+    body {
+        cursor: none;
+    }
+}

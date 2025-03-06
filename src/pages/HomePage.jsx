@@ -1,9 +1,20 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import * as motion from 'motion/react-client'
 import { AustronautLogo, HiAppLogo, PrincipalProfilePicture } from '../assets'
-import { useAnimationFrame, useScroll, useTransform} from 'motion/react'
+import { useAnimationFrame, useMotionValue, useScroll, useSpring, useTransform} from 'motion/react'
+
 
 export const HomePage = () => {
+
+
+
+
+    const mouseX = useMotionValue(0);
+    const mouseY = useMotionValue(0);
+
+    const smoothX = useSpring(mouseX, { stiffness: 300, damping: 28 });
+    const smoothY = useSpring(mouseY, { stiffness: 300, damping: 28 });
+
 
     const {scrollY} = useScroll();
 
@@ -21,18 +32,39 @@ export const HomePage = () => {
         position: "absolute",
         width: "100%",
         height: "100%",
-        backgroundColor: "red",
-        opacity: 0.6
+        opacity: 0.8
     };
 
 
     const y = useTransform(scrollY, [0, 700], [1000, -2000]);
 
 
+    useEffect(() => {
+        const updateCursor = (e) => {
+            mouseX.set(e.clientX);
+            mouseY.set(e.clientY);
+        };
+
+        window.addEventListener("mousemove", updateCursor);
+        return () => window.removeEventListener("mousemove", updateCursor);
+    }, [mouseX, mouseY]);
+
+
   return (
     <>
     
         <div className='flex flex-col w-full items-center relative overflow-hidden'>
+
+            <motion.div
+                className="hidden sm:hidden md:hidden lg:inline-block fixed top-0 left-0 w-6 h-6 bg-neutral-700 rounded-full pointer-events-none mix-blend-difference"
+                style={{
+                    x: smoothX,
+                    y: smoothY,
+                    transform: "translate(-20%, -20%)",
+                    zIndex: 9999,
+                }}
+            />
+
 
         
 
@@ -46,12 +78,63 @@ export const HomePage = () => {
                         ref={ref}
                         
                     >
-                        <div style={{ ...sideStyle, transform: "rotateY(0deg) translateZ(6.3rem)", backgroundColor: "#000" }} />
-                        <div style={{ ...sideStyle, transform: "rotateY(90deg) translateZ(6.3rem)", backgroundColor: "#000" }} />
-                        <div style={{ ...sideStyle, transform: "rotateY(180deg) translateZ(6.3rem)", backgroundColor: "#000" }} />
-                        <div style={{ ...sideStyle, transform: "rotateY(-90deg) translateZ(6.3rem)", backgroundColor: "#000" }} />
-                        <div style={{ ...sideStyle, transform: "rotateX(90deg) translateZ(6.3rem)", backgroundColor: "#000" }} />
-                        <div style={{ ...sideStyle, transform: "rotateX(-90deg) translateZ(6.3rem)", backgroundColor: "#000" }} />
+                        <div style={{ 
+                            ...sideStyle, 
+                            transform: "rotateY(0deg) translateZ(6.3rem)", 
+                            backgroundImage: "url(/react-logonormal.png)", 
+                            backgroundPosition: 'center', 
+                            backgroundSize: 'contain', 
+                            backgroundRepeat: 'no-repeat', 
+                            backgroundColor: "#000" 
+                        }}  />
+
+                        <div style={{ 
+                            ...sideStyle, 
+                            transform: "rotateY(90deg) translateZ(6.3rem)", 
+                            backgroundColor: "#000", 
+                            backgroundImage: "url(/tailwind-css-logo.png)", 
+                            backgroundPosition: 'center', 
+                            backgroundSize: 'contain', 
+                            backgroundRepeat: 'no-repeat' 
+                        }} />
+
+                        <div style={{ 
+                            ...sideStyle, 
+                            transform: "rotateY(180deg) translateZ(6.3rem)",
+                            backgroundColor: "#000", 
+                            backgroundImage: "url(/bootstrap-logo.png)", 
+                            backgroundPosition: 'center', 
+                            backgroundSize: 'contain', 
+                            backgroundRepeat: 'no-repeat' 
+                        }} />
+
+                        <div style={{ 
+                            ...sideStyle, 
+                            transform: "rotateY(-90deg) translateZ(6.3rem)", 
+                            backgroundColor: "#000",
+                            backgroundImage: "url(/motion-logo.png)", 
+                            backgroundPosition: 'center', 
+                            backgroundSize: 'contain', 
+                            backgroundRepeat: 'no-repeat' 
+                        }} />
+                        <div style={{ 
+                            ...sideStyle, 
+                            transform: "rotateX(90deg) translateZ(6.3rem)", 
+                            backgroundColor: "#000",
+                            backgroundImage: "url(/redux-logo.png)", 
+                            backgroundPosition: 'center', 
+                            backgroundSize: 'contain', 
+                            backgroundRepeat: 'no-repeat' 
+                        }} />
+                        <div style={{ 
+                            ...sideStyle, 
+                            transform: "rotateX(-90deg) translateZ(6.3rem)", 
+                            backgroundColor: "#000",
+                            backgroundImage: "url(/react-router-logo.png)", 
+                            backgroundPosition: 'center', 
+                            backgroundSize: 'contain', 
+                            backgroundRepeat: 'no-repeat'
+                        }} />
                     </div>
                 </div>
                 
