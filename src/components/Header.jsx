@@ -1,12 +1,34 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { TypeAnimation } from 'react-type-animation'
 
 export const Header = () => {
+
+    const [scrollY, setScrollY] = useState(window.scrollY);
+
+    useEffect(() => {
+      
+        const onChangeScroll = () => {
+            setScrollY(window.scrollY);    
+        };
+
+        window.addEventListener('scroll', onChangeScroll);
+
+        return () => {
+            window.removeEventListener('scroll', onChangeScroll)
+        }
+       
+
+    }, []);
+
+    console.log(scrollY)
+    
+
+
   return (
     <>
     
     
-        <div className="grid grid-cols-12 bg-black text-white h-20 items-center">
+        <div className={`grid grid-cols-12 ${scrollY === 0? 'bg-transparent text-black' : 'bg-black text-white'} transition-all duration-500 h-20 items-center sticky top-0 z-[1000]`}>
             
             <div className='col-span-12 flex justify-center'>
                 <TypeAnimation
@@ -23,7 +45,7 @@ export const Header = () => {
                     wrapper="h1"
                     speed={50}  
                     repeat={Infinity}  
-                    className="text-2xl text-white font-light"
+                    className="text-2xl font-light"
                 />
             </div>
             {/* <div className='grid-cols-12 col-span-6 h-full hidden sm:hidden md:hidden lg:grid'>

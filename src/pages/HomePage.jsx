@@ -61,7 +61,7 @@ export const HomePage = () => {
                     x: smoothX,
                     y: smoothY,
                     transform: "translate(-20%, -20%)",
-                    zIndex: 9999,
+                    zIndex: 999,
                 }}
             />
 
@@ -140,6 +140,17 @@ export const HomePage = () => {
                 
 
                 
+            </div>
+
+
+            <div className='bg-neutral-900 w-full'>
+
+                <h2 className='font-semibold text-5xl my-4 text-center text-white'>SKILLS AND HABILITIES</h2>
+
+                <div className='flex justify-center items-center'>
+
+                </div>
+
             </div>
 
 
