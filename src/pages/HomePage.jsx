@@ -26,15 +26,8 @@ export const HomePage = () => {
     }, [mouseX, mouseY]);
 
 
-    useEffect(() => {
-        const preventScroll = (e) => e.preventDefault();
+
     
-        document.addEventListener("touchmove", preventScroll, { passive: false });
-    
-        return () => {
-            document.removeEventListener("touchmove", preventScroll);
-        };
-    }, []);
     
 
 
