@@ -28,7 +28,7 @@ export const FloatCube = () => {
                     dragConstraints={{left:0, right:0, top:0, bottom:0}}
                 >
                     <div 
-                        className='transform-3d w-[6.285rem] h-[6.285rem] relative'
+                        className='transform-3d w-[6.29rem] h-[6.29rem] relative'
                         ref={ref}
                     >
                         <div style={{ 
