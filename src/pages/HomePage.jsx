@@ -38,7 +38,7 @@ export const HomePage = () => {
         >
 
             <div 
-                className='fixed z-[1] h-full w-full'
+                className='fixed z-[1] h-full w-full overflow-hidden'
                 style={{
                     backgroundImage: `url(${Noise})`,
                     backgroundSize: '10rem',
