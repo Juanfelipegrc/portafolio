@@ -38,11 +38,11 @@ export const HomePage = () => {
     <>
     
         <div 
-            className='flex flex-col w-full h-screen items-center justify-center relative overflow-hidden bg-black'
+            className='flex flex-col w-full min-h-screen items-center justify-center relative overflow-hidden bg-black'
         >
 
             <div 
-                className='fixed z-[1] h-full w-full overflow-hidden'
+                className='fixed z-[1] h-full w-full inset-0'
                 style={{
                     backgroundImage: `url(${Noise})`,
                     backgroundSize: '10rem',

@@ -26,7 +26,7 @@ export const FloatCubeNormal = () => {
             <motion.div 
                 className='perspective-[50rem] w-[15rem] h-[15rem] flex items-center absolute z-[3] justify-center top-4 left-4'
                 drag
-                dragElastic={0.1}
+                dragElastic={0.2}
                 dragConstraints={{left:0, right:0, top:0, bottom:0}}
             >
                 <div 
