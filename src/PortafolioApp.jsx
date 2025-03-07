@@ -6,7 +6,7 @@ export const PortafolioApp = () => {
   return (
     <>
 
-        <Header/>
+
     
         <Outlet/>
     

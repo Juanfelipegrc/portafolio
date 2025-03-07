@@ -28,7 +28,8 @@ export const Header = () => {
     <>
     
     
-        <div className={`grid grid-cols-12 ${scrollY === 0? 'bg-transparent text-black' : 'bg-black text-white'} transition-all duration-500 h-20 items-center sticky top-0 z-[1000]`}>
+        <div className={`grid grid-cols-12 ${scrollY === 0? 'bg-transparent' : 'bg-black text-white'} transition-all duration-500 h-20 items-center sticky top-0 z-[1000]`}>
+
             
             <div className='col-span-12 flex justify-center'>
                 <TypeAnimation
