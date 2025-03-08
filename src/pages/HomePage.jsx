@@ -95,7 +95,7 @@ export const HomePage = () => {
                             See projects
                         </button>
                         <button style={{fontFamily: 'Turret Road'}} className='bg-transparent text-white text-[1rem] lg:text-[1.2rem] font-medium'>
-                            See projects
+                            About me
                         </button>
                     </div>
 
