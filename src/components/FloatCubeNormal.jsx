@@ -2,7 +2,7 @@ import { useAnimationFrame } from 'motion/react';
 import * as motion from 'motion/react-client';
 import React, { useRef } from 'react';
 
-export const FloatCubeNormal = () => {
+export const FloatCubeNormal = ({animateExit}) => {
     const ref = useRef(null);
 
     useAnimationFrame((t) => {
@@ -28,6 +28,8 @@ export const FloatCubeNormal = () => {
                 drag
                 dragElastic={0.2}
                 dragConstraints={{left:0, right:0, top:0, bottom:0}}
+                animate={animateExit? {x: -1000, opacity: 0} : {}}
+                transition={{duration: 0.5, ease: 'easeInOut'}}
             >
                 <div 
                     className='transform-3d w-[6.29rem] h-[6.29rem] relative'
