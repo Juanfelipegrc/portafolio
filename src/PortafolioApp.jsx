@@ -7,6 +7,7 @@ export const PortafolioApp = () => {
   
   const [cursorSize, setCursorSize] = useState(1);
 
+  
   const handleClick = () => {
     setCursorSize(1.7); 
 
@@ -14,6 +15,7 @@ export const PortafolioApp = () => {
         setCursorSize(1); 
     }, 200);
 };
+
 
 
   return (
