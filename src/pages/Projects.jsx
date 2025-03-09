@@ -27,9 +27,9 @@ export const Projects = () => {
                 </div>
                 <motion.div 
                     className='col-span-12 md:col-span-6 lg:col-span-5 flex justify-center items-center z-[2] order-1 md:order-2 lg:order-2'
-                    initial={{opacity: 0}}
-                    animate={{opacity: 1}}
-                    transition={{duration: 0.5, ease: 'easeInOut', delay: 1}}
+                    initial={{scale: 0}}
+                    animate={{scale: 1}}
+                    transition={{duration: 0.5, ease: 'easeInOut', delay: 1.1}}
                 >
                         <img 
                             src={AustronautLogo} 
