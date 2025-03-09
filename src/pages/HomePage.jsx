@@ -42,27 +42,24 @@ export const HomePage = () => {
                         transition={{duration: 1, ease: 'easeInOut', delay:0.5}}
                     >
                         <h1 
-                            style={{fontFamily: 'Rubik Iso'}}
-                            className='text-[1.7rem] md:text-6xl lg:text-7xl text-center text-white z-[2]'
+                            className='text-[1.7rem] md:text-6xl lg:text-7xl text-center text-white z-[2] font-rubik-iso'
                         >
                             HI DEAR, I'M JUAN FELIPE <br/>
                             WHAT CAN I DO FOR YOU?
                         </h1>
 
                         <h4 
-                            style={{fontFamily: 'Turret Road'}}
-                            className='text-[0.8rem] lg:text-[0.9rem] text-white text-center font-light'
+                            className='text-[0.8rem] lg:text-[0.9rem] text-white text-center font-light font-turret-road'
                         >
                             I'm <b className='font-bold'>React JS</b> software developer
                         </h4>
 
                         <div className='flex w-full justify-center items-center gap-12 lg:gap-10 mt-5'>
                             <motion.button 
-                                style={{fontFamily: 'Turret Road'}} 
                                 onHoverStart={() => setSeeProjectsButtonHover(true)}
                                 onHoverEnd={() => setSeeProjectsButtonHover(false)}
                                 onClick={() => onSetAnimateExit('see-projects')}
-                                className='bg-transparent text-white text-[1rem] lg:text-[1.2rem] font-medium flex flex-col justify-center items-center z-[2] cursor-none'
+                                className='bg-transparent text-white text-[1rem] lg:text-[1.2rem] font-medium flex flex-col justify-center items-center z-[2] cursor-none font-turret-road'
                             >
                                 <div className='flex justify-center items-center'>
                                     <svg 
@@ -84,11 +81,10 @@ export const HomePage = () => {
                                 />
                             </motion.button>
                             <motion.button 
-                                style={{fontFamily: 'Turret Road'}} 
                                 onHoverStart={() =>setAboutMeButtonHover(true)}
                                 onHoverEnd={() => setAboutMeButtonHover(false)}
                                 onClick={() => onSetAnimateExit('about-me')}
-                                className='bg-tr ansparent text-white text-[1rem] lg:text-[1.2rem] font-medium flex flex-col justify-center items-center z-[2] cursor-none'
+                                className='bg-tr ansparent text-white text-[1rem] lg:text-[1.2rem] font-medium flex flex-col justify-center items-center z-[2] cursor-none font-turret-road'
                             >
                                 <div className='flex items-center justify-center'>
                                     <svg 
