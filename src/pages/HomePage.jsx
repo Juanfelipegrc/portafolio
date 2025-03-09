@@ -4,6 +4,7 @@ import { useMotionValue, useSpring} from 'motion/react'
 import { FloatCube, FloatCubeNormal } from '../components';
 import { Noise } from '../assets';
 import { useNavigate } from 'react-router';
+import { useAnimations } from '../hooks/useAnimations';
 
 
 export const HomePage = () => {
@@ -12,6 +13,7 @@ export const HomePage = () => {
     const [aboutMeButtonHover, setAboutMeButtonHover] = useState(false);
     const [seeProjectsButtonHover, setSeeProjectsButtonHover] = useState(false);
     const [animateExit, setAnimateExit] = useState(false);
+    const {lastPage, onSetLastPage} = useAnimations();
 
     const navigate = useNavigate();
 
@@ -23,6 +25,18 @@ export const HomePage = () => {
         }, 1000);     
     };
 
+    useEffect(() => {
+      
+        if(lastPage === '') {
+            onSetLastPage('home');
+        } else{
+            if(lastPage !== 'home'){
+                onSetLastPage('home');
+            }
+        }
+
+    }, [])
+    
 
     
 
@@ -38,8 +52,9 @@ export const HomePage = () => {
                 <FloatCubeNormal animateExit={animateExit}/>
             
                     <motion.div
-                        animate={animateExit? {y:1000, x:-1000} : {}}
-                        transition={{duration: 1, ease: 'easeInOut', delay:0.5}}
+                        initial={lastPage && lastPage !== 'home' ? { x: -1000, y: 1000 } : false}
+                        animate={animateExit ? { x: -1000, y: 1000 } : { x: 0, y: 0 }}
+                        transition={{ duration: 1, ease: 'easeInOut'}}
                     >
                         <h1 
                             className='text-[1.7rem] md:text-6xl lg:text-7xl text-center text-white z-[2] font-rubik-iso'
@@ -59,7 +74,7 @@ export const HomePage = () => {
                                 onHoverStart={() => setSeeProjectsButtonHover(true)}
                                 onHoverEnd={() => setSeeProjectsButtonHover(false)}
                                 onClick={() => onSetAnimateExit('see-projects')}
-                                className='bg-transparent text-white text-[1rem] lg:text-[1.2rem] font-medium flex flex-col justify-center items-center z-[2] cursor-none font-turret-road'
+                                className='bg-transparent text-white text-[1rem] lg:text-[1.2rem] font-medium flex flex-col justify-center items-center z-[2] cursor-none font-turret-road p-2'
                             >
                                 <div className='flex justify-center items-center'>
                                     <svg 
@@ -84,7 +99,7 @@ export const HomePage = () => {
                                 onHoverStart={() =>setAboutMeButtonHover(true)}
                                 onHoverEnd={() => setAboutMeButtonHover(false)}
                                 onClick={() => onSetAnimateExit('about-me')}
-                                className='bg-tr ansparent text-white text-[1rem] lg:text-[1.2rem] font-medium flex flex-col justify-center items-center z-[2] cursor-none font-turret-road'
+                                className='bg-tr ansparent text-white text-[1rem] lg:text-[1.2rem] font-medium flex flex-col justify-center items-center z-[2] cursor-none font-turret-road p-2'
                             >
                                 <div className='flex items-center justify-center'>
                                     <svg 

@@ -1,10 +1,12 @@
 import { useAnimationFrame } from 'motion/react';
 import * as motion from 'motion/react-client'
 import React, { useRef } from 'react';
+import { useAnimations } from '../hooks/useAnimations';
 
 export const FloatCube = ({animateExit}) => {
-    const ref = useRef(null);
-    
+        const ref = useRef(null);
+        const {lastPage} = useAnimations();
+
         useAnimationFrame((t) => {
             if (!ref.current) return;
     
@@ -26,8 +28,9 @@ export const FloatCube = ({animateExit}) => {
                     drag
                     dragElastic={0.2}
                     dragConstraints={{left:0, right:0, top:0, bottom:0}}
-                    animate={animateExit? {x: 1000, opacity: 0} : {}}
-                    transition={{duration: 0.5, ease: 'easeInOut'}}
+                    initial={lastPage && lastPage !== 'home'? {x:1000, opacity: 0} : false}
+                    animate={animateExit? {x: 1000, opacity: 0} : {x:0, opacity: 1}}
+                    transition={{duration: 0.5, ease: 'easeInOut', delay: animateExit? 0 : 1}}
                 >
                     <div 
                         className='transform-3d w-[6.29rem] h-[6.29rem] relative'

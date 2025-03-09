@@ -1,12 +1,15 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import * as motion from 'motion/react-client'
 import { AustronautLogo } from '../assets'
 import { useNavigate } from 'react-router';
+import { useAnimations } from '../hooks/useAnimations';
 
 export const Projects = () => {
 
 
     const [animateExit, setAnimateExit] = useState(false);
+
+    const {lastPage, onSetLastPage} = useAnimations();
 
     const navigate = useNavigate();
 
@@ -17,6 +20,20 @@ export const Projects = () => {
             navigate('/')
         }, 1000);
     }
+
+    useEffect(() => {
+          
+            if(lastPage === '') {
+                onSetLastPage('projects');
+
+            } else{
+                if(lastPage !== 'projects'){
+                    onSetLastPage('projects');
+                }
+            }
+    
+    
+        }, [])
 
   return (
     <>
