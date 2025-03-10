@@ -3,11 +3,13 @@ import * as motion from 'motion/react-client'
 import { AustronautLogo } from '../assets'
 import { useNavigate } from 'react-router';
 import { useAnimations } from '../hooks/useAnimations';
+import { FloatCubeAppearsImage } from '../components';
 
 export const Projects = () => {
 
 
     const [animateExit, setAnimateExit] = useState(false);
+    const [hideCube, setHideCube] = useState(false);
 
     const {lastPage, onSetLastPage} = useAnimations();
 
@@ -18,7 +20,7 @@ export const Projects = () => {
 
         setTimeout(() => {
             navigate('/')
-        }, 800);
+        }, 1100);
     }
 
     useEffect(() => {
@@ -31,6 +33,10 @@ export const Projects = () => {
                     onSetLastPage('projects');
                 }
             }
+
+            setTimeout(() => {
+                setHideCube(true);
+            }, 2500);
     
     
         }, [])
@@ -42,7 +48,7 @@ export const Projects = () => {
             className='w-full flex flex-col overflow-hidden z-[2]'
             initial={lastPage && lastPage !== 'projects'?{x:1000, y: -1000} : false}
             animate={animateExit?{x:1000, y:-1000} : {x: 0, y: 0}}
-            transition={{duration: 1, ease: 'easeInOut'}}
+            transition={{duration: 1, ease: 'easeInOut', delay: animateExit? 0.7 : 0}}
         >
             
 
@@ -74,19 +80,21 @@ export const Projects = () => {
 
                     Explore the universe of knowledge with Astronaut and take your productivity to the next level.</p>
                 </div>
-                <motion.div 
+                <div 
                     className='col-span-12 md:col-span-6 lg:col-span-5 flex justify-center items-center z-[2] order-1 md:order-2 lg:order-2'
-                    initial={{scale: 0}}
-                    animate={{scale: 1}}
-                    transition={{duration: 0.5, ease: 'easeInOut', delay: 1.1}}
                 >
-                        <img 
+
+                        <FloatCubeAppearsImage animateExit={animateExit} hideCube={hideCube}/>
+                        <motion.img 
                             src={AustronautLogo} 
                             alt="Austrounaut Logo" 
+                            initial={{scale: 0}}
+                            animate={hideCube?{scale:1} : false}
+                            transition={{duration: 0.5, ease: 'easeInOut', delay: 0.5}}
                             className='w-[17rem]'
                             
                         />
-                </motion.div>
+                </div>
             </div>
             
 
