@@ -54,7 +54,7 @@ export const Projects = () => {
                 onSetLastPage('projects');
                 setTimeout(() => {
                     setHideCube(true);
-                }, 700);
+                }, 1000);
 
             } else{
                 if(lastPage !== 'projects'){
@@ -83,7 +83,7 @@ export const Projects = () => {
 
             setTimeout(() => {
                 setHideCube(true);
-            }, 3000);
+            }, 1000);
 
         }, [actualProject]);
 
