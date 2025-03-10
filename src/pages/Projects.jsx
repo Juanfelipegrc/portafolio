@@ -27,16 +27,20 @@ export const Projects = () => {
           
             if(lastPage === '') {
                 onSetLastPage('projects');
+                setTimeout(() => {
+                    setHideCube(true);
+                }, 1000);
 
             } else{
                 if(lastPage !== 'projects'){
                     onSetLastPage('projects');
+                    setTimeout(() => {
+                        setHideCube(true);
+                    }, 2500);
                 }
             }
 
-            setTimeout(() => {
-                setHideCube(true);
-            }, 2500);
+           
     
     
         }, [])
@@ -48,7 +52,7 @@ export const Projects = () => {
             className='w-full flex flex-col overflow-hidden z-[2]'
             initial={lastPage && lastPage !== 'projects'?{x:1000, y: -1000} : false}
             animate={animateExit?{x:1000, y:-1000} : {x: 0, y: 0}}
-            transition={{duration: 1, ease: 'easeInOut', delay: animateExit? 0.7 : 0}}
+            transition={{duration: 1, ease: 'easeInOut'}}
         >
             
 
