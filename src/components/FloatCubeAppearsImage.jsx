@@ -5,7 +5,8 @@ import { useAnimations } from '../hooks/useAnimations';
 
 export const FloatCubeAppearsImage = ({animateExit, hideCube}) => {
         const ref = useRef(null);
-        const {lastPage} = useAnimations();
+        const {lastPage, screenWidth} = useAnimations();
+        
 
         useAnimationFrame((t) => {
             if (!ref.current) return;
@@ -21,14 +22,15 @@ export const FloatCubeAppearsImage = ({animateExit, hideCube}) => {
             opacity: 1
         };
 
+        console.log(screenWidth)
         
     
         return (
                 <motion.div 
-                    className='perspective-[50rem] w-[15rem] h-[15rem] flex items-center justify-center fixed z-[3]'
-                    initial={lastPage && lastPage !== 'projects'? {x:-1000, y:1000, opacity: 0} : false}
-                    animate={animateExit && !hideCube? {x: -1000, y:1000, opacity: 0} : hideCube? {scale: 0} : {x:0, y:0, opacity: 1}}
-                    transition={{duration: 0.5, ease: 'easeInOut', delay: animateExit? 0 : !hideCube? 1 : 0}}
+                    className={`perspective-[50rem] w-[15rem] h-[15rem] flex items-center justify-center absolute z-[3]`}
+                    initial={lastPage && lastPage !== 'projects'? {x:1000, opacity: 0} : false}
+                    animate={animateExit && !hideCube? {x: 1000, opacity: 0} : hideCube? {scale: 0} : {x:0, y:0, opacity: 1}}
+                    transition={{duration: hideCube? 0.4 : 0.5, ease: 'easeInOut', delay: animateExit? 0 : !hideCube && lastPage !== 'projects'? 1 : 0.3}}
                 >
                     <div 
                         className='transform-3d w-[6.29rem] h-[6.29rem] relative'

@@ -1,5 +1,12 @@
 export {default as PrincipalProfilePicture} from './portafolio-profile-picture.jpeg';
 export {default as AustronautLogo} from './austronaut-logo.png';
 export {default as HiAppLogo} from './hi-app-logo.png';
-export {default as ReactLogo} from './react-logo.cur';
+export {default as DishoLogo} from './disho-logo.png';
+export {default as NotesAppLogo} from './notes-app-logo.png';
+export {default as ReactLogo} from './react-logo.png';
+export {default as BootstrapLogo} from './bootstrap-logo.png';
+export {default as ReactRouter} from './react-router-logo.png';
+export {default as ReduxLogo} from './redux-logo.png';
+export {default as TailwindCSS} from './tailwind-css-logo.png';
+export {default as MotionLogo} from './motion-logo.png'
 export {default as Noise} from './noise.png';
