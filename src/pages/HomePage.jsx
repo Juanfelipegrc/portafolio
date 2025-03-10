@@ -54,7 +54,7 @@ export const HomePage = () => {
                     <motion.div
                         initial={lastPage && lastPage !== 'home' ? { x: -1000, y: 1000 } : false}
                         animate={animateExit ? { x: -1000, y: 1000 } : { x: 0, y: 0 }}
-                        transition={{ duration: 1, ease: 'easeInOut'}}
+                        transition={{ duration: 1, ease: 'easeInOut', delay: animateExit? 0.5 : 0}}
                     >
                         <h1 
                             className='text-[1.7rem] md:text-6xl lg:text-7xl text-center text-white z-[2] font-rubik-iso'

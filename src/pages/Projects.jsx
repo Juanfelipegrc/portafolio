@@ -18,7 +18,7 @@ export const Projects = () => {
 
         setTimeout(() => {
             navigate('/')
-        }, 1000);
+        }, 800);
     }
 
     useEffect(() => {
