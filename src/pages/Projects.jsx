@@ -40,7 +40,7 @@ export const Projects = () => {
     
         <motion.div 
             className='w-full flex flex-col overflow-hidden z-[2]'
-            initial={{x:1000, y: -1000}}
+            initial={lastPage && lastPage !== 'projects'?{x:1000, y: -1000} : false}
             animate={animateExit?{x:1000, y:-1000} : {x: 0, y: 0}}
             transition={{duration: 1, ease: 'easeInOut'}}
         >
