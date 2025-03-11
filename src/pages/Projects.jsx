@@ -150,22 +150,28 @@ export const Projects = () => {
             <div className='w-full flex justify-center items-center z-[3]'>
                 <div className='grid grid-cols-12 justify-center my-4 w-full'>
 
-                    <div className='col-span-6 flex justify-center'>
-                        <button 
-                            className='border-b-2 border-white bg-transparent text-white font-medium p-6 w-[90%] cursor-none'
-                            onClick={() => onChangeProject('prev')}
-                        >
-                            Prev project
-                        </button>
+                    <div className='col-span-12 md:col-span-6 lg:col-span-6 grid grid-cols-12'>
+                        <div className='col-span-6 flex justify-center'>
+                            <button 
+                                className='border-b-2 border-white bg-transparent text-white font-medium p-6 w-[90%] cursor-none'
+                                onClick={() => onChangeProject('prev')}
+                            >
+                                Prev project
+                            </button>
+                        </div>
+
+                        <div className='col-span-6 flex justify-center'>
+                            <button 
+                                className='border-b-2 border-white bg-transparent text-white font-medium p-6 w-[90%] cursor-none'
+                                onClick={() => onChangeProject('next')}
+                            >
+                                Next project
+                            </button>
+                        </div>
                     </div>
 
-                    <div className='col-span-6 flex justify-center'>
-                        <button 
-                            className='border-b-2 border-white bg-transparent text-white font-medium p-6 w-[90%] cursor-none'
-                            onClick={() => onChangeProject('next')}
-                        >
-                            Next project
-                        </button>
+                    <div className=' col-span-0 md:col-span-6 lg:col-span-6'>
+
                     </div>
 
                 </div>
