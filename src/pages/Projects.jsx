@@ -112,11 +112,11 @@ export const Projects = () => {
                     <svg xmlns="http://www.w3.org/2000/svg" height="2rem" viewBox="0 -960 960 960" width="2rem" fill="#fff"><path d="M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z"/></svg>
                 </div>
 
-                <motion.h1
-                className='text-[3.20rem] text-center p-9 text-white font-rubik-iso'
+                <h1
+                    className='text-[3.20rem] text-center p-9 text-white font-rubik-iso'
                 >
                     PROJECTS
-                </motion.h1>
+                </h1>
             </div>
 
             
