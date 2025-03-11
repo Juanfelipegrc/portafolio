@@ -79,7 +79,7 @@ export const AboutMe = () => {
                 <div className='col-span-12 md:col-span-8 lg:col-span-8 p-4 md:p-7 lg:p-9'>
                   <h1 className='font-semibold text-white text-3xl md:text-5xl lg:text-5xl text-center md:text-start lg:text-start'>Juan Felipe García Rojas</h1>
                   <p className='mt-5 text-white text-center md:text-start lg:text-start'>
-                    Hi I'm Juan Felipe García Rojas, i'm <b>FrontEnd</b> software developer expert using React JS, i know how to use HTML, CSS Javascript, Bootstrap, Tailwind CSS, React Redux, React Router, Motion, Git, a bit of sass, a bit of TypeScript & React JS. <br /> <br />
+                    Hi I'm Juan Felipe García Rojas, i'm <b>FrontEnd</b> software developer expert using React JS, i know how to use HTML, CSS, Javascript, Bootstrap, Tailwind CSS, React Redux, React Router, Motion, Git, a bit of sass, a bit of TypeScript & React JS. <br /> <br />
                     
                     I'm from Colombia i love programing, i don't have previus experience working i'm new but i have a few projects made by me for my portafolio so you can take a look them in the projects page, i think i'm a great software developer because i made projects with a lot of logic and a lot of code lines, projects big, i'm looking foward to start working then it would be incredible work with you.
                   </p>
