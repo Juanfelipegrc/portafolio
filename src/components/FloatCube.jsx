@@ -10,7 +10,7 @@ export const FloatCube = () => {
   useAnimationFrame((t) => {
     if (!ref.current) return;
 
-    const rotate = Math.sin(t / 6000) * 200;
+    const rotate = Math.sin(t / 4000) * 200;
     const y = (1 + Math.sin(t / 800)) * -1; // very light float movement
     ref.current.style.transform = `translateY(${y}px) rotateX(${rotate}deg) rotateY(${rotate}deg)`;
   });
