@@ -42,7 +42,7 @@ export const HomePage = () => {
         <div className='w-full flex flex-col items-center bg-black'>
 
             <div className='flex justify-center h-screen'>
-                <div className='w-[90%] sm:w-[80%] md:w-[75%] lg:w-[60%] grid grid-cols-12 pt-32'>
+                <div className='w-[90%] sm:w-[80%] md:w-[75%] lg:w-[60%] grid grid-cols-12 pt-[7rem] md:pt-[15rem] lg:pt-[15rem]'>
                     <div className='col-span-12 flex justify-center md:justify-end lg:justify-end items-center md:items-start lg:items-start  md:col-span-5 lg:col-span-5 pe-0 md:pe-7 lg:pe-7'>
                         <img 
                             src={PrincipalProfilePicture} 
