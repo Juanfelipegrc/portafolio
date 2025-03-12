@@ -29,7 +29,7 @@ export const Cursor = ({cursorSize}) => {
 
   return (
     <motion.div
-        className="hidden sm:hidden md:hidden lg:flex fixed top-0 left-0 w-6 h-6 bg-transparent border-2 border-white rounded-full pointer-events-none mix-blend-difference justify-center items-center"
+        className="hidden sm:hidden md:hidden lg:flex fixed top-0 left-0 w-6 h-6 bg-transparent border-2 border-white rounded-full pointer-events-none mix-blend-difference justify-center items-center z-50"
         style={{
             x: smoothX,
             y: smoothY,

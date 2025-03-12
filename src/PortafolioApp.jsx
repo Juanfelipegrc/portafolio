@@ -23,19 +23,12 @@ export const PortafolioApp = () => {
 
 
       <div 
-        className='bg-black w-full min-h-screen overflow-hidden'
+        className='w-full h-full overflow-hidden'
         onMouseDown={handleClick}
       >
 
-        <div 
-            className='fixed z-[1] h-full w-full inset-0 overflow-hidden'
-            style={{
-                backgroundImage: `url(${Noise})`,
-                backgroundSize: '10rem',
-                backgroundRepeat: 'repeat',
-                opacity: 0.1
-            }}
-        />
+
+        <Header/>    
 
         <Cursor cursorSize={cursorSize}/>
         

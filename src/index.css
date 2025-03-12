@@ -5,12 +5,6 @@
 
 
 
-@media (min-width: 1024px) {
-    body {
-        cursor: none;
-    }
-}
-
 .noise-div {
     width: 100%; /* Ajusta el tamaño que necesites */
     height: 100%;
@@ -32,5 +26,34 @@
     font-family: 'Orbitron';
 }
 
+.bm-menu-wrap{
+    top: 0;
+    overflow: hidden;
+}
 
+.bm-menu{
+    overflow: hidden !important;
+}
+
+.bm-overlay{
+    left: 0;
+    top: 0;
+    overflow: hidden;
+}
+
+.bm-burger-button{
+    display: none;
+}
+
+@media (min-width: 1024px) {
+    body {
+        cursor: none;
+    }
+}
+
+@media (min-width: 640px) {
+    .bm-menu-wrap{
+        width: 50% !important;
+    }
+}
 
