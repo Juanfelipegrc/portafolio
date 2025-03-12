@@ -35,7 +35,7 @@ export const Header = () => {
     <>
     
     
-        <div className={`grid grid-cols-12 ${scrollY === 0? 'bg-black text-white' : 'bg-neutral-950 text-white'} transition-all duration-500 h-28 items-center w-full sticky top-0 z-[10]`}>
+        <div className={`grid grid-cols-12 ${scrollY === 0? 'bg-black text-white' : 'bg-neutral-950 text-white'} transition-all duration-500 h-28 items-center w-full fixed top-0 z-[10]`}>
 
             
             <div className='col-span-3 flex gap-4 justify-center items-center ps-7 md:ps-0 lg:ps-0'>
