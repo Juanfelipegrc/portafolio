@@ -4,6 +4,9 @@
 @import "tailwindcss";
 
 
+html {
+    scroll-behavior: smooth;
+}
 
 .noise-div {
     width: 100%; /* Ajusta el tamaño que necesites */
