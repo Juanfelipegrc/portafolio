@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import * as motion from 'motion/react-client'
-import { AustronautLogo, DishoLogo, HiAppLogo, PrincipalProfilePicture } from '../assets';
-import { Link, useNavigate } from 'react-router';
+import { PrincipalProfilePicture } from '../assets';
+import { useNavigate } from 'react-router';
 import { useAnimations } from '../hooks/useAnimations';
+import { projects } from '../data/projects';
+import { ProjectCard } from '../components';
 
 
 export const HomePage = () => {
@@ -11,6 +13,8 @@ export const HomePage = () => {
     const {lastPage, onSetLastPage} = useAnimations();
 
     const navigate = useNavigate();
+
+    const projectsCut = projects.slice(0, 3);
 
     const onSetAnimateExit = (page) => {
         setAnimateExit(true);
@@ -90,102 +94,26 @@ export const HomePage = () => {
 
             <div id='projects' className=' w-full md:p-4 lg:p-8 flex flex-col justify-center items-center'>
 
-                <div className='w-[60%]'>
-                    <h2 className='text-center text-white text-4xl font-medium'>Some <span className='text-blue-300'>Projects</span></h2>
+                <div>
+                    <h2 className='text-center text-white text-4xl font-medium'>Some 
+                    <span className='text-blue-300'>Projects</span></h2>
                 </div>
 
 
                 <div className='grid grid-cols-12 gap-6 p-8'>
-                    <motion.div
-                        initial={{scale: 0, y: 50}}
-                        animate={{scale: 1, y: 0}}
-                        transition={{duration: 0.6, ease: 'easeIn'}}
-                        viewport={{once: true}}
-                        className='bg-neutral-900 rounded-4xl p-6 col-span-12 md:col-span-4 lg:col-span-4 hover:scale-105 transition-all flex flex-col gap-3'
-                    >
-                    <img 
-                        src={AustronautLogo} 
-                        alt="Austronaut logo" 
-                        className='w-16' 
-                    />
-                    <h2 className='text-white text-xl font-semibold'>Austronaut</h2>
-                    <p className='text-white text-sm'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quas temporibus cupiditate, voluptates voluptas corporis nostrum nobis sequi tempora molestias, repellat dolores magni sapiente fugiat obcaecati, et velit deleniti quos.</p>
-                    <div className='flex items-center gap-2'>
-                        <span className='py-1 px-2 rounded-xl bg-blue-600 text-white text-xs'>
-                            React
-                        </span>
-                        <span className='py-1 px-2 rounded-xl bg-yellow-500 text-white text-xs'>
-                            JS
-                        </span>
-                        <span className='py-1 px-2 rounded-xl bg-blue-400 text-white text-xs'>
-                            Tailwind CSS
-                        </span>
-                    </div>
-
-                    <Link className='text-blue-500 hover:underline cursor-none'>See more →</Link>
                     
-
-                    </motion.div>
-                    <motion.div
-                        initial={{scale: 0, y: 50}}
-                        animate={{scale: 1, y: 0}}
-                        transition={{duration: 0.6, ease: 'easeIn'}}
-                        viewport={{once: true}}
-                        className='bg-neutral-900 rounded-4xl p-6 col-span-12 md:col-span-4 lg:col-span-4 hover:scale-105 transition-all flex flex-col gap-3'
-                    >
-                    <img 
-                        src={HiAppLogo} 
-                        alt="Austronaut logo" 
-                        className='w-16' 
-                    />
-                    <h2 className='text-white text-xl font-semibold'>Hi</h2>
-                    <p className='text-white text-sm'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quas temporibus cupiditate, voluptates voluptas corporis nostrum nobis sequi tempora molestias, repellat dolores magni sapiente fugiat obcaecati, et velit deleniti quos.</p>
-                    <div className='flex items-center gap-2'>
-                        <span className='py-1 px-2 rounded-xl bg-blue-600 text-white text-xs'>
-                            React
-                        </span>
-                        <span className='py-1 px-2 rounded-xl bg-yellow-500 text-white text-xs'>
-                            JS
-                        </span>
-                        <span className='py-1 px-2 rounded-xl bg-blue-400 text-white text-xs'>
-                            Tailwind CSS
-                        </span>
-                    </div>
-
-                    <Link className='text-blue-500 hover:underline cursor-none'>See more →</Link>
+                    {
+                        projectsCut.map((project, index) => (
+                            <ProjectCard 
+                                key={index} 
+                                image={project.logo} 
+                                title={project.name} 
+                                desc={project.desc} 
+                                tecnologies={project.tecnologies}
+                            />
+                        ))
+                    }
                     
-
-                    </motion.div>
-                    <motion.div
-                        initial={{scale: 0, y: 50}}
-                        animate={{scale: 1, y: 0}}
-                        transition={{duration: 0.6, ease: 'easeIn'}}
-                        viewport={{once: true}}
-                        className='bg-neutral-900 rounded-4xl p-6 col-span-12 md:col-span-4 lg:col-span-4 hover:scale-105 transition-all flex flex-col gap-3'
-                    >
-                    <img 
-                        src={DishoLogo} 
-                        alt="Austronaut logo" 
-                        className='w-16' 
-                    />
-                    <h2 className='text-white text-xl font-semibold'>Disho Replica</h2>
-                    <p className='text-white text-sm'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quas temporibus cupiditate, voluptates voluptas corporis nostrum nobis sequi tempora molestias, repellat dolores magni sapiente fugiat obcaecati, et velit deleniti quos.</p>
-                    <div className='flex items-center gap-2'>
-                        <span className='py-1 px-2 rounded-xl bg-blue-600 text-white text-xs'>
-                            React
-                        </span>
-                        <span className='py-1 px-2 rounded-xl bg-yellow-500 text-white text-xs'>
-                            JS
-                        </span>
-                        <span className='py-1 px-2 rounded-xl bg-blue-400 text-white text-xs'>
-                            Tailwind CSS
-                        </span>
-                    </div>
-
-                    <Link className='text-blue-500 hover:underline cursor-none'>See more →</Link>
-                    
-
-                    </motion.div>
                 </div>
 
 

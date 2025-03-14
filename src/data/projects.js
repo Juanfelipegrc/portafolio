@@ -8,6 +8,7 @@ export const projects = [
         Its intuitive interface and enhanced conversational experience make it an ideal tool for developers, students, and professionals looking for a quick and efficient solution to their queries.
         Explore the universe of knowledge with Astronaut and take your productivity to the next level.`,
         logo: AustronautLogo,
+        tecnologies: ['React', 'JS', 'Tailwind CSS'],
         video: '',
         linkGH: '',
         linkN: 'https://austronaut-chat.netlify.app/',
@@ -20,6 +21,8 @@ export const projects = [
         Designed with modern technologies, Hi ensures a seamless and secure user experience, making it the ideal platform for anyone looking for a powerful yet simple communication tool.
         Whether you're chatting with friends, collaborating with colleagues, or connecting with family, Hi helps you stay close — no matter the distance.`,
         logo: HiAppLogo,
+        tecnologies: ['React', 'JS', 'Tailwind CSS'],
+        video: '',
         video: '',
         linkGH: '',
         linkN: 'https://hi-app.netlify.app/',
@@ -40,6 +43,7 @@ export const projects = [
         - Smooth user interaction and clean navigation
         This project is a great example of how I translate design ideas into fully functional, production-ready interfaces using widely adopted technologies like React and Bootstrap.`,
         logo: DishoLogo,
+        tecnologies: ['React', 'JS', 'Bootstrap'],
         video: '',
         linkGH: '',
         linkN: 'https://disho-replica.netlify.app/',
@@ -62,6 +66,7 @@ export const projects = [
         Custom alerts and confirmations with SweetAlert
         Whether used for productivity, journaling, or task management, Notes App provides a simple yet powerful solution for managing information securely and efficiently.`,
         logo: NotesAppLogo,
+        tecnologies: ['React', 'JS', 'CSS'],
         video: '',
         linkGH: '',
         linkN: 'https://notes-app-react-js-firebase-firestore.netlify.app/',
