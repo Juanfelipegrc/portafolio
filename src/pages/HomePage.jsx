@@ -88,7 +88,7 @@ export const HomePage = () => {
             </div>
 
 
-            <div id='projects' className='mt-16 w-full md:p-4 lg:p-8 flex flex-col justify-center items-center'>
+            <div id='projects' className=' w-full md:p-4 lg:p-8 flex flex-col justify-center items-center'>
 
                 <div className='w-[60%]'>
                     <h2 className='text-center text-white text-4xl font-medium'>Some <span className='text-blue-300'>Projects</span></h2>
