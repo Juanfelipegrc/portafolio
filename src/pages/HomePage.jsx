@@ -47,13 +47,16 @@ export const HomePage = () => {
                         <img 
                             src={PrincipalProfilePicture} 
                             alt="Profile Picture" 
-                            className='w-[18rem] h-[18rem] sm:w-[23rem] sm:h-[23rem] md:w-[15rem] md:h-[15rem] lg:w-[15rem] lg:h-[15rem] rounded-full'
+                            className='w-[18rem] h-[18rem] sm:w-[23rem] sm:h-[23rem] md:w-[15rem] md:h-[15rem] lg:w-[16rem] lg:h-[16rem] rounded-full'
                         />
                     </div>
                     <div className='col-span-12 md:col-span-7 lg:col-span-7 p-5'>
-                        <h1 className='text-white text-center md:text-start lg:text-start font-semibold text-4xl md:text-3xl lg:text-3xl'>It's Juan Felipe</h1>
+                        <h1 className='text-white text-center md:text-start lg:text-start font-semibold text-4xl md:text-3xl lg:text-5xl'>
+                            Hello I'm <br /> 
+                            <span className='text-blue-300'>Juan Felipe</span>
+                        </h1>
                         <p className='mt-5 text-[1.1rem] text-white text-center md:text-start lg:text-start'>
-                            Hi I'm Juan Felipe García Rojas, i'm <b>FrontEnd</b> software developer expert using React JS, i know how to use HTML, CSS, Javascript, Bootstrap, Tailwind CSS, React Redux, React Router, Motion, Git, a bit of sass, a bit of TypeScript & React JS. <br /> <br />
+                            Hi I'm Juan Felipe García Rojas, i'm <b className='text-blue-300'>FrontEnd</b> software developer expert using React JS, i know how to use HTML, CSS, Javascript, Bootstrap, Tailwind CSS, React Redux, React Router, Motion, Git, a bit of sass, a bit of TypeScript & React JS. <br /> <br />
                             
                             
                         </p>

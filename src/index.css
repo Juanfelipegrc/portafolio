@@ -45,6 +45,10 @@
     display: none;
 }
 
+.grid-important{
+    display: grid !important;
+}
+
 @media (min-width: 1024px) {
     body {
         cursor: none;
