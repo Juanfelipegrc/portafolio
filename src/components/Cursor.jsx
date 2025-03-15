@@ -29,13 +29,12 @@ export const Cursor = ({cursorSize}) => {
 
   return (
     <motion.div
-        className="hidden sm:hidden md:hidden lg:flex fixed top-0 left-0 w-6 h-6 bg-transparent border-2 border-white rounded-full pointer-events-none mix-blend-difference justify-center items-center z-50"
+        className="hidden sm:hidden md:hidden lg:flex fixed top-0 left-0 w-6 h-6 bg-transparent border-2 border-white rounded-full pointer-events-none mix-blend-difference justify-center items-center z-[9999]"
         style={{
             x: smoothX,
             y: smoothY,
             transition: 'scale 0.2s ease-out',
             transform: "translate(-50%, -50%)",
-            zIndex: 999,
         }}
         animate={{scale: cursorSize}}
         transition={{duration: 0.2, ease: 'easeOut'}}

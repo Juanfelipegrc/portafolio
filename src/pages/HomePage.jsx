@@ -10,6 +10,7 @@ import { ProjectCard } from '../components';
 export const HomePage = () => {
 
     const [animateExit, setAnimateExit] = useState(false);
+    const [showMore, setShowMore] = useState(false);
     const {lastPage, onSetLastPage} = useAnimations();
 
     const navigate = useNavigate();
@@ -92,11 +93,11 @@ export const HomePage = () => {
             </div>
 
 
-            <div id='projects' className=' w-full md:p-4 lg:p-8 flex flex-col justify-center items-center'>
+            <div id='projects' className=' w-full md:p-4 lg:p-8 flex flex-col justify-center items-center relative'>
 
                 <div>
                     <h2 className='text-center text-white text-4xl font-medium'>Some 
-                    <span className='text-blue-300'>Projects</span></h2>
+                    <span className='text-blue-300'> Projects</span></h2>
                 </div>
 
 
@@ -115,6 +116,8 @@ export const HomePage = () => {
                     }
                     
                 </div>
+
+                {/* <div className='absolute bottom-0 w-full h-32 bg-gradient-to-b from-transparent to-black pointer-events-none blur-sm'></div> */}
 
 
 
