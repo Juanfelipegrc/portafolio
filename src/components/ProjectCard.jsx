@@ -81,13 +81,14 @@ export const ProjectCard = ({image, title, tecnologies, desc}) => {
                     transition={{
                         layout: { duration: 0.2, ease: 'easeInOut' }
                     }}
-                    className={`bg-neutral-900 flex flex-col h-full ${cardClicked.validation && cardClicked.card === title && !isClosing? 'fixed top-0 left-0 w-screen h-screen z-[1000] rounded-none p-10' : isClosing? 'bottom-0' : 'rounded-4xl p-6 justify-center'} `}
+                    className={`bg-neutral-900 flex flex-col h-full ${cardClicked.validation && cardClicked.card === title && !isClosing? 'fixed top-0 left-0 w-screen h-screen z-[1000] rounded-none p-10' : isClosing? 'bottom-0 rounded-4xl' : 'rounded-4xl p-6 justify-center'} `}
                 >
                 
                 
                 <AnimatePresence>
                    {
                     animationFirstDiv?
+                        // FIRST DIV
                         <motion.div 
                             initial={{opacity: 0}}
                             animate={{opacity: 1}}
@@ -133,6 +134,8 @@ export const ProjectCard = ({image, title, tecnologies, desc}) => {
                         :
 
                         animationSecondDiv &&
+
+                        // SECOND DIV
 
                         <>
 
