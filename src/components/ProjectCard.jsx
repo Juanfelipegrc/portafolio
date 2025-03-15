@@ -1,24 +1,47 @@
 import React, { useState } from 'react'
 import * as motion from 'motion/react-client'
 import { Link } from 'react-router';
+import { AnimatePresence } from 'motion/react';
 
 export const ProjectCard = ({image, title, tecnologies, desc}) => {
 
     const [cardClicked, setCardClicked] = useState({validation: false, card: ''});
+    const [animationFirstDiv, setAnimationFirstDiv] = useState(true);
+    const [animationSecondDiv, setAnimationSecondDiv] = useState(false);
     const [isClosing, setIsClosing] = useState(false);
 
     const descCut = desc.slice(0, 300);
 
     
 
+    const handleCardClicked = () => {
+        setAnimationFirstDiv(false);
+        setTimeout(() => {
+            setCardClicked({validation: true, card: title});
+        }, 500);
+        setTimeout(() => {
+            setAnimationSecondDiv(true);
+        }, 800);
+    }
+
+
     const onClose = () => {
-        setIsClosing(true);
+
+        setAnimationSecondDiv(false);
+
+
+        setTimeout(() => {
+            setIsClosing(true);    
+        }, 500);
 
         setTimeout(() => {
             setCardClicked({validation: false, card: ''});
             setIsClosing(false);
-        }, 200);
+            setAnimationFirstDiv(true);
+        }, 800);
     }
+
+    console.log(cardClicked)
 
 
     const getBgColor = (tecnology) => {
@@ -58,51 +81,122 @@ export const ProjectCard = ({image, title, tecnologies, desc}) => {
                     transition={{
                         layout: { duration: 0.2, ease: 'easeInOut' }
                     }}
-                    className={`bg-neutral-900 flex flex-col justify-center gap-3 ${cardClicked.validation && cardClicked.card === title && !isClosing? 'fixed top-0 left-0 w-screen h-screen z-[1000] rounded-none p-10' : isClosing? 'bottom-4 w-auto h-auto' : 'rounded-4xl p-6 h-full'} `}
+                    className={`bg-neutral-900 flex flex-col h-full ${cardClicked.validation && cardClicked.card === title && !isClosing? 'fixed top-0 left-0 w-screen h-screen z-[1000] rounded-none p-10' : isClosing? 'bottom-0' : 'rounded-4xl p-6 justify-center'} `}
                 >
-                <svg 
-                    xmlns="http://www.w3.org/2000/svg" 
-                    height="1.5rem" 
-                    viewBox="0 -960 960 960" 
-                    width="1.5rem" 
-                    className={`${cardClicked.validation && !isClosing? 'mt-8' : 'hidden'}`}
-                    onClick={onClose}
-                    fill="#fff">
-                        <path d="M640-80 240-480l400-400 71 71-329 329 329 329-71 71Z"/>
-                </svg>
-                <img 
-                    src={image} 
-                    alt="Austronaut logo" 
-                    className='w-16' 
-                />
-                <h2 className='text-white text-xl font-semibold'>{title}</h2>
-                <p className='text-white text-sm'>{desc.length > 300 && !cardClicked.validation? `${descCut}...` : desc}</p>
-                <div className='flex items-center gap-2'>
-                    {
-                        tecnologies.map((tecnology, index) => {
+                
+                
+                <AnimatePresence>
+                   {
+                    animationFirstDiv?
+                        <motion.div 
+                            initial={{opacity: 0}}
+                            animate={{opacity: 1}}
+                            exit={{opacity: 0}}
+                            transition={{duration: 0.4, ease: 'easeInOut'}}
+                            className='flex flex-col gap-3'
+                        >
+                            <img 
+                                src={image} 
+                                alt="Austronaut logo" 
+                                className='w-16' 
+                            />
+                            <h2 className='text-white text-xl font-semibold'>{title}</h2>
+                            <p className='text-white text-sm'>{desc.length > 300 && !cardClicked.validation? `${descCut}...` : desc}</p>
+                            <div className='flex items-center gap-2'>
+                                {
+                                    tecnologies.map((tecnology, index) => {
 
-                            const bgColor = getBgColor(tecnology);
+                                        const bgColor = getBgColor(tecnology);
 
-                            return(
-                                <span
-                                    key={index} 
-                                    className={`py-1 px-2 rounded-xl ${bgColor} text-white text-xs `}
+                                        return(
+                                            <span
+                                                key={index} 
+                                                className={`py-1 px-2 rounded-xl ${bgColor} text-white text-xs `}
+                                        
+                                            >
+                                                {tecnology}
+                                            </span>
+                                        )
+                                        
+                                    })
+                                }
+                            </div>
+
+                            <span 
+                                className={`${cardClicked.validation? 'hidden' : 'text-blue-500 p-1 hover:underline cursor-none'}`}
+                                onClick={handleCardClicked}
+                            >
+                                See more →
+                            </span>
+                        </motion.div>
+
+                        :
+
+                        animationSecondDiv &&
+
+                        <>
+
                             
+                            <motion.svg 
+                                xmlns="http://www.w3.org/2000/svg" 
+                                height="1.5rem" 
+                                viewBox="0 -960 960 960" 
+                                width="1.5rem" 
+                                initial={{opacity: 0}}
+                                animate={{opacity: 1}}
+                                exit={{opacity: 0}}
+                                transition={{duration: 0.4, ease: 'easeInOut'}}
+                                className='mt-8'
+                                onClick={onClose}
+                                fill="#fff">
+                                    <path d="M640-80 240-480l400-400 71 71-329 329 329 329-71 71Z"/>
+                            </motion.svg>
+                        
+                            <motion.div 
+                                initial={{opacity: 0}}
+                                animate={{opacity: 1}}
+                                exit={{opacity: 0}}
+                                transition={{duration: 0.4, ease: 'easeInOut'}}
+                                className='flex flex-col gap-3'
+                            >
+                                <img 
+                                    src={image} 
+                                    alt="Austronaut logo" 
+                                    className='w-20' 
+                                />
+                                <h2 className='text-white text-xl font-semibold'>{title}</h2>
+                                <p className='text-white text-sm'>{desc}</p>
+                                <div className='flex items-center gap-2'>
+                                    {
+                                        tecnologies.map((tecnology, index) => {
+
+                                            const bgColor = getBgColor(tecnology);
+
+                                            return(
+                                                <span
+                                                    key={index} 
+                                                    className={`py-1 px-2 rounded-xl ${bgColor} text-white text-xs `}
+                                            
+                                                >
+                                                    {tecnology}
+                                                </span>
+                                            )
+                                            
+                                        })
+                                    }
+                                </div>
+
+                                <span 
+                                    className={`${cardClicked.validation? 'hidden' : 'text-blue-500 p-1 hover:underline cursor-none'}`}
+                                    onClick={() => setCardClicked({validation: true, card: title})}
                                 >
-                                    {tecnology}
+                                    See more →
                                 </span>
-                            )
-                            
-                        })
-                    }
-                </div>
+                            </motion.div>
+                        </>
+                   }
+                </AnimatePresence>
 
-                <span 
-                    className={`${cardClicked.validation? 'hidden' : 'text-blue-500 p-1 hover:underline cursor-none'}`}
-                    onClick={() => setCardClicked({validation: true, card: title})}
-                >
-                    See more →
-                </span>
                 
 
             </motion.div>
