@@ -64,7 +64,7 @@ export const ProjectCard = ({image, title, tecnologies, desc}) => {
                 height="1.5rem" 
                 viewBox="0 -960 960 960" 
                 width="1.5rem" 
-                className={`${cardClicked.validation? 'mt-8' : 'hidden'}`}
+                className={`${cardClicked.validation && !isClosing? 'mt-8' : 'hidden'}`}
                 onClick={onClose}
                 fill="#fff">
                     <path d="M640-80 240-480l400-400 71 71-329 329 329 329-71 71Z"/>
