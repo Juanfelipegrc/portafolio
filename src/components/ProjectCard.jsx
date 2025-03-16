@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import * as motion from 'motion/react-client'
 import { Link } from 'react-router';
 import { AnimatePresence } from 'motion/react';
@@ -71,6 +71,17 @@ export const ProjectCard = ({image, title, tecnologies, desc}) => {
 
        return bgColor;
     }
+
+
+    useEffect(() => {
+        if(cardClicked.validation){
+            document.body.classList.add('overflow-hidden')
+        } else {
+            document.body.classList.remove('overflow-hidden')
+        }
+    }, [cardClicked])
+    
+
 
   return (
     <>
