@@ -86,7 +86,7 @@ export const ProjectCard = ({image, title, tecnologies, desc}) => {
   return (
     <>
     
-        <div className='col-span-12 md:col-span-4 lg:col-span-4 min-h-[22rem] max-h-[25rem] sm:min-h-[20rem] sm:max-h-[20rem] md:min-h-[28rem] md:max-h-[33rem] lg:min-h-[22.5rem] lg:max-h-[27rem]'>
+        <div className='col-span-12 md:col-span-4 lg:col-span-4 min-h-[25rem] max-h-[25rem] sm:min-h-[20rem] sm:max-h-[20rem] md:min-h-[28rem] md:max-h-[33rem] lg:min-h-[22.5rem] lg:max-h-[27rem]'>
             <motion.div
                     layout
                     transition={{
