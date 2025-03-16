@@ -96,11 +96,16 @@ export const ProjectCard = ({image, title, tecnologies, desc}) => {
                             transition={{duration: 0.4, ease: 'easeInOut'}}
                             className='flex flex-col gap-3'
                         >
-                            <img 
-                                src={image} 
-                                alt="Austronaut logo" 
-                                className='w-16' 
-                            />
+                            <div className='w-16 h-16'>
+                                <motion.img 
+                                    src={image} 
+                                    alt="Austronaut logo" 
+                                    initial={{opacity: 0}}
+                                    animate={{opacity: 1}}
+                                    transition={{duration: 0.2, ease: 'easeInOut'}}
+                                    className='w-16 h-16' 
+                                />
+                            </div>
                             <h2 className='text-white text-xl font-semibold'>{title}</h2>
                             <p className='text-white text-sm'>{desc.length > 300 && !cardClicked.validation? `${descCut}...` : desc}</p>
                             <div className='flex items-center gap-2'>
@@ -149,7 +154,7 @@ export const ProjectCard = ({image, title, tecnologies, desc}) => {
                                 animate={{opacity: 1}}
                                 exit={{opacity: 0}}
                                 transition={{duration: 0.4, ease: 'easeInOut'}}
-                                className='mt-8'
+                                className='my-8'
                                 onClick={onClose}
                                 fill="#fff">
                                     <path d="M640-80 240-480l400-400 71 71-329 329 329 329-71 71Z"/>
@@ -162,11 +167,16 @@ export const ProjectCard = ({image, title, tecnologies, desc}) => {
                                 transition={{duration: 0.4, ease: 'easeInOut'}}
                                 className='flex flex-col gap-3'
                             >
-                                <img 
-                                    src={image} 
-                                    alt="Austronaut logo" 
-                                    className='w-20' 
-                                />
+                                <div className='w-16 h-16'>
+                                    <motion.img 
+                                        src={image} 
+                                        alt="Austronaut logo" 
+                                        initial={{opacity: 0}}
+                                        animate={{opacity: 1}}
+                                        transition={{duration: 0.2, ease: 'easeInOut'}}
+                                        className='w-16 h-16' 
+                                    />
+                                </div>
                                 <h2 className='text-white text-xl font-semibold'>{title}</h2>
                                 <p className='text-white text-sm'>{desc}</p>
                                 <div className='flex items-center gap-2'>
