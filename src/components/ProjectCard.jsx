@@ -41,7 +41,7 @@ export const ProjectCard = ({image, title, tecnologies, desc}) => {
         }, 800);
     }
 
-    console.log(cardClicked)
+
 
 
     const getBgColor = (tecnology) => {
