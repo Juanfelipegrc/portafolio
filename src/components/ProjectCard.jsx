@@ -92,7 +92,7 @@ export const ProjectCard = ({image, title, tecnologies, desc}) => {
                     transition={{
                         layout: { duration: 0.2, ease: 'easeInOut' }
                     }}
-                    className={`bg-neutral-900 flex flex-col h-full ${cardClicked.validation && cardClicked.card === title && !isClosing? 'fixed top-0 left-0 w-screen h-screen z-[1000] rounded-none p-10' : isClosing? 'bottom-0 rounded-4xl' : 'rounded-4xl p-6 justify-center'} `}
+                    className={`bg-neutral-900 flex flex-col h-full ${cardClicked.validation && cardClicked.card === title && !isClosing? 'fixed top-0 left-0 w-screen h-screen z-[1000] rounded-none p-10 overflow-y-auto' : isClosing? 'bottom-0 rounded-4xl' : 'rounded-4xl p-6 justify-center'} `}
                 >
                 
                 
@@ -165,7 +165,7 @@ export const ProjectCard = ({image, title, tecnologies, desc}) => {
                                 animate={{opacity: 1}}
                                 exit={{opacity: 0}}
                                 transition={{duration: 0.4, ease: 'easeInOut'}}
-                                className='my-8'
+                                className=' absolute top-4 left-5 my-8'
                                 onClick={onClose}
                                 fill="#fff">
                                     <path d="M640-80 240-480l400-400 71 71-329 329 329 329-71 71Z"/>
@@ -176,7 +176,7 @@ export const ProjectCard = ({image, title, tecnologies, desc}) => {
                                 animate={{opacity: 1}}
                                 exit={{opacity: 0}}
                                 transition={{duration: 0.4, ease: 'easeInOut'}}
-                                className='flex flex-col gap-3'
+                                className='flex flex-col gap-3 mt-11'
                             >
                                 <div className='w-16 h-16'>
                                     <motion.img 
