@@ -155,21 +155,26 @@ export const ProjectCard = ({image, title, tecnologies, desc}) => {
 
                         <>
 
-                            
-                            <motion.svg 
-                                xmlns="http://www.w3.org/2000/svg" 
-                                height="1.5rem" 
-                                viewBox="0 -960 960 960" 
-                                width="1.5rem" 
+                            <motion.div
                                 initial={{opacity: 0}}
                                 animate={{opacity: 1}}
                                 exit={{opacity: 0}}
                                 transition={{duration: 0.4, ease: 'easeInOut'}}
-                                className=' absolute top-4 left-5 my-8'
                                 onClick={onClose}
-                                fill="#fff">
-                                    <path d="M640-80 240-480l400-400 71 71-329 329 329 329-71 71Z"/>
-                            </motion.svg>
+                                className='absolute top-4 left-5 my-8 p-1'
+                            >
+
+                                <motion.svg 
+                                    xmlns="http://www.w3.org/2000/svg" 
+                                    height="1.5rem" 
+                                    viewBox="0 -960 960 960" 
+                                    width="1.5rem" 
+                                    fill="#fff">
+                                        <path d="M640-80 240-480l400-400 71 71-329 329 329 329-71 71Z"/>
+                                </motion.svg>
+
+                            </motion.div>
+                            
                         
                             <motion.div 
                                 initial={{opacity: 0}}
