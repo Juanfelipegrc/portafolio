@@ -144,28 +144,7 @@ export const Header = () => {
                     </motion.button>
 
 
-                    <motion.button 
-                        onHoverStart={() =>setOption3ButtonHover(true)}
-                        onHoverEnd={() => setOption3ButtonHover(false)}
-                        className='bg-transparent col-span-12 row-span-1 text-white text-[1rem] font-medium flex flex-col justify-center items-center z-[2] cursor-none font-turret-road'
-                    >
-                        <div className={`flex items-center justify-center ${pathname === '/contact'? 'text-blue-300' : '' }`}>
-                            <svg 
-                                xmlns="http://www.w3.org/2000/svg" 
-                                height="1.15rem"
-                                viewBox="0 -960 960 960" 
-                                width="1.15rem" 
-                                fill={pathname === '/contact' ? '#8ec5ff' : '#fff'}
-                            ><path d="M240-400h320v-80H240v80Zm0-120h480v-80H240v80Zm0-120h480v-80H240v80ZM80-80v-720q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H240L80-80Zm126-240h594v-480H160v525l46-45Zm-46 0v-480 480Z"/></svg>
-                            &nbsp;
-                            Contact me
-                        </div>
-                        <motion.hr 
-                            className='bg-white h-[0.2] transition-all'
-                            style={{width: option3ButtonHover || pathname === 'contact'? '100%' : '0%', color: pathname === '/contact'? '#8ec5ff' : '#fff'}}
-
-                        />
-                    </motion.button>
+                    
                 
 
 
@@ -181,7 +160,7 @@ export const Header = () => {
                     <motion.button 
                         onHoverStart={() =>setOption1ButtonHover(true)}
                         onHoverEnd={() => setOption1ButtonHover(false)}
-                        className='bg-transparent md:col-span-3 lg:col-span-2 md:col-start-3 lg:col-start-6 text-white text-[1rem] font-medium flex flex-col justify-center items-center z-[2] cursor-none font-turret-road'
+                        className='bg-transparent md:col-span-3 lg:col-span-2 md:col-start-6 lg:col-start-8 text-white text-[1rem] font-medium flex flex-col justify-center items-center z-[2] cursor-none font-turret-road'
                     >
                         <div className={`flex items-center justify-center ${pathname === '/'? 'text-blue-300' : '' }`}>
                             <svg 
@@ -228,28 +207,6 @@ export const Header = () => {
                     </motion.button>
 
 
-                    <motion.button 
-                        onHoverStart={() =>setOption3ButtonHover(true)}
-                        onHoverEnd={() => setOption3ButtonHover(false)}
-                        className='bg-transparent md:col-span-3 lg:col-span-2 text-white text-[1rem] font-medium flex flex-col justify-center items-center z-[2] cursor-none font-turret-road'
-                    >
-                        <div className={`flex items-center justify-center ${pathname === '/contact'? 'text-blue-300' : '' }`}>
-                            <svg 
-                                xmlns="http://www.w3.org/2000/svg" 
-                                height="1.15rem"
-                                viewBox="0 -960 960 960" 
-                                width="1.15rem" 
-                                fill={pathname === '/contact' ? '#8ec5ff' : '#fff'}
-                            ><path d="M240-400h320v-80H240v80Zm0-120h480v-80H240v80Zm0-120h480v-80H240v80ZM80-80v-720q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H240L80-80Zm126-240h594v-480H160v525l46-45Zm-46 0v-480 480Z"/></svg>
-                            &nbsp;
-                            Contact me
-                        </div>
-                        <motion.hr 
-                            className='bg-white h-[0.2] transition-all'
-                            style={{width: option3ButtonHover || pathname === 'contact'? '100%' : '0%', color: pathname === '/contact'? '#8ec5ff' : '#fff'}}
-
-                        />
-                    </motion.button>
                 
 
 
