@@ -9,4 +9,4 @@ export {default as ReactRouter} from './react-router-logo.png';
 export {default as ReduxLogo} from './redux-logo.png';
 export {default as TailwindCSS} from './tailwind-css-logo.png';
 export {default as MotionLogo} from './motion-logo.png'
-export {default as Noise} from './noise.png';
+export {default as GifExpertAppLogo} from './gif-expert-app-logo.png';

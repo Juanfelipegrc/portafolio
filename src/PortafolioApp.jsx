@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { Outlet } from 'react-router'
 import { Cursor, Header } from './components'
-import { Noise } from './assets';
 
 export const PortafolioApp = () => {
   

@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router';
 import { useAnimations } from '../hooks/useAnimations';
 import { projects } from '../data/projects';
 import { ProjectCard } from '../components';
+import { AnimatePresence } from 'motion/react';
 
 
 export const HomePage = () => {
@@ -12,10 +13,10 @@ export const HomePage = () => {
     const [animateExit, setAnimateExit] = useState(false);
     const [showMore, setShowMore] = useState(false);
     const {lastPage, onSetLastPage, screenWidth} = useAnimations();
+    const [cutProjects, setCutProjects] = useState(projects);
 
     const navigate = useNavigate();
 
-    const projectsCut = projects.slice(0, 4);
 
     const onSetAnimateExit = (page) => {
         setAnimateExit(true);
@@ -34,7 +35,32 @@ export const HomePage = () => {
             }
         }
 
-    }, [])
+    }, []);
+
+    useEffect(() => {
+      
+        if(screenWidth <= 768){
+            setCutProjects(projects.slice(0, 4));
+        } else {
+            setCutProjects(projects.slice(0, 5));
+        }
+
+    }, [screenWidth]);
+
+    useEffect(() => {
+      
+        if(showMore){
+            setTimeout(() => {
+                setCutProjects(projects)
+            }, 300);
+        }
+
+    }, [showMore])
+    
+
+
+
+    
     
 
     
@@ -77,7 +103,7 @@ export const HomePage = () => {
 
 
                     <div className='col-span-12 flex items-center justify-center mt-3.5'>
-                        <button className='bg-blue-400 flex items-center justify-center px-3 py-2 rounded-full cursor-none'>
+                        <button className='bg-blue-400 flex items-center justify-center px-3 py-2 rounded-full cursor-none hover:scale-105 transition-all duration-200'>
                             <svg 
                                     xmlns="http://www.w3.org/2000/svg" 
                                     height="1.2rem"
@@ -108,7 +134,7 @@ export const HomePage = () => {
                 <div className='grid grid-cols-12 gap-6 p-6 sm:p-4 md:p-2 lg:p-8 mt-3'>
                     
                     {
-                        projectsCut.map((project, index) => (
+                        cutProjects.map((project, index) => (
                             <ProjectCard 
                                 key={index} 
                                 image={project.logo} 
@@ -121,23 +147,43 @@ export const HomePage = () => {
                     
                 </div>
 
-                <div className='absolute bottom-0 w-full h-[17rem] sm:h-[15rem] md:h-[20rem] lg:h-[25rem] bg-gradient-to-b from-transparent via-black to-black pointer-events-none blur-md'></div>
+                <AnimatePresence>
 
-                <div className='w-full absolute bottom-20 sm:bottom-16 md:bottom-20 lg:bottom-36 flex justify-center items-center z-10'>
-                    <button className='bg-blue-400 flex items-center justify-center px-3 py-2 rounded-full cursor-none'>
-                        <span className='text-white text-[1.1rem] font-light'>See More</span>
-                        &nbsp;
-                        <svg 
-                            xmlns="http://www.w3.org/2000/svg" 
-                            height="1.2rem"
-                            className='mt-[2px]'
-                            viewBox="0 -960 960 960" 
-                            width="1.2rem" 
-                            fill="#fff"
-                        ><path d="M480-320q75 0 127.5-52.5T660-500q0-75-52.5-127.5T480-680q-75 0-127.5 52.5T300-500q0 75 52.5 127.5T480-320Zm0-72q-45 0-76.5-31.5T372-500q0-45 31.5-76.5T480-608q45 0 76.5 31.5T588-500q0 45-31.5 76.5T480-392Zm0 192q-146 0-266-81.5T40-500q54-137 174-218.5T480-800q146 0 266 81.5T920-500q-54 137-174 218.5T480-200Zm0-300Zm0 220q113 0 207.5-59.5T832-500q-50-101-144.5-160.5T480-720q-113 0-207.5 59.5T128-500q50 101 144.5 160.5T480-280Z"/></svg>
+                   {
+                        !showMore && 
+                                <motion.div
+                                    initial={{y: 0, opacity: 1}}
+                                    exit={{y: 500, opacity: 0}}
+                                    transition={{duration: 0.6, ease: 'easeInOut'}}
+                                    className='w-screen'
+                                >
+                                <div className='absolute bottom-0 w-full h-[17rem] sm:h-[15rem] md:h-[20rem] lg:h-[25rem] bg-gradient-to-b from-transparent via-black to-black pointer-events-none blur-md'></div>
 
-                    </button>
-                </div>
+                                <div className='w-full absolute bottom-20 sm:bottom-16 md:bottom-20 lg:bottom-36 flex justify-center items-center z-10'>
+                                    <button 
+                                        className='bg-blue-400 flex items-center justify-center px-3 py-2 rounded-full cursor-none hover:scale-105 transition-all duration-200'
+                                        onClick={() => setShowMore(true)}
+                                    >
+                                        <span className='text-white text-[1.1rem] font-light'>See More</span>
+                                        &nbsp;
+                                        <svg 
+                                            xmlns="http://www.w3.org/2000/svg" 
+                                            height="1.2rem"
+                                            className='mt-[2px]'
+                                            viewBox="0 -960 960 960" 
+                                            width="1.2rem" 
+                                            fill="#fff"
+                                        ><path d="M480-320q75 0 127.5-52.5T660-500q0-75-52.5-127.5T480-680q-75 0-127.5 52.5T300-500q0 75 52.5 127.5T480-320Zm0-72q-45 0-76.5-31.5T372-500q0-45 31.5-76.5T480-608q45 0 76.5 31.5T588-500q0 45-31.5 76.5T480-392Zm0 192q-146 0-266-81.5T40-500q54-137 174-218.5T480-800q146 0 266 81.5T920-500q-54 137-174 218.5T480-200Zm0-300Zm0 220q113 0 207.5-59.5T832-500q-50-101-144.5-160.5T480-720q-113 0-207.5 59.5T128-500q50 101 144.5 160.5T480-280Z"/></svg>
+
+                                    </button>
+                                </div>
+
+                            </motion.div>
+                    }
+
+                </AnimatePresence>
+
+                
 
 
             </div>

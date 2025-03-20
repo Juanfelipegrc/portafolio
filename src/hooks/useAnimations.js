@@ -16,11 +16,14 @@ export const useAnimations = () => {
     useEffect(() => {
         
 
+        const handleResize = () => {
+            setScreenWidth(window.innerWidth);
+        }
       
-        window.addEventListener('resize', setScreenWidth(window.innerWidth));
+        window.addEventListener('resize', handleResize);
 
         return () => {
-            window.removeEventListener('resize', setScreenWidth(window.innerWidth));
+            window.removeEventListener('resize', handleResize);
         }
 
     }, [window.innerWidth]);

@@ -1,4 +1,4 @@
-import { AustronautLogo, DishoLogo, HiAppLogo, NotesAppLogo } from "../assets"
+import { AustronautLogo, DishoLogo, GifExpertAppLogo, HiAppLogo, NotesAppLogo } from "../assets"
 
 export const projects = [
     {
@@ -70,6 +70,34 @@ export const projects = [
         video: '',
         linkGH: '',
         linkN: 'https://notes-app-react-js-firebase-firestore.netlify.app/',
+    },
+
+    {
+        name: 'Gif Expert App',
+        desc: `The GIF Expert App is a modern web application designed to search and display animated GIFs in a fast and responsive interface. Built with React.js, the app seamlessly integrates with the Giphy API to deliver real-time search results and a smooth user experience.
+
+        Key Features:
+
+        - Real-time GIF search functionality
+        - Ability to add and manage custom categories
+        - Fast rendering using reusable React components
+        - Responsive grid layout for displaying GIFs
+        - Lazy loading for optimized performance
+        - Clean and intuitive user interface
+        
+        Tech Stack:
+
+        - React.js
+        - JavaScript (ES6+)
+        - CSS Modules or Tailwind CSS
+        - Giphy API
+        - Vite.js for optimized development and build speed
+        The GIF Expert App is a great example of component-based architecture, asynchronous data handling, and responsive design. It's an ideal project to demonstrate proficiency in modern front-end development.`,
+        logo: GifExpertAppLogo,
+        tecnologies: ['React', 'JS', 'CSS'],
+        video: '',
+        linkGH: '',
+        linkN: 'https://gif-expert-app-react-js.netlify.app/',
     },
 
 ]
