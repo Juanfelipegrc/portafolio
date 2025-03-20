@@ -121,9 +121,9 @@ export const HomePage = () => {
                     
                 </div>
 
-                <div className='absolute bottom-0 w-full h-[17rem] sm:h-[15rem] md:h-[20rem] lg:h-[20rem] bg-gradient-to-b from-transparent via-black to-black pointer-events-none blur-md'></div>
+                <div className='absolute bottom-0 w-full h-[17rem] sm:h-[15rem] md:h-[20rem] lg:h-[25rem] bg-gradient-to-b from-transparent via-black to-black pointer-events-none blur-md'></div>
 
-                <div className='w-full absolute bottom-20 sm:bottom-16 md:bottom-20 lg:bottom-28 flex justify-center items-center z-10'>
+                <div className='w-full absolute bottom-20 sm:bottom-16 md:bottom-20 lg:bottom-36 flex justify-center items-center z-10'>
                     <button className='bg-blue-400 flex items-center justify-center px-3 py-2 rounded-full cursor-none'>
                         <span className='text-white text-[1.1rem] font-light'>See More</span>
                         &nbsp;
