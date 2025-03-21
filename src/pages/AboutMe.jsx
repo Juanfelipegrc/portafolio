@@ -127,13 +127,13 @@ export const AboutMe = () => {
 
               <div className='mt-6 flex justify-start items-center gap-6'>
 
-                <button className='w-[40%] py-2.5 rounded-md text-white border border-white'>
+                <button className='w-[40%] cursor-none py-2.5 rounded-md text-white border border-white'>
 
                   GitHub
 
                 </button>
 
-                <button className='w-[40%] py-2.5 rounded-md bg-blue-400 text-white'>
+                <button className='w-[40%] cursor-none py-2.5 rounded-md bg-blue-400 text-white'>
 
                   Projects 
 
