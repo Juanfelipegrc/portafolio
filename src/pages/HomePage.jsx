@@ -194,8 +194,8 @@ export const HomePage = () => {
 
 
             <section id="contact" className="w-full px-4 sm:px-6 md:px-12 lg:px-24 py-16 bg-black mt-16 md:mt-32 lg:mt-36">
-                <div className="max-w-7xl lg:h-[26rem] mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
-                    <div className="w-full flex flex-col justify-center">
+                <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div className="w-full h-[28rem] sm:h-[27rem] md:h-[26rem] lg:h-[26rem] flex flex-col justify-center">
                     
                     <ContactForm />
                     </div>
