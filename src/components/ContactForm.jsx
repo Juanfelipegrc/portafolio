@@ -46,7 +46,7 @@ export const ContactForm = () => {
                 >
                 
                     <div className='w-full flex justify-center mb-3'>
-                        <h2 className='text-center text-white text-4xl font-medium'> 
+                        <h2 className='text-center text-white text-3xl sm:text-4xl md:text-4xl lg:text-4xl font-medium'> 
                         Can <span className='text-blue-300'> Contact </span>Me By Email</h2>
                     </div>
 

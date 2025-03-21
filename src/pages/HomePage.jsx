@@ -193,10 +193,10 @@ export const HomePage = () => {
             {/* CONTACT ME */}
 
 
-            <div className='grid w-full min-h-[29rem] grid-cols-12 p-6 mt-16 md:mt-32 lg:mt-36'>
+            <div className='grid w-full min-h-[29rem] max-h-[35rem] grid-cols-12 p-6 mt-16 md:mt-32 lg:mt-36'>
 
-                <div className='col-span-12 md:col-span-6 lg:col-span-6 flex justify-center gap-10 md:gap-0 lg:gap-0'>
-                    <div className='w-full flex flex-col items-center p-2.5 md:p-4 lg:p-4'>
+                <div className='col-span-12 h-full md:col-span-6 lg:col-span-6 flex justify-center gap-10 md:gap-0 lg:gap-0'>
+                    <div className='w-full h-full flex flex-col items-center p-2.5 md:p-4 lg:p-4'>
 
 
                         <ContactForm/>
