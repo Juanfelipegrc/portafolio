@@ -4,7 +4,7 @@ import { PrincipalProfilePicture } from '../assets';
 import { useNavigate } from 'react-router';
 import { useAnimations } from '../hooks/useAnimations';
 import { projects } from '../data/projects';
-import { ProjectCard } from '../components';
+import { ContactForm, ProjectCard } from '../components';
 import { AnimatePresence } from 'motion/react';
 
 
@@ -159,7 +159,7 @@ export const HomePage = () => {
                                 >
                                 <div className='absolute bottom-0 w-full h-[17rem] sm:h-[15rem] md:h-[20rem] lg:h-[25rem] bg-gradient-to-b from-transparent via-black to-black pointer-events-none blur-md'></div>
 
-                                <div className='w-full absolute bottom-20 sm:bottom-16 md:bottom-20 lg:bottom-36 flex justify-center items-center z-10'>
+                                <div className='w-full absolute bottom-20 sm:bottom-16 md:bottom-20 lg:bottom-36 flex justify-center items-center z-[9]'>
                                     <button 
                                         className='bg-blue-400 flex items-center justify-center px-3 py-2 rounded-full cursor-none hover:scale-105 transition-all duration-200'
                                         onClick={() => setShowMore(true)}
@@ -193,11 +193,19 @@ export const HomePage = () => {
             {/* CONTACT ME */}
 
 
-            <div className='grid grid-cols-12 p-6'>
-                <div className='col-span-12 flex justify-center'>
-                    <h2 className='text-center text-white text-4xl font-medium'> 
-                    <span className='text-blue-300'>Contact </span>Me</h2>
+            <div className='grid w-full min-h-[29rem] grid-cols-12 p-6 mt-16 md:mt-32 lg:mt-36'>
+
+                <div className='col-span-12 md:col-span-6 lg:col-span-6 flex justify-center gap-10 md:gap-0 lg:gap-0'>
+                    <div className='w-full flex flex-col items-center p-2.5 md:p-4 lg:p-4'>
+
+
+                        <ContactForm/>
+
+                    </div>
                 </div>
+                    <div className='col-span-12 md:col-span-6 lg:col-span-6 h-full items-center hidden sm:hidden md:flex lg:flex'>
+                        <h2 className='text-white text-4xl font-medium text-center w-full'>I'll answer all your dudes</h2>
+                    </div>
             </div>
 
         </div>

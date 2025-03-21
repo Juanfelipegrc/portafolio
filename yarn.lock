@@ -349,6 +349,22 @@
     "@eslint/core" "^0.12.0"
     levn "^0.4.1"
 
+"@formspree/core@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@formspree/core/-/core-4.0.0.tgz#3425bdcbcf8669c1540f66adc9158adcb075096d"
+  integrity sha512-geNlUut5nME1Ztej5Pzx1BrlQ1fFIcJYIqmF+Vm0jaUbpZxjXvt7SDOGeQVkuxn80QJiIHlwBGGjSBFjPX/KDw==
+  dependencies:
+    "@stripe/stripe-js" "^5.7.0"
+
+"@formspree/react@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@formspree/react/-/react-3.0.0.tgz#9d8cc5cb5c7ef18f0606dbc9415d8c3d21425467"
+  integrity sha512-8PufBZ4l13VmCp9xTGQXwyF6mZtYSecqgTlFuMo5Fbe4Q6zUk7PMU2uKOwIaytZyTyJgFVCvdbpQElPPBKYNLw==
+  dependencies:
+    "@formspree/core" "^4.0.0"
+    "@stripe/react-stripe-js" "^3.1.1"
+    "@stripe/stripe-js" "^5.7.0"
+
 "@humanfs/core@^0.19.1":
   version "0.19.1"
   resolved "https://registry.yarnpkg.com/@humanfs/core/-/core-0.19.1.tgz#17c55ca7d426733fe3c561906b8173c336b40a77"
@@ -513,6 +529,18 @@
   version "4.34.9"
   resolved "https://registry.yarnpkg.com/@rollup/rollup-win32-x64-msvc/-/rollup-win32-x64-msvc-4.34.9.tgz#1973871850856ae72bc678aeb066ab952330e923"
   integrity sha512-AyleYRPU7+rgkMWbEh71fQlrzRfeP6SyMnRf9XX4fCdDPAJumdSBqYEcWPMzVQ4ScAl7E4oFfK0GUVn77xSwbw==
+
+"@stripe/react-stripe-js@^3.1.1":
+  version "3.5.1"
+  resolved "https://registry.yarnpkg.com/@stripe/react-stripe-js/-/react-stripe-js-3.5.1.tgz#cee4503dcd86f798ede4287526afc311d6c8a79f"
+  integrity sha512-MFZ69qz70T0srU9nsPhQHFNbOxfL4fb9fokHKqJy0S6X53D8KJXD23iiKWGmLasMeqXNzBqLnuziE72QszeRLw==
+  dependencies:
+    prop-types "^15.7.2"
+
+"@stripe/stripe-js@^5.7.0":
+  version "5.10.0"
+  resolved "https://registry.yarnpkg.com/@stripe/stripe-js/-/stripe-js-5.10.0.tgz#4d1fcf8c59530865fcd59ce910798cc9c973a870"
+  integrity sha512-PTigkxMdMUP6B5ISS7jMqJAKhgrhZwjprDqR1eATtFfh0OpKVNp110xiH+goeVdrJ29/4LeZJR4FaHHWstsu0A==
 
 "@tailwindcss/node@4.0.9":
   version "4.0.9"
