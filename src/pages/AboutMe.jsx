@@ -100,7 +100,7 @@ export const AboutMe = () => {
                   />
                 </div>
 
-                <div className='w-full h-full p-4'>
+                <div className='w-full h-full px-5 py-6'>
                   <img 
                     src={TailwindCSS} 
                     alt="Tailwind CSS Logo" 
@@ -127,17 +127,26 @@ export const AboutMe = () => {
 
               <div className='mt-6 flex justify-start items-center gap-6'>
 
-                <button className='w-[40%] cursor-none py-2.5 rounded-md text-white border border-white'>
+                <a 
+                  className='w-[40%] flex justify-center items-center cursor-none py-2.5 rounded-md text-white border border-white'
+                  href='https://github.com/Juanfelipegrc'
+                  target='_blank'
+
+                  >
 
                   GitHub
 
-                </button>
+                </a>
 
-                <button className='w-[40%] cursor-none py-2.5 rounded-md bg-blue-400 text-white'>
+                <a 
+                  className='w-[40%] flex justify-center items-center cursor-none py-2.5 rounded-md bg-blue-400 text-white'
+                  href='https://linktr.ee/juanfelipegrcrjs'
+                  target='_blank'
+                >
 
-                  Projects 
+                  Projects Links
 
-                </button>
+                </a>
 
               </div>
 
