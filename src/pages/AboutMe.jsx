@@ -128,7 +128,7 @@ export const AboutMe = () => {
               <div className='mt-6 flex justify-start items-center gap-6'>
 
                 <a 
-                  className='w-[40%] flex justify-center items-center cursor-none py-2.5 rounded-md text-white border border-white'
+                  className='w-[40%] flex justify-center items-center cursor-none py-2.5 rounded-md text-white border border-white hover:scale-105 duration-200'
                   href='https://github.com/Juanfelipegrc'
                   target='_blank'
 
@@ -139,7 +139,7 @@ export const AboutMe = () => {
                 </a>
 
                 <a 
-                  className='w-[40%] flex justify-center items-center cursor-none py-2.5 rounded-md bg-blue-400 text-white'
+                  className='w-[40%] flex justify-center items-center cursor-none py-2.5 rounded-md bg-blue-400 text-white hover:scale-105 duration-200'
                   href='https://linktr.ee/juanfelipegrcrjs'
                   target='_blank'
                 >
