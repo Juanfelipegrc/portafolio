@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import * as motion from 'motion/react-client'
 import { useNavigate } from 'react-router';
-import { PrincipalProfilePicture } from '../assets';
+import { BootstrapLogo, MotionLogo, PrincipalProfilePicture, ReactLogo, ReactRouter, ReduxLogo, TailwindCSS } from '../assets';
 import { useAnimations } from '../hooks/useAnimations';
 
 export const AboutMe = () => {
@@ -42,53 +42,113 @@ export const AboutMe = () => {
   return (
     <>
     
-        <motion.div 
-          className="flex w-full min-h-screen flex-col"
-          initial={{x:1000, y:-1000}}
-          animate={animateExit? {x:1000, y:-1000} : {x:0, y:0}}
-          transition={{duration: 1, ease: 'easeInOut'}}
-        >
+      <div className='bg-black w-full pt-[10rem]'>
 
-        
+        <div className='flex w-full justify-center'>
+          <div className='grid grid-cols-12 w-full md:w-[80%]  lg:w-[70%]'>
 
-            <div className='w-full flex items-center justify-center relative'>
-                <div 
-                    className='absolute left-2 md:left-8 lg:left-8 z-10 p-3'
-                    onClick={onSetAnimateExit}
-                >
-                    <svg xmlns="http://www.w3.org/2000/svg" height="2rem" viewBox="0 -960 960 960" width="2rem" fill="#fff"><path d="M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z"/></svg>
-                </div>
+            <div className='col-span-12 md:col-span-6 lg:col-span-5 flex justify-center items-center md:items-start lg:items-start'>
 
-                <h1
-                    className='text-[3.20rem] text-center p-9 text-white font-rubik-iso'
-                >
-                    ABOUT ME
-                </h1>
+              <img 
+                src={PrincipalProfilePicture} 
+                alt="Profile Picture" 
+                className='w-[20rem] h-[20rem] rounded-full'
+              />
+
             </div>
+            <div className='col-span-12 md:col-span-6 lg:col-span-7 p-5'>
 
+              <h2 className='text-white text-center md:text-start lg:text-start text-3xl md:text-4xl lg:text-4xl font-medium'>Juan <span className='text-blue-400'>Felipe</span> García Rojas</h2>
+              <p className='text-white text-center md:text-start lg:text-start font-light mt-6'>
 
-            <div className='w-full flex flex-col items-center z-10'>
-              <div className="grid grid-cols-12 w-full md:w-[80%] lg:w-[80%]">
-                <div className="col-span-12 md:col-span-4 lg:col-span-4 flex justify-center md:justify-end lg:justify-end pe-0 md:pe-5 lg:pe-5">
+              I'm a passionate Junior <span className='text-blue-400'>React.js</span> Software Developer from Colombia, dedicated to building modern and responsive web applications. I specialize in React.js and have hands-on experience with a wide range of front-end technologies including Tailwind CSS, Bootstrap, CSS, HTML, JavaScript, React Redux, and React Router. I also have some knowledge of Sass and TypeScript, which I continue to develop as I grow in my career. <br /> <br />
+
+              I enjoy creating clean, efficient, and user-friendly interfaces while constantly learning new tools and technologies to improve my work. I'm driven by the desire to build impactful digital solutions and collaborate with others in innovative development environments.
+
+              </p>
+
+              <br />
+              <br />
+              
+              <h2 className='text-white text-3xl font-medium'>
+                Skills:
+              </h2>
+
+              <div className='grid grid-cols-3 sm:grid-cols-5 md:grid-cols-3 lg:grid-cols-5 gap-5'>
+
+                <div className='w-full h-full'>
                   <img 
-                    src={PrincipalProfilePicture} 
-                    alt="Profile Picture" 
-                    className='w-[20rem] h-[20rem] rounded-full'
+                    src={MotionLogo} 
+                    alt="Motion Logo" 
+                    className='h-full w-full'
                   />
-                </div> 
-                <div className='col-span-12 md:col-span-8 lg:col-span-8 p-4 md:p-7 lg:p-9'>
-                  <h1 className='font-semibold text-white text-3xl md:text-5xl lg:text-5xl text-center md:text-start lg:text-start'>Juan Felipe García Rojas</h1>
-                  <p className='mt-5 text-white text-center md:text-start lg:text-start'>
-                    Hi I'm Juan Felipe García Rojas, i'm <b>FrontEnd</b> software developer expert using React JS, i know how to use HTML, CSS, Javascript, Bootstrap, Tailwind CSS, React Redux, React Router, Motion, Git, a bit of sass, a bit of TypeScript & React JS. <br /> <br />
-                    
-                    I'm from Colombia i love programing, i don't have previus experience working i'm new but i have a few projects made by me for my portafolio so you can take a look them in the projects page, i think i'm a great software developer because i made projects with a lot of logic and a lot of code lines, projects big, i'm looking foward to start working then it would be incredible work with you.
-                  </p>
                 </div>
+
+                <div className='w-full h-full'>
+                  <img 
+                    src={ReactRouter} 
+                    alt="React Router Logo" 
+                    className='h-full w-full'
+                  />
+                </div>
+
+                <div className='w-full h-full p-4'>
+                  <img 
+                    src={ReduxLogo} 
+                    alt="Redux Logo" 
+                    className='h-full w-full'
+                  />
+                </div>
+
+                <div className='w-full h-full p-4'>
+                  <img 
+                    src={TailwindCSS} 
+                    alt="Tailwind CSS Logo" 
+                    className='h-full w-full'
+                  />
+                </div>
+
+                <div className='w-full h-full p-4'>
+                  <img 
+                    src={BootstrapLogo} 
+                    alt="Bootstrap Logo" 
+                    className='h-full w-full'
+                  />
+                </div>
+
               </div>
+
+
+
+
+              <h2 className='text-white text-3xl font-medium my-12'>
+                GitHub & Netlify Projects:
+              </h2>
+
+              <div className='mt-6 flex justify-start items-center gap-6'>
+
+                <button className='w-[40%] py-2.5 rounded-md text-white border border-white'>
+
+                  GitHub
+
+                </button>
+
+                <button className='w-[40%] py-2.5 rounded-md bg-blue-400 text-white'>
+
+                  Projects 
+
+                </button>
+
+              </div>
+
+
             </div>
-            
-        </motion.div>
-    
+
+          </div>
+        </div>
+
+      </div>
+       
     </>
   )
 }

@@ -3,7 +3,7 @@ import { TypeAnimation } from 'react-type-animation'
 import * as motion from 'motion/react-client'
 import { FloatCube } from './FloatCube';
 import { slide as Menu } from 'react-burger-menu';
-import { useLocation } from 'react-router';
+import { useLocation, useNavigate } from 'react-router';
 
 export const Header = () => {
 
@@ -11,8 +11,10 @@ export const Header = () => {
 
     const [option1ButtonHover, setOption1ButtonHover] = useState(false);
     const [option2ButtonHover, setOption2ButtonHover] = useState(false);
-    const [option3ButtonHover, setOption3ButtonHover] = useState(false);
     const [headerIsOpen, setHeaderIsOpen] = useState(false);
+
+    const navigate = useNavigate();
+
 
     const {pathname} = useLocation();
 
@@ -32,6 +34,7 @@ export const Header = () => {
     }, []);
 
     
+
 
 
     
@@ -97,6 +100,7 @@ export const Header = () => {
                     <motion.button 
                         onHoverStart={() =>setOption1ButtonHover(true)}
                         onHoverEnd={() => setOption1ButtonHover(false)}
+                        onClick={() => navigate('/')}
                         className='bg-transparent col-span-12 row-span-1 text-white text-[1rem] font-medium flex flex-col justify-center items-center z-[2] cursor-none font-turret-road'
                     >
                         <div className={`flex items-center justify-center ${pathname === '/'? 'text-blue-300' : '' }`}>
@@ -122,6 +126,7 @@ export const Header = () => {
                     <motion.button 
                         onHoverStart={() =>setOption2ButtonHover(true)}
                         onHoverEnd={() => setOption2ButtonHover(false)}
+                        onClick={() => navigate('/about-me')}
                         className='bg-transparent col-span-12 row-span-1 text-white text-[1rem] font-medium flex flex-col justify-center items-center z-[2] cursor-none font-turret-road'
                     >
                         <div className={`flex items-center justify-center ${pathname === '/about-me'? 'text-blue-300' : '' }`}>
@@ -138,7 +143,7 @@ export const Header = () => {
                         </div>
                         <motion.hr 
                             className='bg-white h-[0.2] transition-all'
-                            style={{width: option2ButtonHover || pathname === 'about-me'? '100%' : '0%', color: pathname === '/about-me'? '#8ec5ff' : '#fff'}}
+                            style={{width: option2ButtonHover || pathname === '/about-me'? '100%' : '0%', color: pathname === '/about-me'? '#8ec5ff' : '#fff'}}
 
                         />
                     </motion.button>
@@ -160,6 +165,7 @@ export const Header = () => {
                     <motion.button 
                         onHoverStart={() =>setOption1ButtonHover(true)}
                         onHoverEnd={() => setOption1ButtonHover(false)}
+                        onClick={() => navigate('/')}
                         className='bg-transparent md:col-span-3 lg:col-span-2 md:col-start-6 lg:col-start-8 text-white text-[1rem] font-medium flex flex-col justify-center items-center z-[2] cursor-none font-turret-road'
                     >
                         <div className={`flex items-center justify-center ${pathname === '/'? 'text-blue-300' : '' }`}>
@@ -185,6 +191,7 @@ export const Header = () => {
                     <motion.button 
                         onHoverStart={() =>setOption2ButtonHover(true)}
                         onHoverEnd={() => setOption2ButtonHover(false)}
+                        onClick={() => navigate('/about-me')}
                         className='bg-transparent md:col-span-3 lg:col-span-2 text-white text-[1rem] font-medium flex flex-col justify-center items-center z-[2] cursor-none font-turret-road'
                     >
                         <div className={`flex items-center justify-center ${pathname === '/about-me'? 'text-blue-300' : '' }`}>
@@ -201,7 +208,7 @@ export const Header = () => {
                         </div>
                         <motion.hr 
                             className='bg-white h-[0.2] transition-all'
-                            style={{width: option2ButtonHover || pathname === 'about-me'? '100%' : '0%', color: pathname === '/about-me'? '#8ec5ff' : '#fff'}}
+                            style={{width: option2ButtonHover || pathname === '/about-me'? '100%' : '0%', color: pathname === '/about-me'? '#8ec5ff' : '#fff'}}
 
                         />
                     </motion.button>
