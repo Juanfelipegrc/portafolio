@@ -193,20 +193,34 @@ export const HomePage = () => {
             {/* CONTACT ME */}
 
 
-            <div className='grid w-full min-h-[29rem] max-h-[35rem] grid-cols-12 p-6 mt-16 md:mt-32 lg:mt-36'>
+            <section id="contact" className="w-full px-4 sm:px-6 md:px-12 lg:px-24 py-16 bg-black mt-16 md:mt-32 lg:mt-36">
+                <div className="max-w-7xl lg:h-[26rem] mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div className="w-full flex flex-col justify-center">
+                    
+                    <ContactForm />
+                    </div>
 
-                <div className='col-span-12 h-full md:col-span-6 lg:col-span-6 flex justify-center gap-10 md:gap-0 lg:gap-0'>
-                    <div className='w-full h-full flex flex-col items-center p-2.5 md:p-4 lg:p-4'>
-
-
-                        <ContactForm/>
-
+                    <div className="w-full flex flex-col justify-center text-white space-y-5 md:pl-10">
+                    <div>
+                        <h3 className="text-2xl font-medium mb-3">Let's <span className='text-blue-400'>Connect</span></h3>
+                        <p className="text-gray-400 mb-5">
+                        If you're interested in working together or just want to say hello, feel free to reach out.
+                        </p>
+                    </div>
+                    <div className="text-base space-y-3">
+                        <p><strong>Email:</strong> felipegarciarjs@gmail.com</p>
+                        <p><strong>Phone:</strong> +57 3162067218</p>
+                        <p>
+                        <strong>WhatsApp:</strong> <a className="text-blue-400 underline" href="https://wa.me/573162067218" target="_blank" rel="noopener noreferrer">Open WhatsApp</a>
+                        </p>
+                        <p>
+                        <strong>GitHub:</strong> <a className="text-blue-400 underline" href="https://github.com/tuusuario" target="_blank" rel="noopener noreferrer">Visit GitHub</a>
+                        </p>
+                    </div>
                     </div>
                 </div>
-                    <div className='col-span-12 md:col-span-6 lg:col-span-6 h-full items-center hidden sm:hidden md:flex lg:flex'>
-                        <h2 className='text-white text-4xl font-medium text-center w-full'>I'll answer all your dudes</h2>
-                    </div>
-            </div>
+            </section>
+
 
         </div>
 

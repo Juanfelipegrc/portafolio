@@ -45,9 +45,8 @@ export const ContactForm = () => {
                     className='w-full'
                 >
                 
-                    <div className='w-full flex justify-center mb-3'>
-                        <h2 className='text-center text-white text-3xl sm:text-4xl md:text-4xl lg:text-4xl font-medium'> 
-                        Can <span className='text-blue-300'> Contact </span>Me By Email</h2>
+                    <div className='w-full flex justify-start mb-3'>
+                        <h2 className='text-start text-white text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-medium'>Contact Me</h2>
                     </div>
 
                     <form 
@@ -93,8 +92,18 @@ export const ContactForm = () => {
                             errors={state.errors}
                             className='text-white'
                         />
-                        <button className='bg-blue-400 text-white px-4 py-2 rounded-4xl cursor-none' type="submit" disabled={state.submitting}>
-                            Submit
+                        <button className='bg-blue-400 text-white text-[1.1rem] px-7 py-2 flex items-center rounded-4xl cursor-none' type="submit" disabled={state.submitting}>
+                            Send
+                            <svg 
+                                xmlns="http://www.w3.org/2000/svg" 
+                                height="1.2rem" 
+                                viewBox="0 -960 960 960" 
+                                width="1.2rem" 
+                                fill="#fff"
+                                className='ms-1'
+                                >
+                                    <path d="M120-160v-640l760 320-760 320Zm80-120 474-200-474-200v140l240 60-240 60v140Zm0 0v-400 400Z"/>
+                            </svg>
                         </button>
 
                     </form>
