@@ -39,6 +39,18 @@ export const AboutMe = () => {
       }, []);
 
 
+      useEffect(() => {
+        
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth',
+        })
+
+
+      }, [])
+      
+
+
   return (
     <>
     
@@ -77,7 +89,10 @@ export const AboutMe = () => {
               <div className='grid grid-cols-3 sm:grid-cols-5 md:grid-cols-3 lg:grid-cols-5 gap-5'>
 
                 <div className='w-full h-full'>
-                  <img 
+                  <motion.img 
+                    initial={{scale:0}}
+                    animate={{scale:1}}
+                    loading="lazy"
                     src={MotionLogo} 
                     alt="Motion Logo" 
                     className='h-full w-full'
@@ -85,7 +100,10 @@ export const AboutMe = () => {
                 </div>
 
                 <div className='w-full h-full'>
-                  <img 
+                  <motion.img
+                    initial={{scale:0}}
+                    animate={{scale:1}}
+                    loading="lazy" 
                     src={ReactRouter} 
                     alt="React Router Logo" 
                     className='h-full w-full'
@@ -93,7 +111,10 @@ export const AboutMe = () => {
                 </div>
 
                 <div className='w-full h-full p-4'>
-                  <img 
+                  <motion.img
+                    initial={{scale:0}}
+                    animate={{scale:1}}
+                    loading="lazy" 
                     src={ReduxLogo} 
                     alt="Redux Logo" 
                     className='h-full w-full'
@@ -101,7 +122,10 @@ export const AboutMe = () => {
                 </div>
 
                 <div className='w-full h-full px-5 py-6'>
-                  <img 
+                  <motion.img
+                    initial={{scale:0}}
+                    animate={{scale:1}}
+                    loading="lazy" 
                     src={TailwindCSS} 
                     alt="Tailwind CSS Logo" 
                     className='h-full w-full'
@@ -109,7 +133,10 @@ export const AboutMe = () => {
                 </div>
 
                 <div className='w-full h-full p-4'>
-                  <img 
+                  <motion.img
+                    initial={{scale:0}}
+                    animate={{scale:1}}
+                    loading="lazy" 
                     src={BootstrapLogo} 
                     alt="Bootstrap Logo" 
                     className='h-full w-full'
