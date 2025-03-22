@@ -33,6 +33,15 @@ export const Header = () => {
 
     }, []);
 
+    useEffect(() => {
+      
+
+        setHeaderIsOpen(false);
+
+
+    }, [pathname])
+    
+
     
 
 
