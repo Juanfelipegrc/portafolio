@@ -55,11 +55,19 @@ export const HomePage = () => {
             }, 300);
         }
 
-    }, [showMore])
+    }, [showMore]);
     
 
 
+    useEffect(() => {
+            
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        })
 
+
+    }, []);
     
     
 
