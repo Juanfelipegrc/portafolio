@@ -3,7 +3,7 @@ import * as motion from 'motion/react-client'
 import { Link } from 'react-router';
 import { AnimatePresence } from 'motion/react';
 
-export const ProjectCard = ({image, title, tecnologies, desc}) => {
+export const ProjectCard = ({image, title, tecnologies, desc, linkN, linkGH}) => {
 
     const [cardClicked, setCardClicked] = useState({validation: false, card: ''});
     const [animationFirstDiv, setAnimationFirstDiv] = useState(true);
@@ -181,47 +181,71 @@ export const ProjectCard = ({image, title, tecnologies, desc}) => {
                                 animate={{opacity: 1}}
                                 exit={{opacity: 0}}
                                 transition={{duration: 0.4, ease: 'easeInOut'}}
-                                className='flex flex-col gap-3 mt-11'
+                                className='flex justify-center mt-11'
                             >
-                                <div className='w-16 h-16'>
-                                    <motion.img 
-                                        src={image} 
-                                        alt="Austronaut logo" 
-                                        initial={{opacity: 0}}
-                                        animate={{opacity: 1}}
-                                        transition={{duration: 0.2, ease: 'easeInOut'}}
-                                        className='w-16 h-16' 
-                                    />
+
+                                <div className='flex flex-col lg:w-[70%] gap-3'>
+
+                                
+                                    <div className='w-16 h-16'>
+                                        <motion.img 
+                                            src={image} 
+                                            alt="Austronaut logo" 
+                                            initial={{opacity: 0}}
+                                            animate={{opacity: 1}}
+                                            transition={{duration: 0.2, ease: 'easeInOut'}}
+                                            className='w-16 h-16' 
+                                        />
+                                    </div>
+                                    <h2 className='text-white text-xl font-semibold'>{title}</h2>
+                                    <p className='text-white text-sm'>{desc}</p>
+                                    <div className='flex items-center gap-2'>
+                                        {
+                                            tecnologies.map((tecnology, index) => {
+
+                                                const bgColor = getBgColor(tecnology);
+
+                                                return(
+                                                    <span
+                                                        key={index} 
+                                                        className={`py-1 px-2 rounded-xl ${bgColor} text-white text-xs `}
+                                                
+                                                    >
+                                                        {tecnology}
+                                                    </span>
+                                                )
+                                                
+                                            })
+                                        }
+                                    </div>
+
+                                    <div className='flex w-full gap-8 mt-16'>
+
+                                    <a 
+                                        className='w-[50%] sm:w-[40%] flex justify-center items-center cursor-none py-2.5 rounded-md text-white border border-white hover:scale-105 duration-200'
+                                        href={linkGH}
+                                        target='_blank'
+
+                                    >
+
+                                    See Code
+
+                                    </a>
+
+                                    <a 
+                                        className='w-[50%] sm:w-[40%] text-center flex justify-center items-center cursor-none py-2.5 rounded-md bg-blue-400 text-white hover:scale-105 duration-200'
+                                        href={linkN}
+                                        target='_blank'
+                                    >
+
+                                    See Project In Production
+
+                                    </a>
+
+                                    </div>
                                 </div>
-                                <h2 className='text-white text-xl font-semibold'>{title}</h2>
-                                <p className='text-white text-sm'>{desc}</p>
-                                <div className='flex items-center gap-2'>
-                                    {
-                                        tecnologies.map((tecnology, index) => {
-
-                                            const bgColor = getBgColor(tecnology);
-
-                                            return(
-                                                <span
-                                                    key={index} 
-                                                    className={`py-1 px-2 rounded-xl ${bgColor} text-white text-xs `}
-                                            
-                                                >
-                                                    {tecnology}
-                                                </span>
-                                            )
-                                            
-                                        })
-                                    }
-                                </div>
-
-                                <span 
-                                    className={`${cardClicked.validation? 'hidden' : 'text-blue-500 p-1 hover:underline cursor-none'}`}
-                                    onClick={() => setCardClicked({validation: true, card: title})}
-                                >
-                                    See more →
-                                </span>
                             </motion.div>
+                        
                         </>
                    }
                 </AnimatePresence>

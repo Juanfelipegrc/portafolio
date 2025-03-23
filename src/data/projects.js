@@ -10,7 +10,7 @@ export const projects = [
         logo: AustronautLogo,
         tecnologies: ['React', 'JS', 'Tailwind CSS'],
         video: '',
-        linkGH: '',
+        linkGH: 'https://github.com/Juanfelipegrc/austronaut',
         linkN: 'https://austronaut-chat.netlify.app/',
     },
 
@@ -23,8 +23,7 @@ export const projects = [
         logo: HiAppLogo,
         tecnologies: ['React', 'JS', 'Tailwind CSS'],
         video: '',
-        video: '',
-        linkGH: '',
+        linkGH: 'https://github.com/Juanfelipegrc/hi-app',
         linkN: 'https://hi-app.netlify.app/',
     },
 
@@ -45,7 +44,7 @@ export const projects = [
         logo: DishoLogo,
         tecnologies: ['React', 'JS', 'Bootstrap'],
         video: '',
-        linkGH: '',
+        linkGH: 'https://github.com/Juanfelipegrc/disho-replica',
         linkN: 'https://disho-replica.netlify.app/',
     },
 
@@ -68,7 +67,7 @@ export const projects = [
         logo: NotesAppLogo,
         tecnologies: ['React', 'JS', 'CSS'],
         video: '',
-        linkGH: '',
+        linkGH: 'https://github.com/Juanfelipegrc/notes-app',
         linkN: 'https://notes-app-react-js-firebase-firestore.netlify.app/',
     },
 
@@ -96,7 +95,7 @@ export const projects = [
         logo: GifExpertAppLogo,
         tecnologies: ['React', 'JS', 'CSS'],
         video: '',
-        linkGH: '',
+        linkGH: 'https://github.com/Juanfelipegrc/React-gif-expert-app',
         linkN: 'https://gif-expert-app-react-js.netlify.app/',
     },
 

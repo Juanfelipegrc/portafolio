@@ -151,6 +151,8 @@ export const HomePage = () => {
                                 image={project.logo} 
                                 title={project.name} 
                                 desc={project.desc} 
+                                linkN={project.linkN}
+                                linkGH={project.linkGH}
                                 tecnologies={project.tecnologies}
                             />
                         ))

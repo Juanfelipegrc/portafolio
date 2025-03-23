@@ -54,7 +54,7 @@ export const AboutMe = () => {
   return (
     <>
     
-      <div className='bg-black w-full pt-[10rem]'>
+      <div className='bg-black w-full pt-[7.6rem] sm:pt-[10rem]'>
 
         <div className='flex w-full justify-center'>
           <div className='grid grid-cols-12 w-full md:w-[80%]  lg:w-[70%]'>
@@ -64,7 +64,7 @@ export const AboutMe = () => {
               <img 
                 src={PrincipalProfilePicture} 
                 alt="Profile Picture" 
-                className='w-[20rem] h-[20rem] rounded-full'
+                className='w-[18rem] h-[18rem] sm:w-[23rem] sm:h-[23rem] md:w-[20rem] md:h-[20rem] rounded-full'
               />
 
             </div>
