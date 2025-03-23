@@ -6,6 +6,14 @@ export const projects = [
         desc: `Austronaut is an advanced AI assistant, powered by LLaMA, designed to provide accurate answers, solve problems, and optimize productivity in a variety of fields.
         With its state-of-the-art natural language processing, Astronaut can fluently understand and generate text, offering assistance in tasks such as programming, writing, learning, and more.
         Its intuitive interface and enhanced conversational experience make it an ideal tool for developers, students, and professionals looking for a quick and efficient solution to their queries.
+        Explore the universe of knowledge with Astronaut and take your productivity to the next level.
+        Austronaut is an advanced AI assistant, powered by LLaMA, designed to provide accurate answers, solve problems, and optimize productivity in a variety of fields.
+        With its state-of-the-art natural language processing, Astronaut can fluently understand and generate text, offering assistance in tasks such as programming, writing, learning, and more.
+        Its intuitive interface and enhanced conversational experience make it an ideal tool for developers, students, and professionals looking for a quick and efficient solution to their queries.
+        Explore the universe of knowledge with Astronaut and take your productivity to the next level.
+        Austronaut is an advanced AI assistant, powered by LLaMA, designed to provide accurate answers, solve problems, and optimize productivity in a variety of fields.
+        With its state-of-the-art natural language processing, Astronaut can fluently understand and generate text, offering assistance in tasks such as programming, writing, learning, and more.
+        Its intuitive interface and enhanced conversational experience make it an ideal tool for developers, students, and professionals looking for a quick and efficient solution to their queries.
         Explore the universe of knowledge with Astronaut and take your productivity to the next level.`,
         logo: AustronautLogo,
         tecnologies: ['React', 'JS', 'Tailwind CSS'],
