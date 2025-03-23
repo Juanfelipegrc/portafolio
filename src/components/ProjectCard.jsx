@@ -181,7 +181,7 @@ export const ProjectCard = ({image, title, tecnologies, desc, linkN, linkGH}) =>
                                 animate={{opacity: 1}}
                                 exit={{opacity: 0}}
                                 transition={{duration: 0.4, ease: 'easeInOut'}}
-                                className='flex overflow-y-scroll justify-center mt-11'
+                                className='flex justify-center mt-11'
                             >
 
                                 <div className='flex flex-col lg:w-[70%] gap-3'>
