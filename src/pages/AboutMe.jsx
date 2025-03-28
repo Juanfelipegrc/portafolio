@@ -137,6 +137,19 @@ export const AboutMe = () => {
                     
                     </ul>
                   </div>
+
+
+                  <div className='col-span-12 md:col-span-6 lg:col-span-4'>
+                    <h2 className='text-white text-[1.6rem] font-medium mt-6'>
+                      Testing (Jest)
+                    </h2>
+
+                    <ul className='text-white'>
+                      <li>- Unit testing.</li>
+                      <li>- Integration testing.</li>
+                    
+                    </ul>
+                  </div>
                   
                   
 
