@@ -132,7 +132,7 @@ export const Header = () => {
                     </motion.button>
 
 
-                    <motion.button 
+                    {/* <motion.button 
                         onHoverStart={() =>setOption2ButtonHover(true)}
                         onHoverEnd={() => setOption2ButtonHover(false)}
                         onClick={() => navigate('/about-me')}
@@ -155,7 +155,7 @@ export const Header = () => {
                             style={{width: option2ButtonHover || pathname === '/about-me'? '100%' : '0%', color: pathname === '/about-me'? '#8ec5ff' : '#fff'}}
 
                         />
-                    </motion.button>
+                    </motion.button> */}
 
 
                     
@@ -175,7 +175,7 @@ export const Header = () => {
                         onHoverStart={() =>setOption1ButtonHover(true)}
                         onHoverEnd={() => setOption1ButtonHover(false)}
                         onClick={() => navigate('/')}
-                        className='bg-transparent md:col-span-3 lg:col-span-2 md:col-start-6 lg:col-start-8 text-white text-[1rem] font-medium flex flex-col justify-center items-center z-[2] cursor-none font-turret-road'
+                        className='bg-transparent md:col-span-3 lg:col-span-2 md:col-start-9 lg:col-start-10 text-white text-[1rem] font-medium flex flex-col justify-center items-center z-[2] cursor-none font-turret-road'
                     >
                         <div className={`flex items-center justify-center ${pathname === '/'? 'text-blue-300' : '' }`}>
                             <svg 
@@ -197,7 +197,7 @@ export const Header = () => {
                     </motion.button>
 
 
-                    <motion.button 
+                    {/* <motion.button 
                         onHoverStart={() =>setOption2ButtonHover(true)}
                         onHoverEnd={() => setOption2ButtonHover(false)}
                         onClick={() => navigate('/about-me')}
@@ -220,7 +220,7 @@ export const Header = () => {
                             style={{width: option2ButtonHover || pathname === '/about-me'? '100%' : '0%', color: pathname === '/about-me'? '#8ec5ff' : '#fff'}}
 
                         />
-                    </motion.button>
+                    </motion.button> */}
 
 
                 

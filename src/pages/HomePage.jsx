@@ -113,7 +113,7 @@ export const HomePage = () => {
                     <div className='col-span-12 flex items-center justify-center mt-3.5'>
                         <button 
                             className='bg-blue-400 flex items-center justify-center px-3 py-2 rounded-full cursor-none hover:scale-105 transition-all duration-200'
-                            onClick={() => navigate('/about-me')}
+                            
                         >
                             <svg 
                                     xmlns="http://www.w3.org/2000/svg" 
