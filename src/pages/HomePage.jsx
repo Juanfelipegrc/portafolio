@@ -231,10 +231,10 @@ export const HomePage = () => {
                         <p><strong>Email:</strong> felipegarciarjs@gmail.com</p>
                         <p><strong>Phone:</strong> +57 3162067218</p>
                         <p>
-                        <strong>WhatsApp:</strong> <a className="text-blue-400 underline" href="https://wa.me/573162067218" target="_blank" rel="noopener noreferrer">Open WhatsApp</a>
+                        <strong>WhatsApp:</strong> <a className="text-blue-400 underline" href="https://wa.link/e0321w" target="_blank" rel="noopener noreferrer">Open WhatsApp</a>
                         </p>
                         <p>
-                        <strong>GitHub:</strong> <a className="text-blue-400 underline" href="https://github.com/tuusuario" target="_blank" rel="noopener noreferrer">Visit GitHub</a>
+                        <strong>GitHub:</strong> <a className="text-blue-400 underline" href="https://github.com/Juanfelipegrc" target="_blank" rel="noopener noreferrer">Visit GitHub</a>
                         </p>
                     </div>
                     </div>
