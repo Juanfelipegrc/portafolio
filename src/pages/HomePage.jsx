@@ -4,7 +4,7 @@ import { PrincipalProfilePicture } from '../assets';
 import { useNavigate } from 'react-router';
 import { useAnimations } from '../hooks/useAnimations';
 import { projects } from '../data/projects';
-import { ContactForm, ProjectCard } from '../components';
+import { AboutMeModal, ContactForm, ProjectCard } from '../components';
 import { AnimatePresence } from 'motion/react';
 
 
@@ -12,6 +12,7 @@ export const HomePage = () => {
 
     const [animateExit, setAnimateExit] = useState(false);
     const [showMore, setShowMore] = useState(false);
+    const [modalIsOpen, setModalIsOpen] = useState(false);
     const {lastPage, onSetLastPage, screenWidth} = useAnimations();
     const [cutProjects, setCutProjects] = useState(projects);
 
@@ -24,6 +25,10 @@ export const HomePage = () => {
             navigate(`/${page}`)
         }, 1000);     
     };
+
+    const onCloseModal = () => {
+        setModalIsOpen(false);
+    }
 
     useEffect(() => {
       
@@ -78,6 +83,8 @@ export const HomePage = () => {
 
         <div className='w-full flex flex-col items-center bg-black'>
 
+        <AboutMeModal isOpen={modalIsOpen} onClose={onCloseModal}/>
+
             {/* HOME */}
 
             <div className='flex items-center justify-center h-[130vh] sm:h-[130vh] md:h-screen lg:h-screen'>
@@ -113,7 +120,7 @@ export const HomePage = () => {
                     <div className='col-span-12 flex items-center justify-center mt-3.5'>
                         <button 
                             className='bg-blue-400 flex items-center justify-center px-3 py-2 rounded-full cursor-none hover:scale-105 transition-all duration-200'
-                            
+                            onClick={() => setModalIsOpen(true)}
                         >
                             <svg 
                                     xmlns="http://www.w3.org/2000/svg" 
