@@ -8,6 +8,16 @@ html {
     scroll-behavior: smooth;
 }
 
+
+.no-scroll-bar {
+    scrollbar-width: none;         
+    -ms-overflow-style: none;      
+  }
+  
+  .no-scroll-bar::-webkit-scrollbar {
+    display: none;                 
+  }
+
 .noise-div {
     width: 100%; /* Ajusta el tamaño que necesites */
     height: 100%;

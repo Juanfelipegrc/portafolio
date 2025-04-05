@@ -27,13 +27,13 @@ export const AboutMeModal = ({isOpen, onClose}) => {
             {
                 isOpen &&
                 <motion.div    
-                    className='w-screen h-screen z-[9998] overflow-hidden bg-white/65 inset-0 fixed top-0 left-0 flex justify-center items-center'
+                    className='w-screen h-screen z-[9998] overflow-hidden bg-black/65 inset-0 fixed top-0 left-0 flex justify-center items-center'
                     initial={{opacity: 0}}
                     animate={{opacity: 1}}
                     exit={{opacity: 0}}
                     transition={{duration: 0.6, ease: 'easeInOut'}}
                 >
-                    <div className='bg-black w-[85%] md:w-[70%] lg:w-[60%] h-[65%] md:h-[70%] lg:h-[60%] px-3 py-14 sm:p-7 md:px-12 md:py-16 lg:px-16 lg:py-16 rounded-xl overflow-y-scroll relative'>
+                    <div className='bg-black no-scroll-bar shadow-[0_0.1rem_0.5rem_rgba(255,255,255,0.25)] w-[85%] md:w-[70%] lg:w-[60%] h-[65%] md:h-[70%] lg:h-[60%] px-3 py-14 sm:p-7 md:px-12 md:py-16 lg:px-16 lg:py-16 rounded-xl overflow-y-scroll relative'>
                         <div className='flex flex-col w-full'>
 
                             <motion.div
