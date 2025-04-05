@@ -42,7 +42,7 @@ export const AboutMeModal = ({isOpen, onClose}) => {
                                 exit={{opacity: 0}}
                                 transition={{duration: 0.4, ease: 'easeInOut'}}
                                 onClick={onClose}
-                                className='absolute top-2 left-3 sm:top-2 sm:left-4 md:top-4 md:left-6  my-8 p-1'
+                                className='absolute top-2 left-3 sm:top-2 sm:left-4 md:top-4 md:left-6  my-8 p-2'
                             >
 
                                 <motion.svg 
