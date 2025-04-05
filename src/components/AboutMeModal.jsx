@@ -33,7 +33,7 @@ export const AboutMeModal = ({isOpen, onClose}) => {
                     exit={{opacity: 0}}
                     transition={{duration: 0.6, ease: 'easeInOut'}}
                 >
-                    <div className='bg-black no-scroll-bar shadow-[0_0.1rem_0.8rem_rgba(255,255,255,0.25)] w-[85%] md:w-[70%] lg:w-[60%] h-[65%] md:h-[70%] lg:h-[60%] px-3 py-14 sm:p-7 md:px-12 md:py-16 lg:px-16 lg:py-16 rounded-xl overflow-y-scroll relative'>
+                    <div className='bg-black no-scroll-bar shadow-[0_0.1rem_0.8rem_rgba(255,255,255,0.25)] w-[85%] md:w-[70%] lg:w-[60%] h-[65%] md:h-[70%] lg:h-[60%] px-3 py-10 sm:p-7 md:px-12 md:py-16 lg:px-16 lg:py-16 rounded-xl overflow-y-scroll relative'>
                         <div className='flex flex-col w-full'>
 
                             <motion.div
@@ -42,7 +42,7 @@ export const AboutMeModal = ({isOpen, onClose}) => {
                                 exit={{opacity: 0}}
                                 transition={{duration: 0.4, ease: 'easeInOut'}}
                                 onClick={onClose}
-                                className='absolute top-1 right-3 sm:top-2 sm:right-4 md:top-4 md:right-6  my-8 p-2'
+                                className='absolute top-5 right-3 sm:top-2 sm:right-4 md:top-5 md:right-6  p-2'
                             >
 
                                 <motion.svg 
