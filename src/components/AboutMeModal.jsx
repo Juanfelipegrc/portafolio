@@ -33,7 +33,7 @@ export const AboutMeModal = ({isOpen, onClose}) => {
                     exit={{opacity: 0}}
                     transition={{duration: 0.6, ease: 'easeInOut'}}
                 >
-                    <div className='bg-black no-scroll-bar shadow-[0_0.1rem_0.5rem_rgba(255,255,255,0.25)] w-[85%] md:w-[70%] lg:w-[60%] h-[65%] md:h-[70%] lg:h-[60%] px-3 py-14 sm:p-7 md:px-12 md:py-16 lg:px-16 lg:py-16 rounded-xl overflow-y-scroll relative'>
+                    <div className='bg-black no-scroll-bar shadow-[0_0.1rem_0.8rem_rgba(255,255,255,0.25)] w-[85%] md:w-[70%] lg:w-[60%] h-[65%] md:h-[70%] lg:h-[60%] px-3 py-14 sm:p-7 md:px-12 md:py-16 lg:px-16 lg:py-16 rounded-xl overflow-y-scroll relative'>
                         <div className='flex flex-col w-full'>
 
                             <motion.div
