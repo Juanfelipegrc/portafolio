@@ -234,7 +234,7 @@ export const HomePage = () => {
                         <strong>WhatsApp:</strong> <a className="text-blue-400 underline" href="https://wa.link/e0321w" target="_blank" rel="noopener noreferrer">Open WhatsApp</a>
                         </p>
                         <p>
-                        <strong>GitHub:</strong> <a className="text-blue-400 underline" href="https://github.com/Juanfelipegrc" target="_blank" rel="noopener noreferrer">Visit GitHub</a>
+                        <strong>GitHub:</strong> <a className="text-blue-400 underline" href="https://github.com/Juanfelipegrc?tab=repositories" target="_blank" rel="noopener noreferrer">Visit GitHub</a>
                         </p>
                     </div>
                     </div>

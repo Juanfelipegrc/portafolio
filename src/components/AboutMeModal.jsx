@@ -159,7 +159,7 @@ export const AboutMeModal = ({isOpen, onClose}) => {
                 
                                     <a 
                                     className='w-[45%] md:w-[40%] lg:w-[40%] flex justify-center items-center cursor-none py-2.5 rounded-md text-white border border-white hover:scale-105 duration-200'
-                                    href='https://github.com/Juanfelipegrc'
+                                    href='hhttps://github.com/Juanfelipegrc?tab=repositories'
                                     target='_blank'
                 
                                     >
