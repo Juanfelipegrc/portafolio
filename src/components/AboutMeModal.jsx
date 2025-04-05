@@ -42,16 +42,16 @@ export const AboutMeModal = ({isOpen, onClose}) => {
                                 exit={{opacity: 0}}
                                 transition={{duration: 0.4, ease: 'easeInOut'}}
                                 onClick={onClose}
-                                className='absolute top-2 left-3 sm:top-2 sm:left-4 md:top-4 md:left-6  my-8 p-2'
+                                className='absolute top-1 right-3 sm:top-2 sm:right-4 md:top-4 md:right-6  my-8 p-2'
                             >
 
                                 <motion.svg 
                                     xmlns="http://www.w3.org/2000/svg" 
-                                    height="1.5rem" 
+                                    height="1.7rem" 
                                     viewBox="0 -960 960 960" 
-                                    width="1.5rem" 
+                                    width="1.7rem" 
                                     fill="#fff">
-                                        <path d="M640-80 240-480l400-400 71 71-329 329 329 329-71 71Z"/>
+                                        <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
                                 </motion.svg>
 
                             </motion.div>
