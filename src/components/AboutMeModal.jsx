@@ -33,7 +33,7 @@ export const AboutMeModal = ({isOpen, onClose}) => {
                     exit={{opacity: 0}}
                     transition={{duration: 0.6, ease: 'easeInOut'}}
                 >
-                    <div className='bg-black w-[85%] md:w-[70%] lg:w-[60%] h-[65%] md:h-[70%] lg:h-[60%] p-3 sm:p-16 md:p-20 lg:p-20 rounded-xl overflow-y-scroll relative'>
+                    <div className='bg-black w-[85%] md:w-[70%] lg:w-[60%] h-[65%] md:h-[70%] lg:h-[60%] px-3 py-14 sm:p-7 md:px-12 md:py-16 lg:px-16 lg:py-16 rounded-xl overflow-y-scroll relative'>
                         <div className='flex flex-col w-full'>
 
                             <motion.div
@@ -42,7 +42,7 @@ export const AboutMeModal = ({isOpen, onClose}) => {
                                 exit={{opacity: 0}}
                                 transition={{duration: 0.4, ease: 'easeInOut'}}
                                 onClick={onClose}
-                                className='absolute top-2 left-3 my-8 p-1'
+                                className='absolute top-2 left-3 sm:top-2 sm:left-4 md:top-4 md:left-6  my-8 p-1'
                             >
 
                                 <motion.svg 
@@ -60,7 +60,7 @@ export const AboutMeModal = ({isOpen, onClose}) => {
                 
                                 <div className='flex flex-col items-center md:items-start lg:items-start'>
                 
-                                <h2 className='text-white text-center md:text-start lg:text-start text-3xl md:text-4xl lg:text-4xl font-medium mt-6'>Juan <span className='text-blue-400'>Felipe</span> García Rojas</h2>
+                                <h2 className='text-white text-center md:text-start lg:text-start text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-medium'>Juan <span className='text-blue-400'>Felipe</span> García Rojas</h2>
                                 <p className='text-white text-center md:text-start lg:text-start font-light mt-6'>
                 
                                 I'm a passionate Junior <span className='text-blue-400'>React.js</span> Software Developer from Colombia, dedicated to building modern and responsive web applications. I specialize in React.js and have hands-on experience with a wide range of front-end technologies including Tailwind CSS, Bootstrap, CSS, HTML, JavaScript, React Redux, and React Router. I also have some knowledge of Sass and TypeScript, which I continue to develop as I grow in my career. <br /> <br />
