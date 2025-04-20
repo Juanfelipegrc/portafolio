@@ -63,9 +63,10 @@ export const AboutMeModal = ({isOpen, onClose}) => {
                                 <h2 className='text-white text-center md:text-start lg:text-start text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-medium'>Juan <span className='text-blue-400'>Felipe</span> García Rojas</h2>
                                 <p className='text-white text-center md:text-start lg:text-start font-light mt-6'>
                 
-                                I'm a passionate Junior <span className='text-blue-400'>React.js</span> Software Developer from Colombia, dedicated to building modern and responsive web applications. I specialize in React.js and have hands-on experience with a wide range of front-end technologies including Tailwind CSS, Bootstrap, CSS, HTML, JavaScript, React Redux, and React Router. I also have some knowledge of Sass and TypeScript, which I continue to develop as I grow in my career. <br /> <br />
-                
-                                I enjoy creating clean, efficient, and user-friendly interfaces while constantly learning new tools and technologies to improve my work. I'm driven by the desire to build impactful digital solutions and collaborate with others in innovative development environments.
+                                Hello, I'm Juan Felipe García Rojas, a dedicated <b className='text-blue-400'>frontend</b> and <b className='text-blue-400'>mobile</b> software developer. I specialize in crafting engaging, responsive user interfaces and applications, primarily leveraging the React JS ecosystem for web development and React Native for cross-platform mobile solutions.
+                                <br /> <br />
+
+                                My core technical expertise lies in JavaScript (ES6+), HTML5, and CSS3. I am proficient in utilizing modern frameworks and libraries to enhance development efficiency and UI quality, including extensive experience with Bootstrap and Tailwind CSS for styling, Sass for CSS preprocessing, and Framer Motion for animations. Furthermore, I incorporate TypeScript into my projects to build more robust, scalable, and maintainable codebases. I am committed to writing clean code and delivering high-quality digital experiences.
                 
                                 </p>
                                 </div>
@@ -97,7 +98,8 @@ export const AboutMeModal = ({isOpen, onClose}) => {
                                     </h2>
                                     
                                     <ul className='text-white'>
-                                        <li>- React.</li>
+                                        <li>- React JS.</li>
+                                        <li>- React Native.</li>
                                         <li>- HTML.</li>
                                         <li>- CSS.</li>
                                         <li>- JavaScript.</li>

@@ -87,15 +87,15 @@ export const HomePage = () => {
 
             {/* HOME */}
 
-            <div className='flex items-center justify-center h-[130vh] sm:h-[130vh] md:h-screen lg:h-screen'>
-                <div className='w-[90%] sm:w-[80%] md:w-[75%] lg:w-[60%] grid grid-cols-12'>
+            <div className='flex items-center justify-center h-[135vh] sm:h-[130vh] md:h-screen lg:h-screen'>
+                <div className='w-[90%] sm:w-[80%] md:w-[88%] lg:w-[70%] grid grid-cols-12'>
 
 
                     <div className='col-span-12 flex justify-center md:justify-end lg:justify-end items-center md:items-start lg:items-center md:col-span-5 lg:col-span-5 pe-0 md:pe-7 lg:pe-7 md:pt-3 lg:pt-0'>
                         <img 
                             src={PrincipalProfilePicture} 
                             alt="Profile Picture" 
-                            className='w-[18rem] h-[18rem] sm:w-[23rem] sm:h-[23rem] md:w-[15rem] md:h-[15rem] lg:w-[16rem] lg:h-[16rem] rounded-full'
+                            className='w-[18rem] h-auto sm:w-[23rem] md:w-[15rem] lg:w-[16rem] rounded-full aspect-square'
                         />
                     </div>
 
@@ -103,12 +103,12 @@ export const HomePage = () => {
 
 
                     <div className='col-span-12 md:col-span-7 lg:col-span-7 px-5 pt-5 flex flex-col justify-center'>
-                        <h1 className='text-white text-center md:text-start lg:text-start font-semibold text-4xl md:text-3xl lg:text-5xl'>
-                            Hello I'm <br /> 
+                        <h1 className='text-white text-center md:text-start lg:text-start font-semibold text-4xl md:text-4xl lg:text-5xl'>
+                            Hello I'm <br className='sm:hidden md:inline-block lg:inline-block' /> 
                             <span className='text-blue-300'>Juan Felipe</span>
                         </h1>
                         <p className='mt-5 text-[1.1rem] text-white text-center md:text-start lg:text-start'>
-                            Hi I'm Juan Felipe García Rojas, i'm <b className='text-blue-300'>FrontEnd</b> software developer, I'm really good working in React JS, React Native, HTML, CSS, Javascript, Bootstrap, Tailwind CSS, Motion, a bit of sass and a bit of TypeScript <br /> <br />
+                        Hi, I'm Juan Felipe García Rojas, a <b className='text-blue-400'>frontend</b> and <b className='text-blue-400'>mobile</b> developer specializing in React JS and React Native. I build responsive and engaging user interfaces using JavaScript, HTML, CSS, alongside modern tools including Tailwind CSS, Bootstrap, Motion (Framer Motion), Sass, and TypeScript. <br /> <br />
                             
                             
                         </p>
