@@ -108,7 +108,7 @@ export const HomePage = () => {
                             <span className='text-blue-300'>Juan Felipe</span>
                         </h1>
                         <p className='mt-5 text-[1.1rem] text-white text-center md:text-start lg:text-start'>
-                            Hi I'm Juan Felipe García Rojas, i'm <b className='text-blue-300'>FrontEnd</b> software developer expert using React JS, i know how to use HTML, CSS, Javascript, Bootstrap, Tailwind CSS, React Redux, React Router, Motion, Git, a bit of sass, a bit of TypeScript & React JS. <br /> <br />
+                            Hi I'm Juan Felipe García Rojas, i'm <b className='text-blue-300'>FrontEnd</b> software developer, I'm really good working in React JS, React Native, HTML, CSS, Javascript, Bootstrap, Tailwind CSS, Motion, a bit of sass and a bit of TypeScript <br /> <br />
                             
                             
                         </p>
