@@ -108,7 +108,7 @@ export const HomePage = () => {
                             <span className='text-blue-300'>Juan Felipe</span>
                         </h1>
                         <p className='mt-5 text-[1.1rem] text-white text-center md:text-start lg:text-start'>
-                        Hi, I'm Juan Felipe García Rojas, a <b className='text-blue-400'>frontend</b> and <b className='text-blue-400'>mobile</b> developer specializing in React JS and React Native. I build responsive and engaging user interfaces using JavaScript, HTML, CSS, alongside modern tools including Tailwind CSS, Bootstrap, Motion (Framer Motion), Sass, and TypeScript. <br /> <br />
+                        Hi, I'm Juan Felipe García Rojas, a <b className='text-blue-300'>frontend</b> and <b className='text-blue-300'>mobile</b> developer specializing in React JS and React Native. I build responsive and engaging user interfaces using JavaScript, HTML, CSS, alongside modern tools including Tailwind CSS, Bootstrap, Motion (Framer Motion), Sass, and TypeScript. <br /> <br />
                             
                             
                         </p>
