@@ -78,7 +78,7 @@ export const AboutMeModal = ({isOpen, onClose}) => {
                                     Skills:
                                 </h2>
                 
-                                <div className='grid grid-cols-12 w-full ps-10 gap-3'>
+                                <div className='grid grid-cols-12 w-full ps-10 gap-6'>
                 
                                     <div className='col-span-12 md:col-span-6 lg:col-span-4'>
                                     <h2 className='text-white text-[1.6rem] font-medium mt-6'>
@@ -103,6 +103,21 @@ export const AboutMeModal = ({isOpen, onClose}) => {
                                         <li>- HTML.</li>
                                         <li>- CSS.</li>
                                         <li>- JavaScript.</li>
+                                        <li>- TypeScript.</li>
+                                    </ul>
+                                    </div>
+
+                                    <div className='col-span-12 md:col-span-6 lg:col-span-4'>
+                                    <h2 className='text-white text-[1.6rem] font-medium mt-6'>
+                                        Mobile Development
+                                    </h2>
+                                    
+                                    <ul className='text-white'>
+                                        <li>- React Native.</li>
+                                        <li>- HTML.</li>
+                                        <li>- CSS.</li>
+                                        <li>- JavaScript.</li>
+                                        <li>- TypeScript.</li>
                                     </ul>
                                     </div>
                 
