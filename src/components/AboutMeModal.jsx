@@ -33,7 +33,7 @@ export const AboutMeModal = ({isOpen, onClose}) => {
                     exit={{opacity: 0}}
                     transition={{duration: 0.6, ease: 'easeInOut'}}
                 >
-                    <div className='bg-black no-scroll-bar shadow-[0_0.1rem_0.8rem_rgba(255,255,255,0.25)] w-[85%] md:w-[70%] lg:w-[60%] h-[65%] md:h-[70%] lg:h-[60%] px-3 py-10 sm:p-7 md:px-12 md:py-16 lg:px-16 lg:py-16 rounded-xl overflow-y-scroll relative'>
+                    <div className='bg-black no-scroll-bar shadow-[0_0.1rem_0.8rem_rgba(255,255,255,0.25)] w-[85%] md:w-[70%] lg:w-[65%] h-[65%] md:h-[70%] lg:h-[60%] px-3 py-10 sm:p-7 md:px-12 md:py-16 lg:px-14 lg:py-16 rounded-xl overflow-y-scroll relative'>
                         <div className='flex flex-col w-full'>
 
                             <motion.div
@@ -78,11 +78,11 @@ export const AboutMeModal = ({isOpen, onClose}) => {
                                     Skills:
                                 </h2>
                 
-                                <div className='grid grid-cols-12 w-full ps-10 gap-6'>
+                                <div className='grid grid-cols-12 w-full ps-10 gap-10'>
                 
                                     <div className='col-span-12 md:col-span-6 lg:col-span-4'>
                                     <h2 className='text-white text-[1.6rem] font-medium mt-6'>
-                                        Programing <span className='text-blue-400'>Lenguages</span>
+                                        Programing <br /> <span className='text-blue-400'>Lenguages</span>
                                     </h2>
                                     
                                     <ul className='text-white'>
@@ -94,7 +94,7 @@ export const AboutMeModal = ({isOpen, onClose}) => {
                 
                                     <div className='col-span-12 md:col-span-6 lg:col-span-4'>
                                     <h2 className='text-white text-[1.6rem] font-medium mt-6'>
-                                        Web Development
+                                        Web <br /> <span className='text-blue-400'>Development</span>
                                     </h2>
                                     
                                     <ul className='text-white'>
@@ -109,7 +109,7 @@ export const AboutMeModal = ({isOpen, onClose}) => {
 
                                     <div className='col-span-12 md:col-span-6 lg:col-span-4'>
                                     <h2 className='text-white text-[1.6rem] font-medium mt-6'>
-                                        Mobile Development
+                                        Mobile <br /> <span className='text-blue-400'>Development</span>
                                     </h2>
                                     
                                     <ul className='text-white'>
@@ -122,22 +122,11 @@ export const AboutMeModal = ({isOpen, onClose}) => {
                                     </div>
                 
                 
-                                    <div className='col-span-12 md:col-span-6 lg:col-span-4'>
-                                    <h2 className='text-white text-[1.6rem] font-medium mt-6'>
-                                        Frameworks & <span className='text-blue-400'>styles</span> tools (CSS/UI)
-                                    </h2>
-                
-                                    <ul className='text-white'>
-                                        <li>- Tailwind CSS</li>
-                                        <li>- Bootstrap.</li>
-                                    
-                                    </ul>
-                                    </div>
                 
                 
                                     <div className='col-span-12 md:col-span-6 lg:col-span-4'>
                                     <h2 className='text-white text-[1.6rem] font-medium mt-6'>
-                                        Versions Control
+                                        Versions <br /> <span className='text-blue-400'>Control</span>
                                     </h2>
                 
                                     <ul className='text-white'>
@@ -146,16 +135,32 @@ export const AboutMeModal = ({isOpen, onClose}) => {
                                     
                                     </ul>
                                     </div>
-                
+
+
                 
                                     <div className='col-span-12 md:col-span-6 lg:col-span-4'>
                                     <h2 className='text-white text-[1.6rem] font-medium mt-6'>
-                                        Testing (Jest)
+                                        Frameworks & <br /> <span className='text-blue-400'>styles</span> tools
                                     </h2>
                 
                                     <ul className='text-white'>
-                                        <li>- Unit testing.</li>
-                                        <li>- Integration testing.</li>
+                                        <li>- Tailwind CSS</li>
+                                        <li>- Bootstrap.</li>
+                                    
+                                    </ul>
+                                    </div>
+
+
+
+                
+                                    <div className='col-span-12 md:col-span-6 lg:col-span-4'>
+                                    <h2 className='text-white text-[1.6rem] font-medium mt-6'>
+                                        App <br /> <span className='text-blue-400'>Testing </span>
+                                    </h2>
+                
+                                    <ul className='text-white'>
+                                        <li>- Unit testing (Jest).</li>
+                                        <li>- Integration testing (Jest).</li>
                                     
                                     </ul>
                                     </div>
