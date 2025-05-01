@@ -49,11 +49,11 @@ export const ProjectCard = ({image, title, tecnologies, desc, linkN, linkGH}) =>
         let bgColor = ''; 
 
        switch (tecnology) {
-        case 'React':
-            bgColor = 'bg-blue-600';
+        case 'React JS':
+            bgColor = 'bg-yellow-600';
             break;
-        case 'JS':
-            bgColor = 'bg-yellow-500';
+        case 'React Native JS': 
+            bgColor = 'bg-yellow-600';
             break;
         case 'Tailwind CSS':
             bgColor = 'bg-blue-400';
@@ -64,7 +64,21 @@ export const ProjectCard = ({image, title, tecnologies, desc, linkN, linkGH}) =>
         case 'Bootstrap':
             bgColor = 'bg-violet-700';
             break;
-       
+        case 'Expo' : 
+            bgColor = 'bg-black';
+            break;
+        case 'Firebase' : 
+            bgColor = 'bg-amber-700';
+            break;
+        case 'Convex' : 
+            bgColor = 'bg-orange-500';
+            break;
+        case 'Motion' : 
+            bgColor = 'bg-yellow-500';
+            break;
+        case 'Clerk' : 
+            bgColor = 'bg-blue-600';
+            break;
         default:
             break;
        }
@@ -233,7 +247,7 @@ export const ProjectCard = ({image, title, tecnologies, desc, linkN, linkGH}) =>
                                     </a>
 
                                     <a 
-                                        className='w-[50%] sm:w-[40%] text-center flex justify-center items-center cursor-none py-2.5 rounded-md bg-blue-400 text-white hover:scale-105 duration-200'
+                                        className={`w-[50%] sm:w-[40%] text-center flex justify-center items-center cursor-none py-2.5 rounded-md bg-blue-400 text-white hover:scale-105 duration-200 ${!linkN? 'hidden' : ''}`}
                                         href={linkN}
                                         target='_blank'
                                     >

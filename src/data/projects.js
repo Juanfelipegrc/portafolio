@@ -1,4 +1,4 @@
-import { AustronautLogo, DishoLogo, GifExpertAppLogo, HiAppLogo, NotesAppLogo } from "../assets"
+import { AustronautLogo, DishoLogo, GifExpertAppLogo, HiAppLogo, NotesAppLogo, SocnetLogo } from "../assets"
 
 export const projects = [
     {
@@ -8,7 +8,7 @@ export const projects = [
         Its intuitive interface and enhanced conversational experience make it an ideal tool for developers, students, and professionals looking for a quick and efficient solution to their queries.
         Explore the universe of knowledge with Astronaut and take your productivity to the next level.`,
         logo: AustronautLogo,
-        tecnologies: ['React', 'JS', 'Tailwind CSS'],
+        tecnologies: ['React JS', 'Firebase', 'Motion', 'Tailwind CSS'],
         video: '',
         linkGH: 'https://github.com/Juanfelipegrc/austronaut',
         linkN: 'https://austronaut-chat.netlify.app/',
@@ -21,10 +21,37 @@ export const projects = [
         Designed with modern technologies, Hi ensures a seamless and secure user experience, making it the ideal platform for anyone looking for a powerful yet simple communication tool.
         Whether you're chatting with friends, collaborating with colleagues, or connecting with family, Hi helps you stay close — no matter the distance.`,
         logo: HiAppLogo,
-        tecnologies: ['React', 'JS', 'Tailwind CSS'],
+        tecnologies: ['React JS', 'Firebase', 'Tailwind CSS'],
         video: '',
         linkGH: 'https://github.com/Juanfelipegrc/hi-app',
         linkN: 'https://hi-app.netlify.app/',
+    },
+
+    {
+        name: 'Socnet',
+        desc: `Socnet - Connect, Share, Discover
+            Socnet is a modern social networking app designed for effortless sharing and meaningful connections. Built with React Native and Expo, it offers a smooth and intuitive experience that brings people closer through visual content.
+
+            Key Features:
+
+            Share photos and moments instantly to your personal feed
+
+            Like, comment, and engage with posts from your community
+
+            Follow other users and grow your network
+
+            Explore trending content and discover new profiles
+
+            Enjoy real-time interaction through a clean, fast interface
+
+            Experience a minimalist, user-friendly design built for mobile
+
+            Socnet is more than just a photo-sharing app — it's a space to express yourself, stay connected, and discover the people and stories that inspire you.`,
+        logo: SocnetLogo,
+        tecnologies: ['React Native JS', 'Clerk', 'Convex', 'Expo'],
+        video: '',
+        linkGH: 'https://github.com/Juanfelipegrc/socnet',
+        linkN: '',
     },
 
     {
@@ -42,7 +69,7 @@ export const projects = [
         - Smooth user interaction and clean navigation
         This project is a great example of how I translate design ideas into fully functional, production-ready interfaces using widely adopted technologies like React and Bootstrap.`,
         logo: DishoLogo,
-        tecnologies: ['React', 'JS', 'Bootstrap'],
+        tecnologies: ['React JS', 'Firebase', 'Bootstrap'],
         video: '',
         linkGH: 'https://github.com/Juanfelipegrc/disho-replica',
         linkN: 'https://disho-replica.netlify.app/',
@@ -65,7 +92,7 @@ export const projects = [
         Custom alerts and confirmations with SweetAlert
         Whether used for productivity, journaling, or task management, Notes App provides a simple yet powerful solution for managing information securely and efficiently.`,
         logo: NotesAppLogo,
-        tecnologies: ['React', 'JS', 'CSS'],
+        tecnologies: ['React JS', 'Firebase', 'CSS'],
         video: '',
         linkGH: 'https://github.com/Juanfelipegrc/notes-app',
         linkN: 'https://notes-app-react-js-firebase-firestore.netlify.app/',
@@ -93,9 +120,9 @@ export const projects = [
         - Vite.js for optimized development and build speed
         The GIF Expert App is a great example of component-based architecture, asynchronous data handling, and responsive design. It's an ideal project to demonstrate proficiency in modern front-end development.`,
         logo: GifExpertAppLogo,
-        tecnologies: ['React', 'JS', 'CSS'],
+        tecnologies: ['React JS', 'CSS'],
         video: '',
-        linkGH: 'https://github.com/Juanfelipegrc/React-gif-expert-app',
+        linkGH: 'https://github.com/Juanfelipegrc/react-gif-expert-app',
         linkN: 'https://gif-expert-app-react-js.netlify.app/',
     },
 

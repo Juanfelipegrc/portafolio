@@ -1,6 +1,7 @@
-export {default as PrincipalProfilePicture} from './portafolio-profile-picture.jpeg';
+export {default as PrincipalProfilePicture} from './portfolio-profile-picture.webp';
 export {default as AustronautLogo} from './austronaut-logo.png';
 export {default as HiAppLogo} from './hi-app-logo.png';
+export {default as SocnetLogo} from './socnet-logo.png';
 export {default as DishoLogo} from './disho-logo.png';
 export {default as NotesAppLogo} from './notes-app-logo.png';
 export {default as ReactLogo} from './react-logo.png';
