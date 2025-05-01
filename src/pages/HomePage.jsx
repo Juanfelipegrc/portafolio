@@ -228,13 +228,12 @@ export const HomePage = () => {
                         </p>
                     </div>
                     <div className="text-base space-y-3">
-                        <p><strong>Email:</strong> felipegarciarjs@gmail.com</p>
-                        <p><strong>Phone:</strong> +57 3162067218</p>
-                        <p>
-                        <strong>WhatsApp:</strong> <a className="text-blue-400 underline" href="https://wa.link/e0321w" target="_blank" rel="noopener noreferrer">Open WhatsApp</a>
-                        </p>
+                        <p><strong>Email:</strong> felipe@dvelops.com</p>    
                         <p>
                         <strong>GitHub:</strong> <a className="text-blue-400 underline" href="https://github.com/Juanfelipegrc?tab=repositories" target="_blank" rel="noopener noreferrer">Visit GitHub</a>
+                        </p>
+                        <p>
+                        <strong>Production Links:</strong> <a className="text-blue-400 underline" href="https://linktr.ee/juanfelipegrcrjs" target="_blank" rel="noopener noreferrer">Visit Production Links</a>
                         </p>
                     </div>
                     </div>
