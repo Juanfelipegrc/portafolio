@@ -149,7 +149,7 @@ export const HomePage = () => {
                 </div>
 
 
-                <div className='grid grid-cols-12 gap-6 p-6 sm:p-4 md:p-2 lg:p-8 mt-3'>
+                <div className='grid grid-cols-12 gap-6 p-6 sm:p-4 md:p-1 lg:p-8 mt-3'>
                     
                     {
                         cutProjects.map((project, index) => (

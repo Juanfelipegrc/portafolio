@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import * as motion from 'motion/react-client'
 import { Link } from 'react-router';
 import { AnimatePresence } from 'motion/react';
+import { useAnimations } from '../hooks/useAnimations';
 
 export const ProjectCard = ({image, title, tecnologies, desc, linkN, linkGH}) => {
 
@@ -9,8 +10,10 @@ export const ProjectCard = ({image, title, tecnologies, desc, linkN, linkGH}) =>
     const [animationFirstDiv, setAnimationFirstDiv] = useState(true);
     const [animationSecondDiv, setAnimationSecondDiv] = useState(false);
     const [isClosing, setIsClosing] = useState(false);
+    const {screenWidth} = useAnimations();
 
     const descCut = desc.slice(0, 300);
+    const descCutMd = desc.slice(0, 150);
 
     
 
@@ -100,13 +103,13 @@ export const ProjectCard = ({image, title, tecnologies, desc, linkN, linkGH}) =>
   return (
     <>
     
-        <div className='col-span-12 md:col-span-4 lg:col-span-4 min-h-[25rem] max-h-[25rem] sm:min-h-[20rem] sm:max-h-[20rem] md:min-h-[28rem] md:max-h-[33rem] lg:min-h-[22.5rem] lg:max-h-[27rem]'>
+        <div className='col-span-12 md:col-span-4 lg:col-span-4 min-h-[25rem] max-h-[25rem] sm:min-h-[20rem] sm:max-h-[20rem] md:min-h-[24rem] md:max-h-[33rem] lg:min-h-[22.5rem] lg:max-h-[27rem]'>
             <motion.div
                     layout
                     transition={{
                         layout: { duration: 0.2, ease: 'easeInOut' }
                     }}
-                    className={`bg-neutral-900 flex flex-col h-full ${cardClicked.validation && cardClicked.card === title && !isClosing? 'fixed top-0 left-0 w-screen h-screen z-[1000] rounded-none p-10 overflow-y-auto' : isClosing? 'bottom-0 rounded-4xl' : 'rounded-4xl p-6 justify-center'} `}
+                    className={`bg-neutral-900 flex flex-col h-full ${cardClicked.validation && cardClicked.card === title && !isClosing? 'fixed top-0 left-0 w-screen h-screen z-[1000] rounded-none p-10 overflow-y-auto' : isClosing? 'bottom-0 rounded-4xl' : 'rounded-4xl p-6 sm:p-6 md:p-4 lg:p-6 justify-center'} `}
                 >
                 
                 
@@ -132,8 +135,12 @@ export const ProjectCard = ({image, title, tecnologies, desc, linkN, linkGH}) =>
                                 />
                             </div>
                             <h2 className='text-white text-xl font-semibold'>{title}</h2>
-                            <p className='text-white text-sm'>{desc.length > 300 && !cardClicked.validation? `${descCut}...` : desc}</p>
-                            <div className='flex items-center gap-2'>
+                            <p className='text-white text-sm'>{
+
+                                desc.length > 300 && (screenWidth < 768 || screenWidth > 1024)? !cardClicked.validation? `${descCut}...` : desc : desc.length > 150 &&  !cardClicked.validation? `${descCutMd}...` : desc
+                            
+                            }</p>
+                            <div className='flex flex-wrap items-center gap-2'>
                                 {
                                     tecnologies.map((tecnology, index) => {
 
