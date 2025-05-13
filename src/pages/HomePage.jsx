@@ -160,7 +160,7 @@ export const HomePage = () => {
                                 desc={project.desc} 
                                 linkN={project.linkN}
                                 linkGH={project.linkGH}
-                                tecnologies={project.tecnologies}
+                                technologies={project.technologies}
                             />
                         ))
                     }
@@ -230,10 +230,10 @@ export const HomePage = () => {
                     <div className="text-base space-y-3">
                         <p><strong>Email:</strong> felipe@dvelops.com</p>    
                         <p>
-                        <strong>GitHub:</strong> <a className="text-blue-400 underline" href="https://github.com/Juanfelipegrc?tab=repositories" target="_blank" rel="noopener noreferrer">Visit GitHub</a>
+                        <strong>GitHub:</strong> <a className="text-blue-400 underline cursor-none hover:text-blue-300 transition-all" href="https://github.com/Juanfelipegrc?tab=repositories" target="_blank" rel="noopener noreferrer">Visit GitHub</a>
                         </p>
                         <p>
-                        <strong>Production Links:</strong> <a className="text-blue-400 underline" href="https://linktr.ee/juanfelipegrcrjs" target="_blank" rel="noopener noreferrer">Visit Production Links</a>
+                        <strong>Production Links:</strong> <a className="text-blue-400 underline cursor-none hover:text-blue-300 transition-all" href="https://linktr.ee/juanfelipegrcrjs" target="_blank" rel="noopener noreferrer">Visit Production Links</a>
                         </p>
                     </div>
                     </div>

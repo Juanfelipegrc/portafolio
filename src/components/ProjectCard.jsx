@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 import { AnimatePresence } from 'motion/react';
 import { useAnimations } from '../hooks/useAnimations';
 
-export const ProjectCard = ({image, title, tecnologies, desc, linkN, linkGH}) => {
+export const ProjectCard = ({image, title, technologies, desc, linkN, linkGH}) => {
 
     const [cardClicked, setCardClicked] = useState({validation: false, card: ''});
     const [animationFirstDiv, setAnimationFirstDiv] = useState(true);
@@ -14,7 +14,7 @@ export const ProjectCard = ({image, title, tecnologies, desc, linkN, linkGH}) =>
 
     const descCut = desc.slice(0, 300);
     const descCutMd = desc.slice(0, 150);
-
+    const technologiesCut = technologies.slice(0, 4);
     
 
     const handleCardClicked = () => {
@@ -142,7 +142,7 @@ export const ProjectCard = ({image, title, tecnologies, desc, linkN, linkGH}) =>
                             }</p>
                             <div className='flex flex-wrap items-center gap-2'>
                                 {
-                                    tecnologies.map((tecnology, index) => {
+                                    technologiesCut.map((tecnology, index) => {
 
                                         const bgColor = getBgColor(tecnology);
 
@@ -222,7 +222,7 @@ export const ProjectCard = ({image, title, tecnologies, desc, linkN, linkGH}) =>
                                     <p className='text-white text-sm'>{desc}</p>
                                     <div className='flex items-center gap-2'>
                                         {
-                                            tecnologies.map((tecnology, index) => {
+                                            technologies.map((tecnology, index) => {
 
                                                 const bgColor = getBgColor(tecnology);
 
