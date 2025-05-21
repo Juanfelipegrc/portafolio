@@ -44,10 +44,10 @@ export const HomePage = () => {
 
     useEffect(() => {
       
-        if(screenWidth <= 768){
+        if(screenWidth <= 768 && cutProjects.length === projects.length && !showMore){
             setCutProjects(projects.slice(0, 4));
-        } else {
-            setCutProjects(projects.slice(0, 5));
+        } else if(screenWidth >= 768 && cutProjects.length === projects.length && !showMore) {
+            setCutProjects(projects.slice(0, 6));
         }
 
     }, [screenWidth]);
@@ -74,7 +74,10 @@ export const HomePage = () => {
 
     }, []);
     
-    
+    console.log({
+        showMore,
+        cutProjects
+    })
 
     
 

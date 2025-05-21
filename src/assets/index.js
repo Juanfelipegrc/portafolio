@@ -11,3 +11,4 @@ export {default as ReduxLogo} from './redux-logo.png';
 export {default as TailwindCSS} from './tailwind-css-logo.png';
 export {default as MotionLogo} from './motion-logo.png'
 export {default as GifExpertAppLogo} from './gif-expert-app-logo.png';
+export {default as PianoAppLogo} from './piano-app-logo.png';

@@ -1,4 +1,4 @@
-import { AustronautLogo, DishoLogo, GifExpertAppLogo, HiAppLogo, NotesAppLogo, SocnetLogo } from "../assets"
+import { AustronautLogo, DishoLogo, GifExpertAppLogo, HiAppLogo, NotesAppLogo, PianoAppLogo, SocnetLogo } from "../assets"
 
 export const projects = [
     {
@@ -124,6 +124,25 @@ export const projects = [
         video: '',
         linkGH: 'https://github.com/Juanfelipegrc/react-gif-expert-app',
         linkN: 'https://gif-expert-app-react-js.netlify.app/',
+    },
+
+    {
+        name: 'Piano App',
+        desc: `Piano App es una aplicación desarrollada con React.js y Bootstrap, que permite a los usuarios tocar un piano digital desde su navegador. El enfoque principal fue crear una experiencia accesible, fluida y visualmente ordenada, ideal tanto para principiantes como para personas con experiencia musical.
+
+        Características principales:
+        - Teclado digital responsivo con diseño adaptado a móviles y escritorio
+        - Sonidos realistas utilizando la librería Soundfont-player
+        - Control del piano mediante teclado físico con React Hotkeys
+        - Interfaz desarrollada con Bootstrap, optimizada para usabilidad
+
+        Objetivo del proyecto:
+        Construir una herramienta interactiva que combine educación y entretenimiento musical, con un diseño claro y una arquitectura moderna basada en componentes reutilizables de React.`,
+        logo: PianoAppLogo,
+        technologies: ['React JS', 'Bootstrap', 'CSS'],
+        video: '',
+        linkGH: 'https://github.com/Juanfelipegrc/piano-app',
+        linkN: 'https://piano-app-react-js.netlify.app/',
     },
 
 ]
