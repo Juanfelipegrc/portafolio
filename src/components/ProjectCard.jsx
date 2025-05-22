@@ -219,7 +219,7 @@ export const ProjectCard = ({image, title, technologies, desc, linkN, linkGH}) =
                                         />
                                     </div>
                                     <h2 className='text-white text-xl font-semibold'>{title}</h2>
-                                    <p className='text-white text-sm'>{desc}</p>
+                                    <p className='text-white whitespace-pre-line text-sm'>{desc}</p>
                                     <div className='flex items-center gap-2'>
                                         {
                                             technologies.map((tecnology, index) => {

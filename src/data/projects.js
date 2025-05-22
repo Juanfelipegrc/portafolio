@@ -33,18 +33,12 @@ export const projects = [
             Socnet is a modern social networking app designed for effortless sharing and meaningful connections. Built with React Native and Expo, it offers a smooth and intuitive experience that brings people closer through visual content.
 
             Key Features:
-
-            Share photos and moments instantly to your personal feed
-
-            Like, comment, and engage with posts from your community
-
-            Follow other users and grow your network
-
-            Explore trending content and discover new profiles
-
-            Enjoy real-time interaction through a clean, fast interface
-
-            Experience a minimalist, user-friendly design built for mobile
+            - Share photos and moments instantly to your personal feed
+            - Like, comment, and engage with posts from your community
+            - Follow other users and grow your network
+            - Explore trending content and discover new profiles
+            - Enjoy real-time interaction through a clean, fast interface
+            - Experience a minimalist, user-friendly design built for mobile
 
             Socnet is more than just a photo-sharing app — it's a space to express yourself, stay connected, and discover the people and stories that inspire you.`,
         logo: SocnetLogo,
@@ -129,7 +123,7 @@ export const projects = [
     {
         name: 'Piano App',
         desc: `Piano App is an application developed with React.js and Bootstrap that allows users to play a digital piano directly from their browser. The main focus was to create an accessible, smooth, and visually clean experience, ideal for both beginners and users with musical experience.
-
+        
         Key Features:
         - Responsive digital keyboard with a layout adapted for mobile and desktop
         - Realistic piano sounds using the Soundfont-player library

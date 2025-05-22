@@ -99,7 +99,6 @@ export const AboutMeModal = ({isOpen, onClose}) => {
                                     
                                     <ul className='text-white'>
                                         <li>- React JS.</li>
-                                        <li>- React Native.</li>
                                         <li>- HTML.</li>
                                         <li>- CSS.</li>
                                         <li>- JavaScript.</li>
@@ -114,7 +113,6 @@ export const AboutMeModal = ({isOpen, onClose}) => {
                                     
                                     <ul className='text-white'>
                                         <li>- React Native.</li>
-                                        <li>- HTML.</li>
                                         <li>- CSS.</li>
                                         <li>- JavaScript.</li>
                                         <li>- TypeScript.</li>
