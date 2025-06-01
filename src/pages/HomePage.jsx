@@ -25,7 +25,7 @@ export const HomePage = () => {
     const onSetReadMore = (value) => {
         setTimeout(() => {
             setReadMore(value);
-        }, 500);
+        }, 600);
     };
 
     const onSetIsClosing = () => {
@@ -102,7 +102,7 @@ export const HomePage = () => {
             {/* HOME */}
 
             <div className='flex items-center justify-center h-[135vh] sm:h-[130vh] md:h-screen lg:h-screen'>
-                <div className={`w-[90%] sm:w-[80%] md:w-[88%] ${readMore? 'lg:w-[100%]' : 'lg:w-[70%]'} grid grid-cols-12`}>
+                <div className={`w-[90%] sm:w-[80%] md:w-[88%] lg:w-[70%] grid grid-cols-12`}>
 
 
                     <div className='col-span-12 flex justify-center md:justify-end lg:justify-end items-center md:items-start lg:items-center md:col-span-5 lg:col-span-5 pe-0 md:pe-7 lg:pe-7 md:pt-3 lg:pt-0'>
@@ -129,14 +129,16 @@ export const HomePage = () => {
                     </div>
 
                     
-                    <AboutMeButton 
-                        readMore={readMore} 
-                        isClosing={isClosing} 
-                        isOpening={isOpening}
-                        onSetReadMore={onSetReadMore}
-                        onSetIsClosing={onSetIsClosing}
-                        onSetIsOpening={onSetIsOpening}
-                    />
+                    <div className='col-span-12 flex justify-center items-center h-[2.8rem] md:h-[2.5rem] lg:h-[2.8rem]'>
+                        <AboutMeButton 
+                            readMore={readMore} 
+                            isClosing={isClosing} 
+                            isOpening={isOpening}
+                            onSetReadMore={onSetReadMore}
+                            onSetIsClosing={onSetIsClosing}
+                            onSetIsOpening={onSetIsOpening}
+                        />
+                    </div>
 
                     
                 </div>

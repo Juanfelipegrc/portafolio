@@ -1,15 +1,43 @@
 import { AnimatePresence } from 'motion/react'
 import * as motion from 'motion/react-client'
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
 export const AboutMeButton = ({readMore, isClosing, isOpening, onSetReadMore, onSetIsClosing, onSetIsOpening}) => {
+
+
+    const [readyToShow, setReadyToShow] = useState(false);
+    const [readyToShowButton, setReadyToShowButton] = useState(true)
+
+    const onSetReadyToShow = (value) => {
+        if(value){
+            setTimeout(() => {
+                setReadyToShow(value)
+            }, 1200);
+        } else {
+            setTimeout(() => {
+                setReadyToShow(value)
+            }, 250);
+        }
+    }
+
+    const onSetReadyToShowButton = (value) => {
+        if(value){
+            setTimeout(() => {
+                setReadyToShowButton(value)
+            }, 1300);
+        } else {
+            setTimeout(() => {
+                setReadyToShowButton(value)
+            }, 250);
+        }
+    }
 
 
     useEffect(() => {
       
         if(readMore && !isOpening){
             document.body.classList.add('overflow-hidden');
-        } else if (!readMore && !isClosing) {
+        } else if (!readMore) {
             document.body.classList.remove('overflow-hidden');
         }
 
@@ -25,11 +53,18 @@ export const AboutMeButton = ({readMore, isClosing, isOpening, onSetReadMore, on
             
             <motion.div
                 layout
-                transition={{layout: { duration: 0.2, ease: 'easeInOut' }}}
-                className={!readMore? `flex bg-blue-400 items-center justify-center w-[8.5rem] md:w-[8rem] lg:w-[8.5rem] h-[2.8rem] md:h-[2.5rem] lg:h-[2.8rem] rounded-full cursor-none ${!isClosing && 'hover:scale-105'} transition-all duration-200` : 'fixed top-0 left-0 z-[999] bg-black w-screen h-screen'}
+                initial={{borderRadius: '0px'}}
+                animate={{borderRadius: !readMore && !isClosing? '999px' : '0px'}}
+                transition={{
+                    layout: { duration: 0.2, ease: "easeInOut" },         
+                    borderRadius: { duration: isOpening && readMore? 0.1 : 0.5, ease: "easeInOut" } 
+                }}
+                className={!readMore? `flex bg-blue-400 items-center justify-center w-[8.5rem] md:w-[8rem] lg:w-[8.5rem] h-[2.8rem] md:h-[2.5rem] lg:h-[2.8rem] z-[999] cursor-none ${!isClosing && 'hover:scale-105 transition-all duration-200'}` : `fixed top-0 left-0 z-[999] ${isClosing && !readyToShow && 'bg-blue-400'} ${isOpening? 'bg-blue-400' : 'bg-black'} w-screen h-screen transition-colors duration-500`}
                 onClick={() => {
                     if(!readMore){
                         onSetReadMore(true);
+                        onSetReadyToShow(true);
+                        onSetReadyToShowButton(false);
                         onSetIsOpening();
                     }
                 }}
@@ -41,7 +76,7 @@ export const AboutMeButton = ({readMore, isClosing, isOpening, onSetReadMore, on
                             (
                                 <AnimatePresence>
                                     {
-                                        !isClosing && !isOpening && (
+                                        !isClosing && !isOpening && readyToShowButton && (
                                 
                                             <motion.div 
                                             className='flex justify-center items-center'
@@ -75,7 +110,7 @@ export const AboutMeButton = ({readMore, isClosing, isOpening, onSetReadMore, on
                         (
                             <AnimatePresence>
                                 {
-                                    !isOpening && !isClosing && (
+                                    !isOpening && !isClosing && readyToShow && (
                                         <motion.div
                                             className='bg-black p-5 w-full h-full flex flex-col items-center gap-20 py-20 overflow-y-scroll overflow-x-hidden'
                                             initial={{opacity: 0}}
@@ -91,6 +126,8 @@ export const AboutMeButton = ({readMore, isClosing, isOpening, onSetReadMore, on
                                             transition={{duration: 0.4, ease: 'easeInOut'}}
                                             onClick={() => {
                                                 onSetReadMore(false);
+                                                onSetReadyToShow(false);
+                                                onSetReadyToShowButton(true);
                                                 onSetIsClosing();
                                             }}
                                             className='absolute top-5 right-3 sm:top-2 sm:right-4 md:top-5 md:right-6  p-2'
