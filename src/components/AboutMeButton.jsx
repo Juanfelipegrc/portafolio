@@ -76,7 +76,7 @@ export const AboutMeButton = ({readMore, isClosing, isOpening, onSetReadMore, on
                                 {
                                     !isOpening && !isClosing && (
                                         <motion.div
-                                            className='bg-black p-5 w-full h-full flex flex-col gap-20 py-20 overflow-y-scroll overflow-x-hidden'
+                                            className='bg-black p-5 w-full h-full flex flex-col items-center gap-20 py-20 overflow-y-scroll overflow-x-hidden'
                                             initial={{opacity: 0}}
                                             animate={{opacity:1}}
                                             exit={{opacity: 0}}
@@ -106,7 +106,7 @@ export const AboutMeButton = ({readMore, isClosing, isOpening, onSetReadMore, on
 
                                             </motion.div>
 
-                                            <div className='flex flex-col items-center md:items-start lg:items-start'>
+                                            <div className='flex flex-col w-[90%] sm:w-[80%] md:w-[88%] lg:w-[70%] items-center md:items-start lg:items-start'>
                             
                                             <h2 className='text-white text-center md:text-start lg:text-start text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-medium my-5'>About <span className='text-blue-400'>Me</span></h2>
                                             <p className='text-white text-center md:text-start lg:text-start font-light'>
@@ -121,14 +121,14 @@ export const AboutMeButton = ({readMore, isClosing, isOpening, onSetReadMore, on
                             
                                             
                                             
-                                            <div className='w-full'>
+                                            <div className='w-[90%] sm:w-[80%] md:w-[88%] lg:w-[70%]'>
                                             <h2 className='text-white text-3xl font-medium'>
                                                 Skills:
                                             </h2>
                             
                                             <div className='grid grid-cols-12 w-full ps-10 gap-10'>
                             
-                                                <div className='col-span-12 md:col-span-6 lg:col-span-4'>
+                                                <div className='col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-4'>
                                                 <h2 className='text-white text-[1.6rem] font-medium mt-6'>
                                                     Programing <br /> <span className='text-blue-400'>Lenguages</span>
                                                 </h2>
@@ -140,7 +140,7 @@ export const AboutMeButton = ({readMore, isClosing, isOpening, onSetReadMore, on
                                                 </div>
                             
                             
-                                                <div className='col-span-12 md:col-span-6 lg:col-span-4'>
+                                                <div className='col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-4'>
                                                 <h2 className='text-white text-[1.6rem] font-medium mt-6'>
                                                     Web <br /> <span className='text-blue-400'>Development</span>
                                                 </h2>
@@ -154,7 +154,7 @@ export const AboutMeButton = ({readMore, isClosing, isOpening, onSetReadMore, on
                                                 </ul>
                                                 </div>
 
-                                                <div className='col-span-12 md:col-span-6 lg:col-span-4'>
+                                                <div className='col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-4'>
                                                 <h2 className='text-white text-[1.6rem] font-medium mt-6'>
                                                     Mobile <br /> <span className='text-blue-400'>Development</span>
                                                 </h2>
@@ -170,7 +170,7 @@ export const AboutMeButton = ({readMore, isClosing, isOpening, onSetReadMore, on
                             
                             
                             
-                                                <div className='col-span-12 md:col-span-6 lg:col-span-4'>
+                                                <div className='col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-4'>
                                                 <h2 className='text-white text-[1.6rem] font-medium mt-6'>
                                                     Versions <br /> <span className='text-blue-400'>Control</span>
                                                 </h2>
@@ -184,7 +184,7 @@ export const AboutMeButton = ({readMore, isClosing, isOpening, onSetReadMore, on
 
 
                             
-                                                <div className='col-span-12 md:col-span-6 lg:col-span-4'>
+                                                <div className='col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-4'>
                                                 <h2 className='text-white text-[1.6rem] font-medium mt-6'>
                                                     Frameworks & <br /> <span className='text-blue-400'>styles</span> tools
                                                 </h2>
@@ -199,7 +199,7 @@ export const AboutMeButton = ({readMore, isClosing, isOpening, onSetReadMore, on
 
 
                             
-                                                <div className='col-span-12 md:col-span-6 lg:col-span-4'>
+                                                <div className='col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-4'>
                                                 <h2 className='text-white text-[1.6rem] font-medium mt-6'>
                                                     App <br /> <span className='text-blue-400'>Testing </span>
                                                 </h2>
@@ -218,7 +218,7 @@ export const AboutMeButton = ({readMore, isClosing, isOpening, onSetReadMore, on
                             
                             
                             
-                                            <div>
+                                            <div className='w-[90%] sm:w-[80%] md:w-[88%] lg:w-[70%]'>
                                             <h2 className='text-white text-3xl font-medium'>
                                                 GitHub & Netlify Projects:
                                             </h2>
