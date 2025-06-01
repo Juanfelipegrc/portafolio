@@ -27,6 +27,12 @@ export const AboutMeButton = ({readMore, isClosing, isOpening, onSetReadMore, on
                 layout
                 transition={{layout: { duration: 0.2, ease: 'easeInOut' }}}
                 className={!readMore? `flex bg-blue-400 items-center justify-center w-[8.5rem] md:w-[8rem] lg:w-[8.5rem] h-[2.8rem] md:h-[2.5rem] lg:h-[2.8rem] rounded-full cursor-none ${!isClosing && 'hover:scale-105'} transition-all duration-200` : 'fixed top-0 left-0 z-[999] bg-black w-screen h-screen'}
+                onClick={() => {
+                    if(!readMore){
+                        onSetReadMore(true);
+                        onSetIsOpening();
+                    }
+                }}
 
             >
 
@@ -43,11 +49,6 @@ export const AboutMeButton = ({readMore, isClosing, isOpening, onSetReadMore, on
                                             animate={{opacity: 1}}
                                             exit={{opacity: 0}}
                                             transition={{duration: 0.4, ease: 'easeInOut'}}
-                                            
-                                            onClick={() => {
-                                                onSetReadMore(true);
-                                                onSetIsOpening();
-                                            }}
                                             >
                                             
                                                 <svg 
@@ -108,10 +109,10 @@ export const AboutMeButton = ({readMore, isClosing, isOpening, onSetReadMore, on
 
                                             <div className='flex flex-col w-[90%] sm:w-[80%] md:w-[88%] lg:w-[70%] items-center md:items-start lg:items-start'>
                             
-                                            <h2 className='text-white text-center md:text-start lg:text-start text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-medium my-5'>About <span className='text-blue-400'>Me</span></h2>
+                                            <h2 className='text-white text-center md:text-start lg:text-start text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-medium my-5'>About <span className='text-blue-300'>Me</span></h2>
                                             <p className='text-white text-center md:text-start lg:text-start font-light'>
                             
-                                            Hello, I'm Juan Felipe García Rojas, a dedicated <b className='text-blue-400'>frontend</b> and <b className='text-blue-400'>mobile</b> software developer. I specialize in crafting engaging, responsive user interfaces and applications, primarily leveraging the React JS ecosystem for web development and React Native for cross-platform mobile solutions.
+                                            Hello, I'm Juan Felipe García Rojas, a dedicated <b className='text-blue-300'>frontend</b> and <b className='text-blue-300'>mobile</b> software developer. I specialize in crafting engaging, responsive user interfaces and applications, primarily leveraging the React JS ecosystem for web development and React Native for cross-platform mobile solutions.
                                             <br /> <br />
 
                                             My core technical expertise lies in JavaScript (ES6+), HTML5, and CSS3. I am proficient in utilizing modern frameworks and libraries to enhance development efficiency and UI quality, including extensive experience with Bootstrap and Tailwind CSS for styling, Sass for CSS preprocessing, and Framer Motion for animations. Furthermore, I incorporate TypeScript into my projects to build more robust, scalable, and maintainable codebases. I am committed to writing clean code and delivering high-quality digital experiences.
@@ -130,7 +131,7 @@ export const AboutMeButton = ({readMore, isClosing, isOpening, onSetReadMore, on
                             
                                                 <div className='col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-4'>
                                                 <h2 className='text-white text-[1.6rem] font-medium mt-6'>
-                                                    Programing <br /> <span className='text-blue-400'>Lenguages</span>
+                                                    Programing <br /> <span className='text-blue-300'>Lenguages</span>
                                                 </h2>
                                                 
                                                 <ul className='text-white'>
@@ -142,7 +143,7 @@ export const AboutMeButton = ({readMore, isClosing, isOpening, onSetReadMore, on
                             
                                                 <div className='col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-4'>
                                                 <h2 className='text-white text-[1.6rem] font-medium mt-6'>
-                                                    Web <br /> <span className='text-blue-400'>Development</span>
+                                                    Web <br /> <span className='text-blue-300'>Development</span>
                                                 </h2>
                                                 
                                                 <ul className='text-white'>
@@ -156,7 +157,7 @@ export const AboutMeButton = ({readMore, isClosing, isOpening, onSetReadMore, on
 
                                                 <div className='col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-4'>
                                                 <h2 className='text-white text-[1.6rem] font-medium mt-6'>
-                                                    Mobile <br /> <span className='text-blue-400'>Development</span>
+                                                    Mobile <br /> <span className='text-blue-300'>Development</span>
                                                 </h2>
                                                 
                                                 <ul className='text-white'>
@@ -172,7 +173,7 @@ export const AboutMeButton = ({readMore, isClosing, isOpening, onSetReadMore, on
                             
                                                 <div className='col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-4'>
                                                 <h2 className='text-white text-[1.6rem] font-medium mt-6'>
-                                                    Versions <br /> <span className='text-blue-400'>Control</span>
+                                                    Versions <br /> <span className='text-blue-300'>Control</span>
                                                 </h2>
                             
                                                 <ul className='text-white'>
@@ -186,7 +187,7 @@ export const AboutMeButton = ({readMore, isClosing, isOpening, onSetReadMore, on
                             
                                                 <div className='col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-4'>
                                                 <h2 className='text-white text-[1.6rem] font-medium mt-6'>
-                                                    Frameworks & <br /> <span className='text-blue-400'>styles</span> tools
+                                                    Frameworks & <br /> <span className='text-blue-300'>styles</span> tools
                                                 </h2>
                             
                                                 <ul className='text-white'>
@@ -201,7 +202,7 @@ export const AboutMeButton = ({readMore, isClosing, isOpening, onSetReadMore, on
                             
                                                 <div className='col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-4'>
                                                 <h2 className='text-white text-[1.6rem] font-medium mt-6'>
-                                                    App <br /> <span className='text-blue-400'>Testing </span>
+                                                    App <br /> <span className='text-blue-300'>Testing </span>
                                                 </h2>
                             
                                                 <ul className='text-white'>
