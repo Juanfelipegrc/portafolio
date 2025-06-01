@@ -7,6 +7,16 @@ export const AboutMeButton = ({readMore, isClosing, isOpening, onSetReadMore, on
 
     const [readyToShow, setReadyToShow] = useState(false);
     const [readyToShowButton, setReadyToShowButton] = useState(true)
+    const [userHasClicked, setUserHasClicked] = useState(false);
+
+
+
+    const onSetUserHasClicked = (value) => {
+        if(userHasClicked) return;
+        setUserHasClicked(value)
+    }
+
+ 
 
     const onSetReadyToShow = (value) => {
         if(value){
@@ -53,18 +63,19 @@ export const AboutMeButton = ({readMore, isClosing, isOpening, onSetReadMore, on
             
             <motion.div
                 layout
-                initial={{borderRadius: '0px'}}
-                animate={{borderRadius: !readMore && !isClosing? '999px' : '0px'}}
+                initial={userHasClicked?{borderRadius: '0px'} : {}}
+                animate={ userHasClicked?{borderRadius: !readMore && !isClosing? '999px' : '0px'} : {}}
                 transition={{
                     layout: { duration: 0.2, ease: "easeInOut" },         
                     borderRadius: { duration: isOpening && readMore? 0.1 : 0.5, ease: "easeInOut" } 
                 }}
-                className={!readMore? `flex bg-blue-400 items-center justify-center w-[8.5rem] md:w-[8rem] lg:w-[8.5rem] h-[2.8rem] md:h-[2.5rem] lg:h-[2.8rem] z-[999] cursor-none ${!isClosing && 'hover:scale-105 transition-all duration-200'}` : `fixed top-0 left-0 z-[999] ${isClosing && !readyToShow && 'bg-blue-400'} ${isOpening? 'bg-blue-400' : 'bg-black'} w-screen h-screen transition-colors duration-500`}
+                className={!readMore? `flex bg-blue-400 items-center justify-center w-[8.5rem] md:w-[8rem] lg:w-[8.5rem] h-[2.8rem] md:h-[2.5rem] lg:h-[2.8rem] ${!userHasClicked && 'rounded-full'} z-[999] cursor-none ${!isClosing && 'hover:scale-105 transition-all duration-200'}` : `fixed top-0 left-0 z-[999] ${isClosing && !readyToShow && 'bg-blue-400'} ${isOpening? 'bg-blue-400' : 'bg-black'} w-screen h-screen transition-colors duration-500`}
                 onClick={() => {
                     if(!readMore){
                         onSetReadMore(true);
                         onSetReadyToShow(true);
                         onSetReadyToShowButton(false);
+                        onSetUserHasClicked(true); 
                         onSetIsOpening();
                     }
                 }}
