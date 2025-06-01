@@ -127,7 +127,7 @@ export const ProjectCard = ({image, title, technologies, desc, linkN, linkGH}) =
                             <div className='w-16 h-16'>
                                 <motion.img 
                                     src={image} 
-                                    alt="Austronaut logo" 
+                                    alt="Logo" 
                                     initial={{opacity: 0}}
                                     animate={{opacity: 1}}
                                     transition={{duration: 0.2, ease: 'easeInOut'}}

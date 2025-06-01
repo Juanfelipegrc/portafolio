@@ -4,31 +4,45 @@ import { PrincipalProfilePicture } from '../assets';
 import { useNavigate } from 'react-router';
 import { useAnimations } from '../hooks/useAnimations';
 import { projects } from '../data/projects';
-import { AboutMeModal, ContactForm, ProjectCard } from '../components';
+import { AboutMeButton, ContactForm, ProjectCard } from '../components';
 import { AnimatePresence } from 'motion/react';
 
 
 export const HomePage = () => {
 
-    const [animateExit, setAnimateExit] = useState(false);
+    const [readMore, setReadMore] = useState(false);
     const [showMore, setShowMore] = useState(false);
-    const [modalIsOpen, setModalIsOpen] = useState(false);
+
+    const [isClosing, setIsClosing] = useState(false);
+    const [isOpening, setIsOpening] = useState(false);
     const {lastPage, onSetLastPage, screenWidth} = useAnimations();
     const [cutProjects, setCutProjects] = useState(projects);
 
     const navigate = useNavigate();
 
 
-    const onSetAnimateExit = (page) => {
-        setAnimateExit(true);
+
+    const onSetReadMore = (value) => {
         setTimeout(() => {
-            navigate(`/${page}`)
-        }, 1000);     
+            setReadMore(value);
+        }, 500);
     };
 
-    const onCloseModal = () => {
-        setModalIsOpen(false);
+    const onSetIsClosing = () => {
+        setIsClosing(true)
+        setTimeout(() => {
+            setIsClosing(false)
+        }, 900);
     }
+
+    const onSetIsOpening = () => {
+        setIsOpening(true)
+        setTimeout(() => {
+            setIsOpening(false)
+        }, 900);
+    }
+
+  
 
     useEffect(() => {
       
@@ -74,10 +88,7 @@ export const HomePage = () => {
 
     }, []);
     
-    console.log({
-        showMore,
-        cutProjects
-    })
+
 
     
 
@@ -86,12 +97,12 @@ export const HomePage = () => {
 
         <div className='w-full flex flex-col items-center bg-black'>
 
-        <AboutMeModal isOpen={modalIsOpen} onClose={onCloseModal}/>
+        
 
             {/* HOME */}
 
             <div className='flex items-center justify-center h-[135vh] sm:h-[130vh] md:h-screen lg:h-screen'>
-                <div className='w-[90%] sm:w-[80%] md:w-[88%] lg:w-[70%] grid grid-cols-12'>
+                <div className={`w-[90%] sm:w-[80%] md:w-[88%] ${readMore? 'lg:w-[100%]' : 'lg:w-[70%]'} grid grid-cols-12`}>
 
 
                     <div className='col-span-12 flex justify-center md:justify-end lg:justify-end items-center md:items-start lg:items-center md:col-span-5 lg:col-span-5 pe-0 md:pe-7 lg:pe-7 md:pt-3 lg:pt-0'>
@@ -117,27 +128,17 @@ export const HomePage = () => {
                         </p>
                     </div>
 
+                    
+                    <AboutMeButton 
+                        readMore={readMore} 
+                        isClosing={isClosing} 
+                        isOpening={isOpening}
+                        onSetReadMore={onSetReadMore}
+                        onSetIsClosing={onSetIsClosing}
+                        onSetIsOpening={onSetIsOpening}
+                    />
 
-
-
-                    <div className='col-span-12 flex items-center justify-center mt-3.5'>
-                        <button 
-                            className='bg-blue-400 flex items-center justify-center px-3 py-2 rounded-full cursor-none hover:scale-105 transition-all duration-200'
-                            onClick={() => setModalIsOpen(true)}
-                        >
-                            <svg 
-                                    xmlns="http://www.w3.org/2000/svg" 
-                                    height="1.2rem"
-                                    className='mt-[2px]'
-                                    viewBox="0 -960 960 960" 
-                                    width="1.2rem" 
-                                    fill="#fff"
-                                ><path d="m600-200-57-56 184-184H80v-80h647L544-704l56-56 280 280-280 280Z"/></svg>
-
-                                &nbsp;
-                                <span className='text-white text-[1.1rem] font-light'>Read More</span>
-                        </button>
-                    </div>
+                    
                 </div>
             </div>
 

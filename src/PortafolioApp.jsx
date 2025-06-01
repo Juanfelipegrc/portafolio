@@ -22,7 +22,7 @@ export const PortafolioApp = () => {
 
 
       <div 
-        className='w-full h-full overflow-hidden'
+        className='w-full h-full overflow-hidden custom-scrollbar'
         onMouseDown={handleClick}
       >
 

@@ -3,4 +3,4 @@ export * from './FloatCube';
 export * from './Cursor';
 export * from './ProjectCard';
 export * from './ContactForm';
-export * from './AboutMeModal';
+export * from './AboutMeButton';
