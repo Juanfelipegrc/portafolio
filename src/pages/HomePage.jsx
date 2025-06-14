@@ -122,14 +122,12 @@ export const HomePage = () => {
                             <span className='text-blue-300'>Juan Felipe</span>
                         </h1>
                         <p className='mt-5 text-[1.1rem] text-white text-center md:text-start lg:text-start'>
-                        Hi, I'm Juan Felipe García Rojas, a <b className='text-blue-300'>frontend</b> and <b className='text-blue-300'>mobile</b> developer specializing in React JS and React Native. I build responsive and engaging user interfaces using JavaScript, HTML, CSS, alongside modern tools including Tailwind CSS, Bootstrap, Motion (Framer Motion), Sass, and TypeScript. <br /> <br />
-                            
-                            
+                            Hi, I'm Juan Felipe García Rojas, a <b className='text-blue-300'>Full stack</b> and <b className='text-blue-300'>Mobile</b> developer specialized in React JS, .NET, and React Native. I build modern, responsive, and high-performance applications for both web and mobile platforms. My skill set includes JavaScript, C#, HTML, CSS, Tailwind CSS, Bootstrap, Framer Motion, Sass, and TypeScript.
                         </p>
                     </div>
 
                     
-                    <div className='col-span-12 flex justify-center items-center h-[2.8rem] md:h-[2.5rem] lg:h-[2.8rem]'>
+                    <div className='col-span-12 mt-3 flex justify-center items-center h-[2.8rem] md:h-[2.5rem] lg:h-[2.8rem]'>
                         <AboutMeButton 
                             readMore={readMore} 
                             isClosing={isClosing} 
