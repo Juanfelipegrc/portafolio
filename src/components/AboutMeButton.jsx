@@ -176,12 +176,13 @@ export const AboutMeButton = ({readMore, isClosing, isOpening, onSetReadMore, on
                             
                                                 <div className='col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-4'>
                                                 <h2 className='text-white text-[1.6rem] font-medium mt-6'>
-                                                    Programing <br /> <span className='text-blue-300'>Lenguages</span>
+                                                    Programing <br /> <span className='text-blue-300'>Languages</span>
                                                 </h2>
                                                 
                                                 <ul className='text-white'>
                                                     <li>- JavaScript.</li>
                                                     <li>- TypeScript.</li>
+                                                    <li>- C#.</li>
                                                 </ul>
                                                 </div>
                             
@@ -192,7 +193,7 @@ export const AboutMeButton = ({readMore, isClosing, isOpening, onSetReadMore, on
                                                 </h2>
                                                 
                                                 <ul className='text-white'>
-                                                    <li>- React JS.</li>
+                                                    <li>- React.</li>
                                                     <li>- HTML.</li>
                                                     <li>- CSS.</li>
                                                     <li>- JavaScript.</li>
@@ -257,6 +258,7 @@ export const AboutMeButton = ({readMore, isClosing, isOpening, onSetReadMore, on
 
 
                             
+
                                                 <div className='col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-4'>
                                                 <h2 className='text-white text-[1.6rem] font-medium mt-6'>
                                                     App <br /> <span className='text-blue-300'>Testing </span>
@@ -269,6 +271,18 @@ export const AboutMeButton = ({readMore, isClosing, isOpening, onSetReadMore, on
                                                 </ul>
                                                 </div>
                                                 
+                                                <div className='col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-4'>
+                                                <h2 className='text-white text-[1.6rem] font-medium mt-6'>
+                                                    Language <br /> <span className='text-blue-300'>Skills </span>
+                                                    & Levels
+                                                </h2>
+                            
+                                                <ul className='text-white'>
+                                                    <li>- English B2.</li>
+                                                    <li>- Spanish C2.</li>
+                                                
+                                                </ul>
+                                                </div>
                                                 
                             
                                             </div>
