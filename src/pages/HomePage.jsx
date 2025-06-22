@@ -127,7 +127,7 @@ export const HomePage = () => {
                     </div>
 
                     
-                    <div className='col-span-12 mt-5 mb-8 sm:mb-0 flex justify-center items-center h-[2.8rem] md:h-[2.5rem] lg:h-[2.8rem]'>
+                    <div className='col-span-12 mt-5 mb-16 sm:mb-8 md:mb-0 flex justify-center items-center h-[2.8rem] md:h-[2.5rem] lg:h-[2.8rem]'>
                         <AboutMeButton 
                             readMore={readMore} 
                             isClosing={isClosing} 
