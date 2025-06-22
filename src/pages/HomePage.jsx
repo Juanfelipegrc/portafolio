@@ -101,7 +101,7 @@ export const HomePage = () => {
 
             {/* HOME */}
 
-            <div className='flex items-center justify-center h-[135vh] sm:h-[130vh] md:h-screen lg:h-screen'>
+            <div className='flex items-center justify-center pt-[8rem] sm:pt-0 sm:h-[130vh] md:h-screen lg:h-screen'>
                 <div className={`w-[90%] sm:w-[80%] md:w-[88%] lg:w-[70%] grid grid-cols-12`}>
 
 
@@ -127,7 +127,7 @@ export const HomePage = () => {
                     </div>
 
                     
-                    <div className='col-span-12 mt-3 flex justify-center items-center h-[2.8rem] md:h-[2.5rem] lg:h-[2.8rem]'>
+                    <div className='col-span-12 mt-5 mb-8 sm:mb-0 flex justify-center items-center h-[2.8rem] md:h-[2.5rem] lg:h-[2.8rem]'>
                         <AboutMeButton 
                             readMore={readMore} 
                             isClosing={isClosing} 
