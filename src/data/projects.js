@@ -1,4 +1,4 @@
-import { AustronautLogo, DishoLogo, GifExpertAppLogo, HiAppLogo, NotesAppLogo, PianoAppLogo, SocnetLogo } from "../assets"
+import { AustronautLogo, DishoLogo, GifExpertAppLogo, HiAppLogo, NotesAppLogo, PianoAppLogo, SocnetLogo, SocnetVideo } from "../assets"
 
 export const projects = [
     {
@@ -12,6 +12,7 @@ export const projects = [
         video: '',
         linkGH: 'https://github.com/Juanfelipegrc/austronaut',
         linkN: 'https://austronaut-chat.netlify.app/',
+        video: ''
     },
 
     {
@@ -25,6 +26,7 @@ export const projects = [
         video: '',
         linkGH: 'https://github.com/Juanfelipegrc/hi-app',
         linkN: 'https://hi-app.netlify.app/',
+        video: ''
     },
 
     {
@@ -46,6 +48,7 @@ export const projects = [
         video: '',
         linkGH: 'https://github.com/Juanfelipegrc/socnet',
         linkN: '',
+        video: SocnetVideo
     },
 
     {
@@ -67,6 +70,7 @@ export const projects = [
         video: '',
         linkGH: 'https://github.com/Juanfelipegrc/disho-replica',
         linkN: 'https://disho-replica.netlify.app/',
+        video: ''
     },
 
     {
@@ -90,6 +94,7 @@ export const projects = [
         video: '',
         linkGH: 'https://github.com/Juanfelipegrc/notes-app',
         linkN: 'https://notes-app-react-js-firebase-firestore.netlify.app/',
+        video: ''
     },
 
     {
@@ -118,6 +123,7 @@ export const projects = [
         video: '',
         linkGH: 'https://github.com/Juanfelipegrc/react-gif-expert-app',
         linkN: 'https://gif-expert-app-react-js.netlify.app/',
+        video: ''
     },
 
     {
@@ -137,6 +143,7 @@ export const projects = [
         video: '',
         linkGH: 'https://github.com/Juanfelipegrc/piano-app',
         linkN: 'https://piano-app-react-js.netlify.app/',
+        video: ''
     },
 
 ]

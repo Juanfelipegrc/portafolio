@@ -4,3 +4,4 @@ export * from './Cursor';
 export * from './ProjectCard';
 export * from './ContactForm';
 export * from './AboutMeButton';
+export * from './VideoProjectModal';

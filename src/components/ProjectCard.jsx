@@ -3,18 +3,21 @@ import * as motion from 'motion/react-client'
 import { Link } from 'react-router';
 import { AnimatePresence } from 'motion/react';
 import { useAnimations } from '../hooks/useAnimations';
+import { VideoProjectModal } from './VideoProjectModal';
 
-export const ProjectCard = ({image, title, technologies, desc, linkN, linkGH}) => {
+export const ProjectCard = ({image, title, technologies, desc, linkN, linkGH, video}) => {
 
     const [cardClicked, setCardClicked] = useState({validation: false, card: ''});
     const [animationFirstDiv, setAnimationFirstDiv] = useState(true);
     const [animationSecondDiv, setAnimationSecondDiv] = useState(false);
+    const [modalVideoIsOpen, setModalVideoIsOpen] = useState(false);
     const [isClosing, setIsClosing] = useState(false);
     const {screenWidth} = useAnimations();
 
     const descCut = desc.slice(0, 300);
     const descCutMd = desc.slice(0, 150);
     const technologiesCut = technologies.slice(0, 4);
+
     
 
     const handleCardClicked = () => {
@@ -25,6 +28,10 @@ export const ProjectCard = ({image, title, technologies, desc, linkN, linkGH}) =
         setTimeout(() => {
             setAnimationSecondDiv(true);
         }, 800);
+    }
+
+    const onSetModalVideoIsOpen = () => {
+        setModalVideoIsOpen(!modalVideoIsOpen);
     }
 
 
@@ -262,6 +269,21 @@ export const ProjectCard = ({image, title, technologies, desc, linkN, linkGH}) =
                                     See Project In Production
 
                                     </a>
+
+                                    <button 
+                                        className={`w-[50%] sm:w-[40%] text-center flex justify-center items-center cursor-none py-2.5 rounded-md bg-blue-400 text-white hover:scale-105 duration-200 ${!video? 'hidden' : ''}`}
+                                        onClick={() => onSetModalVideoIsOpen()}
+                                    >
+
+                                    Watch production project video
+
+                                    </button>
+
+                                    <VideoProjectModal
+                                        video={video}
+                                        modalIsOpen={modalVideoIsOpen}
+                                        onSetModalVideoIsOpen={onSetModalVideoIsOpen}
+                                    />
 
                                     </div>
                                 </div>

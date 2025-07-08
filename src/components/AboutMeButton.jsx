@@ -161,8 +161,9 @@ export const AboutMeButton = ({readMore, isClosing, isOpening, onSetReadMore, on
                                             <p className='text-white text-center md:text-start lg:text-start font-light'>
                                                 Hello, I'm Juan Felipe García Rojas, a dedicated <b className='text-blue-300'>Full stack</b> and <b className='text-blue-300'>Mobile</b> software developer. I specialize in building responsive and engaging applications using <b>React JS</b> and <b>.NET</b> for web development, and <b>React Native</b> for cross-platform mobile solutions.
                                                 <br /><br />
-                                                My core expertise includes JavaScript (ES6+), C#, HTML5, and CSS3. I'm experienced with modern tools and frameworks such as Bootstrap, Tailwind CSS, Sass, and Framer Motion. I also use TypeScript to ensure scalability and maintainability across all projects. I'm passionate about writing clean code and creating high-quality digital experiences for both web and mobile users.
+                                                My core expertise includes JavaScript (ES6+), C#, SQL, T-SQL, HTML5, and CSS3. I'm experienced with modern tools and frameworks such as Bootstrap, Tailwind CSS, Sass, and Framer Motion. I also use TypeScript to ensure scalability and maintainability across all projects. I'm passionate about writing clean code and creating high-quality digital experiences for both web and mobile users.
                                             </p>
+
                                             </div>
                             
                                             
@@ -226,8 +227,16 @@ export const AboutMeButton = ({readMore, isClosing, isOpening, onSetReadMore, on
                                                 </ul>
                                                 </div>
                             
-                            
-                            
+                                                <div className='col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-4'>
+                                                <h2 className='text-white text-[1.6rem] font-medium mt-6'>
+                                                    Database <br /> <span className='text-blue-300'>Lenguages</span>
+                                                </h2>
+                                                
+                                                <ul className='text-white'>
+                                                    <li>- SQL.</li>
+                                                    <li>- T-SQL.</li>
+                                                </ul>
+                                                </div>
                             
                                                 <div className='col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-4'>
                                                 <h2 className='text-white text-[1.6rem] font-medium mt-6'>
