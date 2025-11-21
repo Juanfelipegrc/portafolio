@@ -237,7 +237,7 @@ export const HomePage = () => {
                         </p>
                     </div>
                     <div className="text-base space-y-3">
-                        <p><strong>Email:</strong> felipe@dvelops.com</p>    
+                        <p><strong>Email:</strong> felipegarciarjs@gmail.com</p>    
                         <p>
                         <strong>GitHub:</strong> <a className="text-blue-400 underline cursor-none hover:text-blue-300 transition-all" href="https://github.com/Juanfelipegrc?tab=repositories" target="_blank" rel="noopener noreferrer">Visit GitHub</a>
                         </p>
