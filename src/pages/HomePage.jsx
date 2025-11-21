@@ -122,7 +122,7 @@ export const HomePage = () => {
                             <span className='text-blue-300'>Juan Felipe</span>
                         </h1>
                         <p className='mt-5 text-[1.1rem] text-white text-center md:text-start lg:text-start'>
-                            Hi, I'm Juan Felipe García Rojas, a <b className='text-blue-300'>Full stack</b> and <b className='text-blue-300'>Mobile</b> developer specialized in APIs, backend, and modern web and mobile apps. My main stack includes React JS, .NET, React Native, SQL, T-SQL, JavaScript, C#, TypeScript, HTML, CSS, Tailwind CSS, Bootstrap, Framer Motion, and Sass.
+                            Hi, I'm Juan Felipe García Rojas, a <b className='text-blue-300'>Frontend</b> and <b className='text-blue-300'>Mobile</b> developer specialized in modern web and mobile interfaces. While my main focus is the frontend, I have a functional understanding of backend logic using <b className='text-blue-300'>.NET</b>. My main stack includes <b className='text-blue-300'>React JS</b>, React Native, TypeScript, JavaScript, Tailwind CSS, Framer Motion, HTML, CSS, Sass, C#, SQL, and T-SQL.
                         </p>
 
 

@@ -159,9 +159,11 @@ export const AboutMeButton = ({readMore, isClosing, isOpening, onSetReadMore, on
                             
                                             <h2 className='text-white text-center md:text-start lg:text-start text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-medium my-5'>About <span className='text-blue-300'>Me</span></h2>
                                             <p className='text-white text-center md:text-start lg:text-start font-light'>
-                                                Hello, I'm Juan Felipe García Rojas, a dedicated <b className='text-blue-300'>Full stack</b> and <b className='text-blue-300'>Mobile</b> software developer. I specialize in building responsive and engaging applications using <b>React JS</b> and <b>.NET</b> for web development, and <b>React Native</b> for cross-platform mobile solutions.
+                                                Hello, I'm Juan Felipe García Rojas, a dedicated <b className='text-blue-300'>Frontend</b> and <b className='text-blue-300'>Mobile</b> software developer. I specialize in building responsive and engaging applications using <b>React JS</b> and <b>React Native</b> for cross-platform mobile solutions.
                                                 <br /><br />
-                                                My core expertise includes JavaScript (ES6+), C#, SQL, T-SQL, HTML5, and CSS3. I'm experienced with modern tools and frameworks such as Bootstrap, Tailwind CSS, Sass, and Framer Motion. I also use TypeScript to ensure scalability and maintainability across all projects. I'm passionate about writing clean code and creating high-quality digital experiences for both web and mobile users.
+                                                While my professional focus is entirely on the frontend, I have previously built backend projects using <b>.NET</b> for my portfolio. This experience gave me a clear understanding of server-side logic, allowing me to master API integrations and architecture from a frontend perspective.
+                                                <br /><br />
+                                                My core expertise includes JavaScript (ES6+), TypeScript, HTML5, and CSS3. I'm experienced with modern tools and frameworks such as Bootstrap, Tailwind CSS, Sass, and Framer Motion. I retain knowledge of C#, SQL, and T-SQL from my background studies, which supports my ability to write clean, scalable code for web and mobile users.
                                             </p>
 
                                             </div>
